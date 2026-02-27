@@ -1,0 +1,27 @@
+[4.775s] Invoking command in '/workspaces/amr_ws/src/build/amr_bringup': PYTHONPATH=/workspaces/amr_ws/src/build/amr_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/amr_ws/src/install/amr_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspaces/amr_ws/src/build/amr_bringup/build --no-deps symlink_data
+[7.646s] running develop
+[8.373s] running egg_info
+[8.376s] creating amr_bringup.egg-info
+[8.381s] writing amr_bringup.egg-info/PKG-INFO
+[8.399s] writing dependency_links to amr_bringup.egg-info/dependency_links.txt
+[8.415s] writing entry points to amr_bringup.egg-info/entry_points.txt
+[8.428s] writing requirements to amr_bringup.egg-info/requires.txt
+[8.438s] writing top-level names to amr_bringup.egg-info/top_level.txt
+[8.453s] writing manifest file 'amr_bringup.egg-info/SOURCES.txt'
+[8.638s] reading manifest file 'amr_bringup.egg-info/SOURCES.txt'
+[8.865s] writing manifest file 'amr_bringup.egg-info/SOURCES.txt'
+[8.912s] running build_ext
+[8.915s] Creating /workspaces/amr_ws/src/install/amr_bringup/lib/python3.10/site-packages/amr-bringup.egg-link (link to .)
+[8.979s] Installing lifecycle_manager script to /workspaces/amr_ws/src/install/amr_bringup/lib/amr_bringup
+[9.076s] 
+[9.082s] Installed /workspaces/amr_ws/src/build/amr_bringup
+[9.096s] running symlink_data
+[9.126s] creating /workspaces/amr_ws/src/install/amr_bringup/share/ament_index
+[9.134s] creating /workspaces/amr_ws/src/install/amr_bringup/share/ament_index/resource_index
+[9.145s] creating /workspaces/amr_ws/src/install/amr_bringup/share/ament_index/resource_index/packages
+[9.201s] symbolically linking /workspaces/amr_ws/src/build/amr_bringup/resource/amr_bringup -> /workspaces/amr_ws/src/install/amr_bringup/share/ament_index/resource_index/packages
+[9.260s] symbolically linking /workspaces/amr_ws/src/build/amr_bringup/package.xml -> /workspaces/amr_ws/src/install/amr_bringup/share/amr_bringup
+[9.289s] creating /workspaces/amr_ws/src/install/amr_bringup/share/amr_bringup/launch
+[9.337s] symbolically linking /workspaces/amr_ws/src/build/amr_bringup/launch/lab01.launch.py -> /workspaces/amr_ws/src/install/amr_bringup/share/amr_bringup/launch
+[9.401s] symbolically linking /workspaces/amr_ws/src/build/amr_bringup/launch/lab02.launch.py -> /workspaces/amr_ws/src/install/amr_bringup/share/amr_bringup/launch
+[9.524s] Invoked command in '/workspaces/amr_ws/src/build/amr_bringup' returned '0': PYTHONPATH=/workspaces/amr_ws/src/build/amr_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/amr_ws/src/install/amr_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspaces/amr_ws/src/build/amr_bringup/build --no-deps symlink_data

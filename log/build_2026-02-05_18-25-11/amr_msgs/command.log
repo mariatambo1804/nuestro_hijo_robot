@@ -1,0 +1,6 @@
+Invoking command in '/workspaces/amr_ws/src/build/amr_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/amr_ws/src/amr_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspaces/amr_ws/src/install/amr_msgs
+Invoked command in '/workspaces/amr_ws/src/build/amr_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/amr_ws/src/amr_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspaces/amr_ws/src/install/amr_msgs
+Invoking command in '/workspaces/amr_ws/src/build/amr_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/amr_ws/src/build/amr_msgs -- -j12 -l12
+Invoked command in '/workspaces/amr_ws/src/build/amr_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/amr_ws/src/build/amr_msgs -- -j12 -l12
+Invoking command in '/workspaces/amr_ws/src/build/amr_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /workspaces/amr_ws/src/build/amr_msgs
+Invoked command in '/workspaces/amr_ws/src/build/amr_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /workspaces/amr_ws/src/build/amr_msgs

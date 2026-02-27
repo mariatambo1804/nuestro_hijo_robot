@@ -1,0 +1,1 @@
+/workspaces/amr_ws/src/amr_msgs/msg/RangeScan.msg

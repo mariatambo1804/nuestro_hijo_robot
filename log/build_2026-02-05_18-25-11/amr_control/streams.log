@@ -1,0 +1,24 @@
+[12.817s] Invoking command in '/workspaces/amr_ws/src/build/amr_control': AMENT_PREFIX_PATH=/workspaces/amr_ws/src/install/amr_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/amr_ws/src/install/amr_msgs LD_LIBRARY_PATH=/workspaces/amr_ws/src/install/amr_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/workspaces/amr_ws/src/build/amr_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/amr_ws/src/install/amr_control/lib/python3.10/site-packages:/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspaces/amr_ws/src/build/amr_control/build --no-deps symlink_data
+[16.644s] running develop
+[17.458s] running egg_info
+[17.465s] creating amr_control.egg-info
+[17.469s] writing amr_control.egg-info/PKG-INFO
+[17.492s] writing dependency_links to amr_control.egg-info/dependency_links.txt
+[17.510s] writing entry points to amr_control.egg-info/entry_points.txt
+[17.523s] writing requirements to amr_control.egg-info/requires.txt
+[17.535s] writing top-level names to amr_control.egg-info/top_level.txt
+[17.552s] writing manifest file 'amr_control.egg-info/SOURCES.txt'
+[17.706s] reading manifest file 'amr_control.egg-info/SOURCES.txt'
+[17.925s] writing manifest file 'amr_control.egg-info/SOURCES.txt'
+[18.002s] running build_ext
+[18.007s] Creating /workspaces/amr_ws/src/install/amr_control/lib/python3.10/site-packages/amr-control.egg-link (link to .)
+[18.106s] Installing wall_follower script to /workspaces/amr_ws/src/install/amr_control/lib/amr_control
+[18.187s] 
+[18.193s] Installed /workspaces/amr_ws/src/build/amr_control
+[18.213s] running symlink_data
+[18.252s] creating /workspaces/amr_ws/src/install/amr_control/share/ament_index
+[18.262s] creating /workspaces/amr_ws/src/install/amr_control/share/ament_index/resource_index
+[18.275s] creating /workspaces/amr_ws/src/install/amr_control/share/ament_index/resource_index/packages
+[18.340s] symbolically linking /workspaces/amr_ws/src/build/amr_control/resource/amr_control -> /workspaces/amr_ws/src/install/amr_control/share/ament_index/resource_index/packages
+[18.395s] symbolically linking /workspaces/amr_ws/src/build/amr_control/package.xml -> /workspaces/amr_ws/src/install/amr_control/share/amr_control
+[18.551s] Invoked command in '/workspaces/amr_ws/src/build/amr_control' returned '0': AMENT_PREFIX_PATH=/workspaces/amr_ws/src/install/amr_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/amr_ws/src/install/amr_msgs LD_LIBRARY_PATH=/workspaces/amr_ws/src/install/amr_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/workspaces/amr_ws/src/build/amr_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/amr_ws/src/install/amr_control/lib/python3.10/site-packages:/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspaces/amr_ws/src/build/amr_control/build --no-deps symlink_data

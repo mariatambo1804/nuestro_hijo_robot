@@ -1,0 +1,3 @@
+[console_scripts]
+wall_follower = amr_control.wall_follower_node:main
+

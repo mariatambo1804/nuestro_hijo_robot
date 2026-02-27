@@ -1,0 +1,229 @@
+[0.468s] Invoking command in '/workspaces/amr_ws/src/build/amr_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/amr_ws/src/amr_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspaces/amr_ws/src/install/amr_msgs
+[1.742s] -- The C compiler identification is GNU 11.4.0
+[2.679s] -- The CXX compiler identification is GNU 11.4.0
+[2.924s] -- Detecting C compiler ABI info
+[5.223s] -- Detecting C compiler ABI info - done
+[5.402s] -- Check for working C compiler: /usr/bin/cc - skipped
+[5.408s] -- Detecting C compile features
+[5.415s] -- Detecting C compile features - done
+[5.698s] -- Detecting CXX compiler ABI info
+[7.620s] -- Detecting CXX compiler ABI info - done
+[7.726s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[7.730s] -- Detecting CXX compile features
+[7.734s] -- Detecting CXX compile features - done
+[8.016s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[8.442s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[8.944s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[9.590s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[9.634s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[9.672s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[9.874s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[10.033s] -- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[21.882s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[44.845s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[73.667s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[73.743s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[73.753s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[73.839s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[73.842s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[73.845s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[73.848s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[73.895s] -- Found PythonExtra: .so  
+[83.000s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[86.219s] -- Added test 'copyright' to check source files copyright and LICENSE
+[88.546s] -- Added test 'lint_cmake' to check CMake code style
+[89.774s] -- Added test 'xmllint' to check XML markup files
+[91.989s] -- Configuring done
+[100.436s] -- Generating done
+[104.251s] -- Build files have been written to: /workspaces/amr_ws/src/build/amr_msgs
+[104.280s] Invoked command in '/workspaces/amr_ws/src/build/amr_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/amr_ws/src/amr_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspaces/amr_ws/src/install/amr_msgs
+[104.322s] Invoking command in '/workspaces/amr_ws/src/build/amr_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/amr_ws/src/build/amr_msgs -- -j12 -l12
+[105.229s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[105.283s] [  2%] Built target ament_cmake_python_symlink_amr_msgs
+[105.320s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[106.264s] running egg_info
+[106.268s] creating amr_msgs.egg-info
+[106.276s] writing amr_msgs.egg-info/PKG-INFO
+[106.291s] writing dependency_links to amr_msgs.egg-info/dependency_links.txt
+[106.323s] writing top-level names to amr_msgs.egg-info/top_level.txt
+[106.341s] writing manifest file 'amr_msgs.egg-info/SOURCES.txt'
+[106.483s] reading manifest file 'amr_msgs.egg-info/SOURCES.txt'
+[106.591s] writing manifest file 'amr_msgs.egg-info/SOURCES.txt'
+[106.774s] [  5%] Built target ament_cmake_python_build_amr_msgs_egg
+[106.866s] [  5%] Built target amr_msgs__cpp
+[107.047s] [ 12%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[107.050s] [ 12%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[107.054s] [ 12%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[107.235s] [ 15%] [32mBuilding C object CMakeFiles/amr_msgs__rosidl_generator_c.dir/rosidl_generator_c/amr_msgs/msg/detail/pose_stamped__functions.c.o[0m
+[107.257s] [ 17%] [32mBuilding C object CMakeFiles/amr_msgs__rosidl_generator_c.dir/rosidl_generator_c/amr_msgs/msg/detail/range_scan__functions.c.o[0m
+[107.922s] [ 20%] [32m[1mLinking C shared library libamr_msgs__rosidl_generator_c.so[0m
+[108.147s] [ 25%] [32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/amr_msgs/msg/pose_stamped__type_support.cpp.o[0m
+[108.151s] [ 25%] [32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/amr_msgs/msg/range_scan__type_support.cpp.o[0m
+[108.371s] [ 25%] Built target amr_msgs__rosidl_generator_c
+[108.412s] [ 28%] [32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/amr_msgs/msg/detail/pose_stamped__type_support.cpp.o[0m
+[108.445s] [ 30%] [32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/amr_msgs/msg/detail/range_scan__type_support.cpp.o[0m
+[108.478s] [ 33%] [32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/amr_msgs/msg/detail/dds_fastrtps/pose_stamped__type_support.cpp.o[0m
+[108.520s] [ 35%] [32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/amr_msgs/msg/detail/dds_fastrtps/range_scan__type_support.cpp.o[0m
+[108.543s] [ 43%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[108.548s] [ 43%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[108.551s] [ 43%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[110.542s] [ 46%] [32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/amr_msgs/msg/pose_stamped__type_support.cpp.o[0m
+[110.563s] [ 48%] [32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/amr_msgs/msg/range_scan__type_support.cpp.o[0m
+[110.982s] [ 53%] [32mBuilding C object CMakeFiles/amr_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/amr_msgs/msg/detail/pose_stamped__type_support.c.o[0m
+[110.987s] [ 53%] [32mBuilding C object CMakeFiles/amr_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/amr_msgs/msg/detail/range_scan__type_support.c.o[0m
+[111.033s] [ 58%] [32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/amr_msgs/msg/detail/pose_stamped__type_support_c.cpp.o[0m
+[111.040s] [ 58%] [32m[1mLinking CXX shared library libamr_msgs__rosidl_typesupport_cpp.so[0m
+[111.072s] [ 61%] [32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/amr_msgs/msg/detail/range_scan__type_support_c.cpp.o[0m
+[111.229s] [ 64%] [32m[1mLinking CXX shared library libamr_msgs__rosidl_typesupport_c.so[0m
+[111.899s] [ 64%] Built target amr_msgs__rosidl_typesupport_cpp
+[111.960s] [ 64%] Built target amr_msgs__rosidl_typesupport_c
+[112.214s] [ 66%] [32m[1mLinking C shared library libamr_msgs__rosidl_typesupport_introspection_c.so[0m
+[112.700s] [ 69%] [32m[1mLinking CXX shared library libamr_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[112.745s] [ 69%] Built target amr_msgs__rosidl_typesupport_introspection_c
+[112.904s] [ 71%] [32m[1mLinking CXX shared library libamr_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[113.316s] [ 71%] Built target amr_msgs__rosidl_typesupport_introspection_cpp
+[113.590s] [ 74%] Built target amr_msgs__rosidl_typesupport_fastrtps_cpp
+[113.594s] [ 74%] [32m[1mLinking CXX shared library libamr_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[114.140s] [ 74%] Built target amr_msgs__rosidl_typesupport_fastrtps_c
+[114.427s] [ 74%] Built target amr_msgs
+[114.673s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[115.961s] [ 76%] Built target amr_msgs__py
+[116.329s] [ 79%] [32mBuilding C object CMakeFiles/amr_msgs__rosidl_generator_py.dir/rosidl_generator_py/amr_msgs/msg/_pose_stamped_s.c.o[0m
+[116.346s] [ 82%] [32mBuilding C object CMakeFiles/amr_msgs__rosidl_generator_py.dir/rosidl_generator_py/amr_msgs/msg/_range_scan_s.c.o[0m
+[117.363s] [ 84%] [32m[1mLinking C shared library rosidl_generator_py/amr_msgs/libamr_msgs__rosidl_generator_py.so[0m
+[118.031s] [ 84%] Built target amr_msgs__rosidl_generator_py
+[118.237s] [ 89%] [32mBuilding C object CMakeFiles/amr_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/amr_msgs/_amr_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[118.241s] [ 89%] [32mBuilding C object CMakeFiles/amr_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/amr_msgs/_amr_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[118.258s] [ 92%] [32mBuilding C object CMakeFiles/amr_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/amr_msgs/_amr_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[119.616s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/amr_msgs/amr_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[119.795s] [100%] [32m[1mLinking C shared library rosidl_generator_py/amr_msgs/amr_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[119.802s] [100%] [32m[1mLinking C shared library rosidl_generator_py/amr_msgs/amr_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[120.195s] [100%] Built target amr_msgs__rosidl_typesupport_c__pyext
+[120.231s] [100%] Built target amr_msgs__rosidl_typesupport_fastrtps_c__pyext
+[120.234s] [100%] Built target amr_msgs__rosidl_typesupport_introspection_c__pyext
+[120.935s] Invoked command in '/workspaces/amr_ws/src/build/amr_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/amr_ws/src/build/amr_msgs -- -j12 -l12
+[121.075s] Invoking command in '/workspaces/amr_ws/src/build/amr_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /workspaces/amr_ws/src/build/amr_msgs
+[121.114s] -- Install configuration: ""
+[121.159s] -- Execute custom install script
+[121.290s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/ament_index/resource_index/rosidl_interfaces/amr_msgs
+[121.950s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__functions.h
+[122.155s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__struct.h
+[122.378s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__type_support.h
+[122.553s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__functions.h
+[122.734s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__struct.h
+[122.895s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__type_support.h
+[123.093s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/pose_stamped.h
+[123.261s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/range_scan.h
+[123.461s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/rosidl_generator_c__visibility_control.h
+[123.685s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/environment/library_path.sh
+[123.827s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/environment/library_path.dsv
+[124.308s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__rosidl_typesupport_fastrtps_c.h
+[124.515s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__rosidl_typesupport_fastrtps_c.h
+[124.770s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[125.134s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__rosidl_typesupport_introspection_c.h
+[125.364s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__rosidl_typesupport_introspection_c.h
+[125.560s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[125.969s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__builder.hpp
+[126.173s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__struct.hpp
+[126.335s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__traits.hpp
+[126.509s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__type_support.hpp
+[126.663s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__builder.hpp
+[126.841s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__struct.hpp
+[127.055s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__traits.hpp
+[127.255s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__type_support.hpp
+[127.448s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/pose_stamped.hpp
+[127.641s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/range_scan.hpp
+[127.818s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[128.382s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[128.594s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__rosidl_typesupport_fastrtps_cpp.hpp
+[128.764s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[129.077s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__rosidl_typesupport_introspection_cpp.hpp
+[129.320s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__rosidl_typesupport_introspection_cpp.hpp
+[129.524s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/environment/pythonpath.sh
+[129.700s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/environment/pythonpath.dsv
+[130.221s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs-1.0.0-py3.10.egg-info/PKG-INFO
+[130.527s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs-1.0.0-py3.10.egg-info/SOURCES.txt
+[130.733s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs-1.0.0-py3.10.egg-info/dependency_links.txt
+[130.929s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs-1.0.0-py3.10.egg-info/top_level.txt
+[131.810s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/__init__.py
+[132.018s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/_amr_msgs_s.ep.rosidl_typesupport_c.c
+[132.247s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/_amr_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[132.501s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/_amr_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[132.664s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/amr_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[132.830s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/amr_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[133.041s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/amr_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[133.246s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/libamr_msgs__rosidl_generator_py.so
+[133.549s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg/__init__.py
+[133.855s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg/_pose_stamped.py
+[134.054s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg/_pose_stamped_s.c
+[134.269s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg/_range_scan.py
+[134.502s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg/_range_scan_s.c
+[134.791s] -- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/amr_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[134.947s] -- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/amr_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[135.136s] -- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/amr_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[135.249s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/msg/PoseStamped.idl
+[135.431s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/msg/RangeScan.idl
+[135.583s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/msg/PoseStamped.msg
+[135.763s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/msg/RangeScan.msg
+[135.952s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/ament_index/resource_index/package_run_dependencies/amr_msgs
+[136.241s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/ament_index/resource_index/parent_prefix_path/amr_msgs
+[136.467s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/environment/ament_prefix_path.sh
+[136.600s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/environment/ament_prefix_path.dsv
+[136.752s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/environment/path.sh
+[136.888s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/environment/path.dsv
+[137.063s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/local_setup.bash
+[137.182s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/local_setup.sh
+[137.329s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/local_setup.zsh
+[137.519s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/local_setup.dsv
+[137.687s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/package.dsv
+[137.945s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/ament_index/resource_index/packages/amr_msgs
+[138.242s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/rosidl_cmake-extras.cmake
+[138.418s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[138.566s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[138.762s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[138.958s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[139.189s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[139.332s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[139.497s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgsConfig.cmake
+[139.675s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgsConfig-version.cmake
+[139.832s] -- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/package.xml
+[140.040s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_generator_c.so
+[140.603s] -- Set runtime path of "/workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_generator_c.so" to ""
+[140.683s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_fastrtps_c.so
+[141.106s] -- Set runtime path of "/workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[141.183s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_introspection_c.so
+[141.609s] -- Set runtime path of "/workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_introspection_c.so" to ""
+[141.678s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_c.so
+[142.133s] -- Set runtime path of "/workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_c.so" to ""
+[142.200s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_fastrtps_cpp.so
+[142.496s] -- Set runtime path of "/workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[142.540s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_introspection_cpp.so
+[142.808s] -- Set runtime path of "/workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[142.842s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_cpp.so
+[143.152s] -- Set runtime path of "/workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_cpp.so" to ""
+[144.702s] Listing '/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs'...
+[144.706s] Compiling '/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/__init__.py'...
+[144.709s] Listing '/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg'...
+[144.711s] Compiling '/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg/__init__.py'...
+[144.714s] Compiling '/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg/_pose_stamped.py'...
+[144.716s] Compiling '/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg/_range_scan.py'...
+[144.768s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_generator_py.so
+[145.092s] -- Set runtime path of "/workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_generator_py.so" to ""
+[145.184s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_generator_cExport.cmake
+[145.536s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_generator_cExport-noconfig.cmake
+[145.851s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[146.223s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[146.609s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgs__rosidl_typesupport_introspection_cExport.cmake
+[146.860s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[147.059s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgs__rosidl_typesupport_cExport.cmake
+[147.430s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[147.800s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_generator_cppExport.cmake
+[148.225s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[148.513s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[148.934s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[149.273s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[149.586s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgs__rosidl_typesupport_cppExport.cmake
+[149.932s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[150.190s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_generator_pyExport.cmake
+[150.461s] -- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_generator_pyExport-noconfig.cmake
+[150.652s] Invoked command in '/workspaces/amr_ws/src/build/amr_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /workspaces/amr_ws/src/build/amr_msgs

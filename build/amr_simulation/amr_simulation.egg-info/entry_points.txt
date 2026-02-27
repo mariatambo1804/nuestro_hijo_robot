@@ -1,0 +1,3 @@
+[console_scripts]
+coppeliasim = amr_simulation.coppeliasim_node:main
+

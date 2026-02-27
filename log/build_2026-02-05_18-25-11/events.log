@@ -1,0 +1,2094 @@
+[0.000000] (-) TimerEvent: {}
+[0.002806] (amr_bringup) JobQueued: {'identifier': 'amr_bringup', 'dependencies': OrderedDict()}
+[0.003594] (amr_msgs) JobQueued: {'identifier': 'amr_msgs', 'dependencies': OrderedDict()}
+[0.004285] (amr_control) JobQueued: {'identifier': 'amr_control', 'dependencies': OrderedDict([('amr_msgs', '/workspaces/amr_ws/src/install/amr_msgs')])}
+[0.005068] (amr_localization) JobQueued: {'identifier': 'amr_localization', 'dependencies': OrderedDict([('amr_msgs', '/workspaces/amr_ws/src/install/amr_msgs')])}
+[0.005793] (amr_simulation) JobQueued: {'identifier': 'amr_simulation', 'dependencies': OrderedDict([('amr_msgs', '/workspaces/amr_ws/src/install/amr_msgs')])}
+[0.007087] (amr_msgs) JobStarted: {'identifier': 'amr_msgs'}
+[0.079570] (amr_bringup) JobStarted: {'identifier': 'amr_bringup'}
+[0.095208] (-) TimerEvent: {}
+[0.198570] (-) TimerEvent: {}
+[0.300775] (-) TimerEvent: {}
+[0.309365] (amr_msgs) JobProgress: {'identifier': 'amr_msgs', 'progress': 'cmake'}
+[0.401182] (-) TimerEvent: {}
+[0.437289] (amr_msgs) Command: {'cmd': ['/usr/bin/cmake', '/workspaces/amr_ws/src/amr_msgs', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/workspaces/amr_ws/src/install/amr_msgs'], 'cwd': '/workspaces/amr_ws/src/build/amr_msgs', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('HOSTNAME', 'humble'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/bin/helpers/browser.sh'), ('HOME', '/home/ros'), ('OLDPWD', '/workspaces/amr_ws'), ('TERM_PROGRAM_VERSION', '1.108.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-dd0fea95-e217-4a61-937a-0386aa99568f.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('WAYLAND_DISPLAY', 'vscode-wayland-b4e83e19-6220-4ced-9c64-35eaf5abf0ef.sock'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-437ba7c6-c449-40f6-9493-c3108ccab163.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/tmp/user/1000'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/.X11-unix/X5","/home/ros/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':5'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-e3d230fdb7b95ebd.txt'), ('LANG', 'C.UTF-8'), ('PYTHONSTARTUP', '/home/ros/.vscode-server/data/User/workspaceStorage/9443f1eff74ed665d8e8109805ee5a51/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/user/1000/vscode-git-842091ba8a.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X5'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/amr_ws/src/build/amr_msgs'), ('LC_ALL', 'C.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.501502] (-) TimerEvent: {}
+[0.603327] (-) TimerEvent: {}
+[0.704994] (-) TimerEvent: {}
+[0.806303] (-) TimerEvent: {}
+[0.907734] (-) TimerEvent: {}
+[1.009237] (-) TimerEvent: {}
+[1.111310] (-) TimerEvent: {}
+[1.213105] (-) TimerEvent: {}
+[1.314982] (-) TimerEvent: {}
+[1.416732] (-) TimerEvent: {}
+[1.518474] (-) TimerEvent: {}
+[1.619888] (-) TimerEvent: {}
+[1.721733] (-) TimerEvent: {}
+[1.745456] (amr_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[1.822673] (-) TimerEvent: {}
+[1.924772] (-) TimerEvent: {}
+[2.027210] (-) TimerEvent: {}
+[2.129348] (-) TimerEvent: {}
+[2.231519] (-) TimerEvent: {}
+[2.333324] (-) TimerEvent: {}
+[2.435180] (-) TimerEvent: {}
+[2.537079] (-) TimerEvent: {}
+[2.639683] (-) TimerEvent: {}
+[2.683925] (amr_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[2.740000] (-) TimerEvent: {}
+[2.841447] (-) TimerEvent: {}
+[2.929577] (amr_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[2.941683] (-) TimerEvent: {}
+[3.043588] (-) TimerEvent: {}
+[3.145134] (-) TimerEvent: {}
+[3.247619] (-) TimerEvent: {}
+[3.349335] (-) TimerEvent: {}
+[3.450560] (-) TimerEvent: {}
+[3.552522] (-) TimerEvent: {}
+[3.654641] (-) TimerEvent: {}
+[3.756741] (-) TimerEvent: {}
+[3.858633] (-) TimerEvent: {}
+[3.960451] (-) TimerEvent: {}
+[4.061775] (-) TimerEvent: {}
+[4.163485] (-) TimerEvent: {}
+[4.265761] (-) TimerEvent: {}
+[4.366959] (-) TimerEvent: {}
+[4.468719] (-) TimerEvent: {}
+[4.571081] (-) TimerEvent: {}
+[4.672659] (-) TimerEvent: {}
+[4.774559] (-) TimerEvent: {}
+[4.792670] (amr_bringup) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/workspaces/amr_ws/src/build/amr_bringup/build', '--no-deps', 'symlink_data'], 'cwd': '/workspaces/amr_ws/src/build/amr_bringup', 'env': {'PYTHON_BASIC_REPL': '1', 'HOSTNAME': 'humble', 'GIT_ASKPASS': '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/bin/helpers/browser.sh', 'HOME': '/home/ros', 'OLDPWD': '/workspaces/amr_ws', 'TERM_PROGRAM_VERSION': '1.108.2', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-dd0fea95-e217-4a61-937a-0386aa99568f.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'WAYLAND_DISPLAY': 'vscode-wayland-b4e83e19-6220-4ced-9c64-35eaf5abf0ef.sock', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-437ba7c6-c449-40f6-9493-c3108ccab163.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts', 'XDG_RUNTIME_DIR': '/tmp/user/1000', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/.X11-unix/X5","/home/ros/.gnupg/S.gpg-agent"]', 'DISPLAY': ':5', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-e3d230fdb7b95ebd.txt', 'LANG': 'C.UTF-8', 'PYTHONSTARTUP': '/home/ros/.vscode-server/data/User/workspaceStorage/9443f1eff74ed665d8e8109805ee5a51/ms-python.python/pythonrc.py', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/user/1000/vscode-git-842091ba8a.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'REMOTE_CONTAINERS_DISPLAY_SOCK': '/tmp/.X11-unix/X5', 'SHELL': '/bin/bash', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/workspaces/amr_ws/src/build/amr_bringup', 'LC_ALL': 'C.UTF-8', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/workspaces/amr_ws/src/build/amr_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/amr_ws/src/install/amr_bringup/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[4.874835] (-) TimerEvent: {}
+[4.976667] (-) TimerEvent: {}
+[5.079565] (-) TimerEvent: {}
+[5.181434] (-) TimerEvent: {}
+[5.226861] (amr_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[5.281727] (-) TimerEvent: {}
+[5.384091] (-) TimerEvent: {}
+[5.404290] (amr_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[5.410685] (amr_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[5.417806] (amr_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[5.484783] (-) TimerEvent: {}
+[5.587442] (-) TimerEvent: {}
+[5.689024] (-) TimerEvent: {}
+[5.700591] (amr_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[5.789407] (-) TimerEvent: {}
+[5.891697] (-) TimerEvent: {}
+[5.993228] (-) TimerEvent: {}
+[6.095969] (-) TimerEvent: {}
+[6.197430] (-) TimerEvent: {}
+[6.299317] (-) TimerEvent: {}
+[6.401013] (-) TimerEvent: {}
+[6.503059] (-) TimerEvent: {}
+[6.604278] (-) TimerEvent: {}
+[6.706267] (-) TimerEvent: {}
+[6.809125] (-) TimerEvent: {}
+[6.910327] (-) TimerEvent: {}
+[7.012119] (-) TimerEvent: {}
+[7.113323] (-) TimerEvent: {}
+[7.214975] (-) TimerEvent: {}
+[7.316659] (-) TimerEvent: {}
+[7.418418] (-) TimerEvent: {}
+[7.520222] (-) TimerEvent: {}
+[7.622375] (-) TimerEvent: {}
+[7.624191] (amr_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[7.722781] (amr_bringup) StdoutLine: {'line': b'running develop\n'}
+[7.727997] (-) TimerEvent: {}
+[7.730446] (amr_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[7.734471] (amr_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[7.738888] (amr_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[7.828472] (-) TimerEvent: {}
+[7.930802] (-) TimerEvent: {}
+[8.021588] (amr_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[8.031062] (-) TimerEvent: {}
+[8.132549] (-) TimerEvent: {}
+[8.234493] (-) TimerEvent: {}
+[8.336117] (-) TimerEvent: {}
+[8.438110] (-) TimerEvent: {}
+[8.445985] (amr_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[8.450449] (amr_bringup) StdoutLine: {'line': b'running egg_info\n'}
+[8.454674] (amr_bringup) StdoutLine: {'line': b'creating amr_bringup.egg-info\n'}
+[8.458530] (amr_bringup) StdoutLine: {'line': b'writing amr_bringup.egg-info/PKG-INFO\n'}
+[8.478005] (amr_bringup) StdoutLine: {'line': b'writing dependency_links to amr_bringup.egg-info/dependency_links.txt\n'}
+[8.493577] (amr_bringup) StdoutLine: {'line': b'writing entry points to amr_bringup.egg-info/entry_points.txt\n'}
+[8.506266] (amr_bringup) StdoutLine: {'line': b'writing requirements to amr_bringup.egg-info/requires.txt\n'}
+[8.515811] (amr_bringup) StdoutLine: {'line': b'writing top-level names to amr_bringup.egg-info/top_level.txt\n'}
+[8.530539] (amr_bringup) StdoutLine: {'line': b"writing manifest file 'amr_bringup.egg-info/SOURCES.txt'\n"}
+[8.538437] (-) TimerEvent: {}
+[8.640189] (-) TimerEvent: {}
+[8.715795] (amr_bringup) StdoutLine: {'line': b"reading manifest file 'amr_bringup.egg-info/SOURCES.txt'\n"}
+[8.740455] (-) TimerEvent: {}
+[8.842319] (-) TimerEvent: {}
+[8.940061] (amr_bringup) StdoutLine: {'line': b"writing manifest file 'amr_bringup.egg-info/SOURCES.txt'\n"}
+[8.946549] (-) TimerEvent: {}
+[8.948073] (amr_msgs) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[8.990135] (amr_bringup) StdoutLine: {'line': b'running build_ext\n'}
+[8.993756] (amr_bringup) StdoutLine: {'line': b'Creating /workspaces/amr_ws/src/install/amr_bringup/lib/python3.10/site-packages/amr-bringup.egg-link (link to .)\n'}
+[9.046819] (-) TimerEvent: {}
+[9.057048] (amr_bringup) StdoutLine: {'line': b'Installing lifecycle_manager script to /workspaces/amr_ws/src/install/amr_bringup/lib/amr_bringup\n'}
+[9.147447] (-) TimerEvent: {}
+[9.152224] (amr_bringup) StdoutLine: {'line': b'\n'}
+[9.158504] (amr_bringup) StdoutLine: {'line': b'Installed /workspaces/amr_ws/src/build/amr_bringup\n'}
+[9.172115] (amr_bringup) StdoutLine: {'line': b'running symlink_data\n'}
+[9.203363] (amr_bringup) StdoutLine: {'line': b'creating /workspaces/amr_ws/src/install/amr_bringup/share/ament_index\n'}
+[9.212506] (amr_bringup) StdoutLine: {'line': b'creating /workspaces/amr_ws/src/install/amr_bringup/share/ament_index/resource_index\n'}
+[9.223983] (amr_bringup) StdoutLine: {'line': b'creating /workspaces/amr_ws/src/install/amr_bringup/share/ament_index/resource_index/packages\n'}
+[9.247722] (-) TimerEvent: {}
+[9.279817] (amr_bringup) StdoutLine: {'line': b'symbolically linking /workspaces/amr_ws/src/build/amr_bringup/resource/amr_bringup -> /workspaces/amr_ws/src/install/amr_bringup/share/ament_index/resource_index/packages\n'}
+[9.338015] (amr_bringup) StdoutLine: {'line': b'symbolically linking /workspaces/amr_ws/src/build/amr_bringup/package.xml -> /workspaces/amr_ws/src/install/amr_bringup/share/amr_bringup\n'}
+[9.347937] (-) TimerEvent: {}
+[9.367741] (amr_bringup) StdoutLine: {'line': b'creating /workspaces/amr_ws/src/install/amr_bringup/share/amr_bringup/launch\n'}
+[9.416027] (amr_bringup) StdoutLine: {'line': b'symbolically linking /workspaces/amr_ws/src/build/amr_bringup/launch/lab01.launch.py -> /workspaces/amr_ws/src/install/amr_bringup/share/amr_bringup/launch\n'}
+[9.448235] (-) TimerEvent: {}
+[9.477965] (amr_bringup) StdoutLine: {'line': b'symbolically linking /workspaces/amr_ws/src/build/amr_bringup/launch/lab02.launch.py -> /workspaces/amr_ws/src/install/amr_bringup/share/amr_bringup/launch\n'}
+[9.548558] (-) TimerEvent: {}
+[9.594232] (amr_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[9.601224] (amr_bringup) CommandEnded: {'returncode': 0}
+[9.639240] (amr_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[9.648881] (-) TimerEvent: {}
+[9.677202] (amr_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[9.749520] (-) TimerEvent: {}
+[9.851493] (-) TimerEvent: {}
+[9.879482] (amr_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[9.951980] (-) TimerEvent: {}
+[10.038408] (amr_msgs) StdoutLine: {'line': b'-- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[10.052266] (-) TimerEvent: {}
+[10.153578] (-) TimerEvent: {}
+[10.255448] (-) TimerEvent: {}
+[10.357082] (-) TimerEvent: {}
+[10.458469] (-) TimerEvent: {}
+[10.560208] (-) TimerEvent: {}
+[10.661955] (-) TimerEvent: {}
+[10.722618] (amr_bringup) JobEnded: {'identifier': 'amr_bringup', 'rc': 0}
+[10.762388] (-) TimerEvent: {}
+[10.864655] (-) TimerEvent: {}
+[10.966331] (-) TimerEvent: {}
+[11.071872] (-) TimerEvent: {}
+[11.173961] (-) TimerEvent: {}
+[11.276442] (-) TimerEvent: {}
+[11.378763] (-) TimerEvent: {}
+[11.480779] (-) TimerEvent: {}
+[11.582633] (-) TimerEvent: {}
+[11.684300] (-) TimerEvent: {}
+[11.786461] (-) TimerEvent: {}
+[11.888358] (-) TimerEvent: {}
+[11.990345] (-) TimerEvent: {}
+[12.093018] (-) TimerEvent: {}
+[12.197939] (-) TimerEvent: {}
+[12.299882] (-) TimerEvent: {}
+[12.403103] (-) TimerEvent: {}
+[12.505028] (-) TimerEvent: {}
+[12.607302] (-) TimerEvent: {}
+[12.709331] (-) TimerEvent: {}
+[12.812568] (-) TimerEvent: {}
+[12.914680] (-) TimerEvent: {}
+[13.018414] (-) TimerEvent: {}
+[13.120590] (-) TimerEvent: {}
+[13.223491] (-) TimerEvent: {}
+[13.326726] (-) TimerEvent: {}
+[13.429889] (-) TimerEvent: {}
+[13.532510] (-) TimerEvent: {}
+[13.634921] (-) TimerEvent: {}
+[13.736553] (-) TimerEvent: {}
+[13.838908] (-) TimerEvent: {}
+[13.941141] (-) TimerEvent: {}
+[14.043629] (-) TimerEvent: {}
+[14.146142] (-) TimerEvent: {}
+[14.248808] (-) TimerEvent: {}
+[14.351722] (-) TimerEvent: {}
+[14.454129] (-) TimerEvent: {}
+[14.556174] (-) TimerEvent: {}
+[14.658460] (-) TimerEvent: {}
+[14.760363] (-) TimerEvent: {}
+[14.861503] (-) TimerEvent: {}
+[14.963771] (-) TimerEvent: {}
+[15.066653] (-) TimerEvent: {}
+[15.169109] (-) TimerEvent: {}
+[15.271765] (-) TimerEvent: {}
+[15.373482] (-) TimerEvent: {}
+[15.475541] (-) TimerEvent: {}
+[15.578028] (-) TimerEvent: {}
+[15.680413] (-) TimerEvent: {}
+[15.782563] (-) TimerEvent: {}
+[15.885775] (-) TimerEvent: {}
+[15.987781] (-) TimerEvent: {}
+[16.089327] (-) TimerEvent: {}
+[16.191211] (-) TimerEvent: {}
+[16.292864] (-) TimerEvent: {}
+[16.394857] (-) TimerEvent: {}
+[16.497110] (-) TimerEvent: {}
+[16.599214] (-) TimerEvent: {}
+[16.702011] (-) TimerEvent: {}
+[16.804568] (-) TimerEvent: {}
+[16.907984] (-) TimerEvent: {}
+[17.010549] (-) TimerEvent: {}
+[17.113219] (-) TimerEvent: {}
+[17.215831] (-) TimerEvent: {}
+[17.318388] (-) TimerEvent: {}
+[17.421552] (-) TimerEvent: {}
+[17.524425] (-) TimerEvent: {}
+[17.627773] (-) TimerEvent: {}
+[17.730601] (-) TimerEvent: {}
+[17.832481] (-) TimerEvent: {}
+[17.935028] (-) TimerEvent: {}
+[18.036709] (-) TimerEvent: {}
+[18.138910] (-) TimerEvent: {}
+[18.241261] (-) TimerEvent: {}
+[18.343456] (-) TimerEvent: {}
+[18.445642] (-) TimerEvent: {}
+[18.548364] (-) TimerEvent: {}
+[18.651420] (-) TimerEvent: {}
+[18.754698] (-) TimerEvent: {}
+[18.857480] (-) TimerEvent: {}
+[18.960028] (-) TimerEvent: {}
+[19.062724] (-) TimerEvent: {}
+[19.165302] (-) TimerEvent: {}
+[19.268089] (-) TimerEvent: {}
+[19.371440] (-) TimerEvent: {}
+[19.473901] (-) TimerEvent: {}
+[19.576326] (-) TimerEvent: {}
+[19.678787] (-) TimerEvent: {}
+[19.780998] (-) TimerEvent: {}
+[19.882749] (-) TimerEvent: {}
+[19.985027] (-) TimerEvent: {}
+[20.087686] (-) TimerEvent: {}
+[20.189705] (-) TimerEvent: {}
+[20.292323] (-) TimerEvent: {}
+[20.393768] (-) TimerEvent: {}
+[20.495811] (-) TimerEvent: {}
+[20.598105] (-) TimerEvent: {}
+[20.700555] (-) TimerEvent: {}
+[20.802655] (-) TimerEvent: {}
+[20.905224] (-) TimerEvent: {}
+[21.007647] (-) TimerEvent: {}
+[21.110343] (-) TimerEvent: {}
+[21.212317] (-) TimerEvent: {}
+[21.314758] (-) TimerEvent: {}
+[21.416406] (-) TimerEvent: {}
+[21.519240] (-) TimerEvent: {}
+[21.621354] (-) TimerEvent: {}
+[21.722839] (-) TimerEvent: {}
+[21.825426] (-) TimerEvent: {}
+[21.886037] (amr_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[21.925761] (-) TimerEvent: {}
+[22.028082] (-) TimerEvent: {}
+[22.129877] (-) TimerEvent: {}
+[22.232737] (-) TimerEvent: {}
+[22.334400] (-) TimerEvent: {}
+[22.436380] (-) TimerEvent: {}
+[22.538018] (-) TimerEvent: {}
+[22.640112] (-) TimerEvent: {}
+[22.741941] (-) TimerEvent: {}
+[22.843673] (-) TimerEvent: {}
+[22.945761] (-) TimerEvent: {}
+[23.047468] (-) TimerEvent: {}
+[23.149841] (-) TimerEvent: {}
+[23.251954] (-) TimerEvent: {}
+[23.354243] (-) TimerEvent: {}
+[23.456022] (-) TimerEvent: {}
+[23.558044] (-) TimerEvent: {}
+[23.660433] (-) TimerEvent: {}
+[23.762093] (-) TimerEvent: {}
+[23.864324] (-) TimerEvent: {}
+[23.965820] (-) TimerEvent: {}
+[24.067802] (-) TimerEvent: {}
+[24.170118] (-) TimerEvent: {}
+[24.272443] (-) TimerEvent: {}
+[24.374459] (-) TimerEvent: {}
+[24.476076] (-) TimerEvent: {}
+[24.577657] (-) TimerEvent: {}
+[24.679680] (-) TimerEvent: {}
+[24.781531] (-) TimerEvent: {}
+[24.883167] (-) TimerEvent: {}
+[24.984961] (-) TimerEvent: {}
+[25.087200] (-) TimerEvent: {}
+[25.189292] (-) TimerEvent: {}
+[25.291455] (-) TimerEvent: {}
+[25.392899] (-) TimerEvent: {}
+[25.494566] (-) TimerEvent: {}
+[25.596047] (-) TimerEvent: {}
+[25.698315] (-) TimerEvent: {}
+[25.800477] (-) TimerEvent: {}
+[25.901980] (-) TimerEvent: {}
+[26.003518] (-) TimerEvent: {}
+[26.105556] (-) TimerEvent: {}
+[26.207232] (-) TimerEvent: {}
+[26.309035] (-) TimerEvent: {}
+[26.411347] (-) TimerEvent: {}
+[26.513428] (-) TimerEvent: {}
+[26.614942] (-) TimerEvent: {}
+[26.716496] (-) TimerEvent: {}
+[26.818322] (-) TimerEvent: {}
+[26.919930] (-) TimerEvent: {}
+[27.022502] (-) TimerEvent: {}
+[27.124297] (-) TimerEvent: {}
+[27.226748] (-) TimerEvent: {}
+[27.329384] (-) TimerEvent: {}
+[27.431603] (-) TimerEvent: {}
+[27.533583] (-) TimerEvent: {}
+[27.635349] (-) TimerEvent: {}
+[27.737224] (-) TimerEvent: {}
+[27.839212] (-) TimerEvent: {}
+[27.941398] (-) TimerEvent: {}
+[28.043008] (-) TimerEvent: {}
+[28.144679] (-) TimerEvent: {}
+[28.247010] (-) TimerEvent: {}
+[28.349753] (-) TimerEvent: {}
+[28.451622] (-) TimerEvent: {}
+[28.553372] (-) TimerEvent: {}
+[28.655644] (-) TimerEvent: {}
+[28.758628] (-) TimerEvent: {}
+[28.863564] (-) TimerEvent: {}
+[28.965459] (-) TimerEvent: {}
+[29.067398] (-) TimerEvent: {}
+[29.169171] (-) TimerEvent: {}
+[29.270984] (-) TimerEvent: {}
+[29.373827] (-) TimerEvent: {}
+[29.475157] (-) TimerEvent: {}
+[29.577891] (-) TimerEvent: {}
+[29.680422] (-) TimerEvent: {}
+[29.783980] (-) TimerEvent: {}
+[29.886540] (-) TimerEvent: {}
+[29.989315] (-) TimerEvent: {}
+[30.092260] (-) TimerEvent: {}
+[30.194902] (-) TimerEvent: {}
+[30.297540] (-) TimerEvent: {}
+[30.400537] (-) TimerEvent: {}
+[30.503363] (-) TimerEvent: {}
+[30.606152] (-) TimerEvent: {}
+[30.710135] (-) TimerEvent: {}
+[30.813410] (-) TimerEvent: {}
+[30.915776] (-) TimerEvent: {}
+[31.018641] (-) TimerEvent: {}
+[31.120874] (-) TimerEvent: {}
+[31.223153] (-) TimerEvent: {}
+[31.325230] (-) TimerEvent: {}
+[31.427696] (-) TimerEvent: {}
+[31.530005] (-) TimerEvent: {}
+[31.632655] (-) TimerEvent: {}
+[31.735230] (-) TimerEvent: {}
+[31.837698] (-) TimerEvent: {}
+[31.940596] (-) TimerEvent: {}
+[32.044230] (-) TimerEvent: {}
+[32.146761] (-) TimerEvent: {}
+[32.249880] (-) TimerEvent: {}
+[32.352362] (-) TimerEvent: {}
+[32.455373] (-) TimerEvent: {}
+[32.558388] (-) TimerEvent: {}
+[32.660504] (-) TimerEvent: {}
+[32.763377] (-) TimerEvent: {}
+[32.866482] (-) TimerEvent: {}
+[32.968892] (-) TimerEvent: {}
+[33.071372] (-) TimerEvent: {}
+[33.173420] (-) TimerEvent: {}
+[33.275843] (-) TimerEvent: {}
+[33.378536] (-) TimerEvent: {}
+[33.481423] (-) TimerEvent: {}
+[33.583397] (-) TimerEvent: {}
+[33.685931] (-) TimerEvent: {}
+[33.788483] (-) TimerEvent: {}
+[33.890403] (-) TimerEvent: {}
+[33.992763] (-) TimerEvent: {}
+[34.094738] (-) TimerEvent: {}
+[34.197462] (-) TimerEvent: {}
+[34.299716] (-) TimerEvent: {}
+[34.402370] (-) TimerEvent: {}
+[34.504878] (-) TimerEvent: {}
+[34.607172] (-) TimerEvent: {}
+[34.709293] (-) TimerEvent: {}
+[34.812517] (-) TimerEvent: {}
+[34.914466] (-) TimerEvent: {}
+[35.017069] (-) TimerEvent: {}
+[35.120686] (-) TimerEvent: {}
+[35.223855] (-) TimerEvent: {}
+[35.325852] (-) TimerEvent: {}
+[35.427853] (-) TimerEvent: {}
+[35.531025] (-) TimerEvent: {}
+[35.633552] (-) TimerEvent: {}
+[35.736983] (-) TimerEvent: {}
+[35.840289] (-) TimerEvent: {}
+[35.943952] (-) TimerEvent: {}
+[36.045561] (-) TimerEvent: {}
+[36.146969] (-) TimerEvent: {}
+[36.248226] (-) TimerEvent: {}
+[36.350100] (-) TimerEvent: {}
+[36.452798] (-) TimerEvent: {}
+[36.555540] (-) TimerEvent: {}
+[36.657486] (-) TimerEvent: {}
+[36.760869] (-) TimerEvent: {}
+[36.864726] (-) TimerEvent: {}
+[36.967863] (-) TimerEvent: {}
+[37.070626] (-) TimerEvent: {}
+[37.172904] (-) TimerEvent: {}
+[37.275147] (-) TimerEvent: {}
+[37.377354] (-) TimerEvent: {}
+[37.479515] (-) TimerEvent: {}
+[37.582093] (-) TimerEvent: {}
+[37.683921] (-) TimerEvent: {}
+[37.785178] (-) TimerEvent: {}
+[37.887000] (-) TimerEvent: {}
+[37.990496] (-) TimerEvent: {}
+[38.092734] (-) TimerEvent: {}
+[38.195363] (-) TimerEvent: {}
+[38.297587] (-) TimerEvent: {}
+[38.400185] (-) TimerEvent: {}
+[38.502740] (-) TimerEvent: {}
+[38.605340] (-) TimerEvent: {}
+[38.707210] (-) TimerEvent: {}
+[38.809370] (-) TimerEvent: {}
+[38.912014] (-) TimerEvent: {}
+[39.014559] (-) TimerEvent: {}
+[39.116801] (-) TimerEvent: {}
+[39.218950] (-) TimerEvent: {}
+[39.321464] (-) TimerEvent: {}
+[39.423837] (-) TimerEvent: {}
+[39.526501] (-) TimerEvent: {}
+[39.628550] (-) TimerEvent: {}
+[39.730407] (-) TimerEvent: {}
+[39.833831] (-) TimerEvent: {}
+[39.936114] (-) TimerEvent: {}
+[40.039137] (-) TimerEvent: {}
+[40.141739] (-) TimerEvent: {}
+[40.244490] (-) TimerEvent: {}
+[40.346730] (-) TimerEvent: {}
+[40.448586] (-) TimerEvent: {}
+[40.550796] (-) TimerEvent: {}
+[40.652399] (-) TimerEvent: {}
+[40.754443] (-) TimerEvent: {}
+[40.856475] (-) TimerEvent: {}
+[40.958508] (-) TimerEvent: {}
+[41.061412] (-) TimerEvent: {}
+[41.164619] (-) TimerEvent: {}
+[41.266736] (-) TimerEvent: {}
+[41.369157] (-) TimerEvent: {}
+[41.471374] (-) TimerEvent: {}
+[41.573092] (-) TimerEvent: {}
+[41.674952] (-) TimerEvent: {}
+[41.776761] (-) TimerEvent: {}
+[41.878967] (-) TimerEvent: {}
+[41.981308] (-) TimerEvent: {}
+[42.083666] (-) TimerEvent: {}
+[42.186054] (-) TimerEvent: {}
+[42.288488] (-) TimerEvent: {}
+[42.390496] (-) TimerEvent: {}
+[42.492985] (-) TimerEvent: {}
+[42.594932] (-) TimerEvent: {}
+[42.697239] (-) TimerEvent: {}
+[42.799331] (-) TimerEvent: {}
+[42.901084] (-) TimerEvent: {}
+[43.003189] (-) TimerEvent: {}
+[43.105754] (-) TimerEvent: {}
+[43.207399] (-) TimerEvent: {}
+[43.309043] (-) TimerEvent: {}
+[43.410910] (-) TimerEvent: {}
+[43.513369] (-) TimerEvent: {}
+[43.616098] (-) TimerEvent: {}
+[43.717681] (-) TimerEvent: {}
+[43.819124] (-) TimerEvent: {}
+[43.920896] (-) TimerEvent: {}
+[44.023018] (-) TimerEvent: {}
+[44.125807] (-) TimerEvent: {}
+[44.229100] (-) TimerEvent: {}
+[44.331693] (-) TimerEvent: {}
+[44.434505] (-) TimerEvent: {}
+[44.537350] (-) TimerEvent: {}
+[44.639519] (-) TimerEvent: {}
+[44.742267] (-) TimerEvent: {}
+[44.844538] (-) TimerEvent: {}
+[44.850140] (amr_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[44.945301] (-) TimerEvent: {}
+[45.047784] (-) TimerEvent: {}
+[45.150500] (-) TimerEvent: {}
+[45.253390] (-) TimerEvent: {}
+[45.356005] (-) TimerEvent: {}
+[45.458737] (-) TimerEvent: {}
+[45.562301] (-) TimerEvent: {}
+[45.664531] (-) TimerEvent: {}
+[45.767665] (-) TimerEvent: {}
+[45.870450] (-) TimerEvent: {}
+[45.973356] (-) TimerEvent: {}
+[46.075209] (-) TimerEvent: {}
+[46.177049] (-) TimerEvent: {}
+[46.278580] (-) TimerEvent: {}
+[46.380399] (-) TimerEvent: {}
+[46.482026] (-) TimerEvent: {}
+[46.583819] (-) TimerEvent: {}
+[46.686354] (-) TimerEvent: {}
+[46.788513] (-) TimerEvent: {}
+[46.890369] (-) TimerEvent: {}
+[46.992070] (-) TimerEvent: {}
+[47.094633] (-) TimerEvent: {}
+[47.197634] (-) TimerEvent: {}
+[47.299349] (-) TimerEvent: {}
+[47.401364] (-) TimerEvent: {}
+[47.503549] (-) TimerEvent: {}
+[47.605070] (-) TimerEvent: {}
+[47.707090] (-) TimerEvent: {}
+[47.808886] (-) TimerEvent: {}
+[47.911119] (-) TimerEvent: {}
+[48.012864] (-) TimerEvent: {}
+[48.114729] (-) TimerEvent: {}
+[48.216500] (-) TimerEvent: {}
+[48.318779] (-) TimerEvent: {}
+[48.421101] (-) TimerEvent: {}
+[48.523424] (-) TimerEvent: {}
+[48.625271] (-) TimerEvent: {}
+[48.727539] (-) TimerEvent: {}
+[48.829863] (-) TimerEvent: {}
+[48.931961] (-) TimerEvent: {}
+[49.034314] (-) TimerEvent: {}
+[49.136358] (-) TimerEvent: {}
+[49.238744] (-) TimerEvent: {}
+[49.340182] (-) TimerEvent: {}
+[49.441487] (-) TimerEvent: {}
+[49.543258] (-) TimerEvent: {}
+[49.645180] (-) TimerEvent: {}
+[49.747200] (-) TimerEvent: {}
+[49.849745] (-) TimerEvent: {}
+[49.952334] (-) TimerEvent: {}
+[50.054895] (-) TimerEvent: {}
+[50.157290] (-) TimerEvent: {}
+[50.259625] (-) TimerEvent: {}
+[50.361139] (-) TimerEvent: {}
+[50.463512] (-) TimerEvent: {}
+[50.565691] (-) TimerEvent: {}
+[50.668017] (-) TimerEvent: {}
+[50.769880] (-) TimerEvent: {}
+[50.871260] (-) TimerEvent: {}
+[50.972735] (-) TimerEvent: {}
+[51.073857] (-) TimerEvent: {}
+[51.175267] (-) TimerEvent: {}
+[51.276606] (-) TimerEvent: {}
+[51.378394] (-) TimerEvent: {}
+[51.480221] (-) TimerEvent: {}
+[51.581977] (-) TimerEvent: {}
+[51.684327] (-) TimerEvent: {}
+[51.786313] (-) TimerEvent: {}
+[51.888537] (-) TimerEvent: {}
+[51.990372] (-) TimerEvent: {}
+[52.091996] (-) TimerEvent: {}
+[52.193457] (-) TimerEvent: {}
+[52.295282] (-) TimerEvent: {}
+[52.397061] (-) TimerEvent: {}
+[52.498809] (-) TimerEvent: {}
+[52.600640] (-) TimerEvent: {}
+[52.702711] (-) TimerEvent: {}
+[52.805143] (-) TimerEvent: {}
+[52.907534] (-) TimerEvent: {}
+[53.009726] (-) TimerEvent: {}
+[53.111966] (-) TimerEvent: {}
+[53.214300] (-) TimerEvent: {}
+[53.315725] (-) TimerEvent: {}
+[53.417413] (-) TimerEvent: {}
+[53.519552] (-) TimerEvent: {}
+[53.621639] (-) TimerEvent: {}
+[53.723485] (-) TimerEvent: {}
+[53.825092] (-) TimerEvent: {}
+[53.927275] (-) TimerEvent: {}
+[54.029178] (-) TimerEvent: {}
+[54.131358] (-) TimerEvent: {}
+[54.233112] (-) TimerEvent: {}
+[54.335034] (-) TimerEvent: {}
+[54.437214] (-) TimerEvent: {}
+[54.538798] (-) TimerEvent: {}
+[54.640487] (-) TimerEvent: {}
+[54.742497] (-) TimerEvent: {}
+[54.844458] (-) TimerEvent: {}
+[54.946421] (-) TimerEvent: {}
+[55.047989] (-) TimerEvent: {}
+[55.149633] (-) TimerEvent: {}
+[55.251026] (-) TimerEvent: {}
+[55.352888] (-) TimerEvent: {}
+[55.455010] (-) TimerEvent: {}
+[55.557061] (-) TimerEvent: {}
+[55.658664] (-) TimerEvent: {}
+[55.760398] (-) TimerEvent: {}
+[55.862023] (-) TimerEvent: {}
+[55.963695] (-) TimerEvent: {}
+[56.065695] (-) TimerEvent: {}
+[56.168202] (-) TimerEvent: {}
+[56.269477] (-) TimerEvent: {}
+[56.371012] (-) TimerEvent: {}
+[56.472884] (-) TimerEvent: {}
+[56.574550] (-) TimerEvent: {}
+[56.676341] (-) TimerEvent: {}
+[56.778065] (-) TimerEvent: {}
+[56.880419] (-) TimerEvent: {}
+[56.982593] (-) TimerEvent: {}
+[57.085002] (-) TimerEvent: {}
+[57.186592] (-) TimerEvent: {}
+[57.288234] (-) TimerEvent: {}
+[57.390793] (-) TimerEvent: {}
+[57.492782] (-) TimerEvent: {}
+[57.594758] (-) TimerEvent: {}
+[57.696568] (-) TimerEvent: {}
+[57.798119] (-) TimerEvent: {}
+[57.900323] (-) TimerEvent: {}
+[58.001903] (-) TimerEvent: {}
+[58.104598] (-) TimerEvent: {}
+[58.206817] (-) TimerEvent: {}
+[58.308839] (-) TimerEvent: {}
+[58.411855] (-) TimerEvent: {}
+[58.514370] (-) TimerEvent: {}
+[58.616784] (-) TimerEvent: {}
+[58.719149] (-) TimerEvent: {}
+[58.821405] (-) TimerEvent: {}
+[58.923479] (-) TimerEvent: {}
+[59.025638] (-) TimerEvent: {}
+[59.128005] (-) TimerEvent: {}
+[59.230263] (-) TimerEvent: {}
+[59.332187] (-) TimerEvent: {}
+[59.433885] (-) TimerEvent: {}
+[59.535568] (-) TimerEvent: {}
+[59.636906] (-) TimerEvent: {}
+[59.739485] (-) TimerEvent: {}
+[59.842054] (-) TimerEvent: {}
+[59.944027] (-) TimerEvent: {}
+[60.046450] (-) TimerEvent: {}
+[60.148696] (-) TimerEvent: {}
+[60.251167] (-) TimerEvent: {}
+[60.354014] (-) TimerEvent: {}
+[60.455741] (-) TimerEvent: {}
+[60.558395] (-) TimerEvent: {}
+[60.660456] (-) TimerEvent: {}
+[60.762646] (-) TimerEvent: {}
+[60.864892] (-) TimerEvent: {}
+[60.967617] (-) TimerEvent: {}
+[61.069560] (-) TimerEvent: {}
+[61.171754] (-) TimerEvent: {}
+[61.273996] (-) TimerEvent: {}
+[61.376234] (-) TimerEvent: {}
+[61.479064] (-) TimerEvent: {}
+[61.581098] (-) TimerEvent: {}
+[61.683109] (-) TimerEvent: {}
+[61.785192] (-) TimerEvent: {}
+[61.887047] (-) TimerEvent: {}
+[61.989024] (-) TimerEvent: {}
+[62.091544] (-) TimerEvent: {}
+[62.193985] (-) TimerEvent: {}
+[62.296032] (-) TimerEvent: {}
+[62.398448] (-) TimerEvent: {}
+[62.501074] (-) TimerEvent: {}
+[62.603752] (-) TimerEvent: {}
+[62.706353] (-) TimerEvent: {}
+[62.809254] (-) TimerEvent: {}
+[62.911621] (-) TimerEvent: {}
+[63.014494] (-) TimerEvent: {}
+[63.116271] (-) TimerEvent: {}
+[63.218676] (-) TimerEvent: {}
+[63.321255] (-) TimerEvent: {}
+[63.423881] (-) TimerEvent: {}
+[63.525965] (-) TimerEvent: {}
+[63.628309] (-) TimerEvent: {}
+[63.730711] (-) TimerEvent: {}
+[63.832944] (-) TimerEvent: {}
+[63.935104] (-) TimerEvent: {}
+[64.037675] (-) TimerEvent: {}
+[64.140399] (-) TimerEvent: {}
+[64.242253] (-) TimerEvent: {}
+[64.344211] (-) TimerEvent: {}
+[64.446400] (-) TimerEvent: {}
+[64.548144] (-) TimerEvent: {}
+[64.649741] (-) TimerEvent: {}
+[64.752047] (-) TimerEvent: {}
+[64.854392] (-) TimerEvent: {}
+[64.956563] (-) TimerEvent: {}
+[65.059805] (-) TimerEvent: {}
+[65.162512] (-) TimerEvent: {}
+[65.264396] (-) TimerEvent: {}
+[65.366091] (-) TimerEvent: {}
+[65.468244] (-) TimerEvent: {}
+[65.570379] (-) TimerEvent: {}
+[65.672339] (-) TimerEvent: {}
+[65.774439] (-) TimerEvent: {}
+[65.875841] (-) TimerEvent: {}
+[65.978407] (-) TimerEvent: {}
+[66.080084] (-) TimerEvent: {}
+[66.181602] (-) TimerEvent: {}
+[66.283018] (-) TimerEvent: {}
+[66.384570] (-) TimerEvent: {}
+[66.486282] (-) TimerEvent: {}
+[66.588115] (-) TimerEvent: {}
+[66.689826] (-) TimerEvent: {}
+[66.791910] (-) TimerEvent: {}
+[66.893980] (-) TimerEvent: {}
+[66.996311] (-) TimerEvent: {}
+[67.098366] (-) TimerEvent: {}
+[67.200256] (-) TimerEvent: {}
+[67.302433] (-) TimerEvent: {}
+[67.404217] (-) TimerEvent: {}
+[67.506323] (-) TimerEvent: {}
+[67.609569] (-) TimerEvent: {}
+[67.711891] (-) TimerEvent: {}
+[67.813734] (-) TimerEvent: {}
+[67.915106] (-) TimerEvent: {}
+[68.017536] (-) TimerEvent: {}
+[68.119756] (-) TimerEvent: {}
+[68.221836] (-) TimerEvent: {}
+[68.325756] (-) TimerEvent: {}
+[68.429094] (-) TimerEvent: {}
+[68.531925] (-) TimerEvent: {}
+[68.634155] (-) TimerEvent: {}
+[68.736617] (-) TimerEvent: {}
+[68.838803] (-) TimerEvent: {}
+[68.941226] (-) TimerEvent: {}
+[69.042919] (-) TimerEvent: {}
+[69.144695] (-) TimerEvent: {}
+[69.246992] (-) TimerEvent: {}
+[69.349025] (-) TimerEvent: {}
+[69.450600] (-) TimerEvent: {}
+[69.553626] (-) TimerEvent: {}
+[69.656005] (-) TimerEvent: {}
+[69.757577] (-) TimerEvent: {}
+[69.859364] (-) TimerEvent: {}
+[69.961769] (-) TimerEvent: {}
+[70.063679] (-) TimerEvent: {}
+[70.166449] (-) TimerEvent: {}
+[70.269579] (-) TimerEvent: {}
+[70.373089] (-) TimerEvent: {}
+[70.475747] (-) TimerEvent: {}
+[70.578535] (-) TimerEvent: {}
+[70.681361] (-) TimerEvent: {}
+[70.783992] (-) TimerEvent: {}
+[70.886669] (-) TimerEvent: {}
+[70.989983] (-) TimerEvent: {}
+[71.093071] (-) TimerEvent: {}
+[71.196047] (-) TimerEvent: {}
+[71.299231] (-) TimerEvent: {}
+[71.401211] (-) TimerEvent: {}
+[71.504052] (-) TimerEvent: {}
+[71.606528] (-) TimerEvent: {}
+[71.709686] (-) TimerEvent: {}
+[71.812076] (-) TimerEvent: {}
+[71.914574] (-) TimerEvent: {}
+[72.017030] (-) TimerEvent: {}
+[72.120428] (-) TimerEvent: {}
+[72.223110] (-) TimerEvent: {}
+[72.325685] (-) TimerEvent: {}
+[72.428032] (-) TimerEvent: {}
+[72.530286] (-) TimerEvent: {}
+[72.632088] (-) TimerEvent: {}
+[72.735190] (-) TimerEvent: {}
+[72.838173] (-) TimerEvent: {}
+[72.940632] (-) TimerEvent: {}
+[73.043286] (-) TimerEvent: {}
+[73.145378] (-) TimerEvent: {}
+[73.247232] (-) TimerEvent: {}
+[73.348942] (-) TimerEvent: {}
+[73.450926] (-) TimerEvent: {}
+[73.553388] (-) TimerEvent: {}
+[73.655339] (-) TimerEvent: {}
+[73.672270] (amr_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[73.748331] (amr_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[73.755599] (-) TimerEvent: {}
+[73.758571] (amr_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[73.843855] (amr_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[73.847279] (amr_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[73.850373] (amr_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[73.853384] (amr_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[73.856005] (-) TimerEvent: {}
+[73.900514] (amr_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[73.957069] (-) TimerEvent: {}
+[74.060344] (-) TimerEvent: {}
+[74.162949] (-) TimerEvent: {}
+[74.266083] (-) TimerEvent: {}
+[74.369239] (-) TimerEvent: {}
+[74.472068] (-) TimerEvent: {}
+[74.575341] (-) TimerEvent: {}
+[74.678848] (-) TimerEvent: {}
+[74.782731] (-) TimerEvent: {}
+[74.885794] (-) TimerEvent: {}
+[74.988562] (-) TimerEvent: {}
+[75.090973] (-) TimerEvent: {}
+[75.193026] (-) TimerEvent: {}
+[75.296149] (-) TimerEvent: {}
+[75.399182] (-) TimerEvent: {}
+[75.500654] (-) TimerEvent: {}
+[75.602593] (-) TimerEvent: {}
+[75.704655] (-) TimerEvent: {}
+[75.807231] (-) TimerEvent: {}
+[75.910542] (-) TimerEvent: {}
+[76.013082] (-) TimerEvent: {}
+[76.114669] (-) TimerEvent: {}
+[76.216673] (-) TimerEvent: {}
+[76.318387] (-) TimerEvent: {}
+[76.419825] (-) TimerEvent: {}
+[76.521442] (-) TimerEvent: {}
+[76.623427] (-) TimerEvent: {}
+[76.726444] (-) TimerEvent: {}
+[76.829662] (-) TimerEvent: {}
+[76.931773] (-) TimerEvent: {}
+[77.033620] (-) TimerEvent: {}
+[77.136151] (-) TimerEvent: {}
+[77.238937] (-) TimerEvent: {}
+[77.341551] (-) TimerEvent: {}
+[77.443978] (-) TimerEvent: {}
+[77.546708] (-) TimerEvent: {}
+[77.648846] (-) TimerEvent: {}
+[77.750600] (-) TimerEvent: {}
+[77.852502] (-) TimerEvent: {}
+[77.954466] (-) TimerEvent: {}
+[78.056617] (-) TimerEvent: {}
+[78.159080] (-) TimerEvent: {}
+[78.261415] (-) TimerEvent: {}
+[78.363582] (-) TimerEvent: {}
+[78.466803] (-) TimerEvent: {}
+[78.568815] (-) TimerEvent: {}
+[78.670900] (-) TimerEvent: {}
+[78.772792] (-) TimerEvent: {}
+[78.875552] (-) TimerEvent: {}
+[78.978165] (-) TimerEvent: {}
+[79.080847] (-) TimerEvent: {}
+[79.182747] (-) TimerEvent: {}
+[79.284403] (-) TimerEvent: {}
+[79.386369] (-) TimerEvent: {}
+[79.487941] (-) TimerEvent: {}
+[79.589567] (-) TimerEvent: {}
+[79.691745] (-) TimerEvent: {}
+[79.793570] (-) TimerEvent: {}
+[79.895227] (-) TimerEvent: {}
+[79.997319] (-) TimerEvent: {}
+[80.099300] (-) TimerEvent: {}
+[80.201700] (-) TimerEvent: {}
+[80.303579] (-) TimerEvent: {}
+[80.405564] (-) TimerEvent: {}
+[80.507621] (-) TimerEvent: {}
+[80.609513] (-) TimerEvent: {}
+[80.711104] (-) TimerEvent: {}
+[80.812412] (-) TimerEvent: {}
+[80.914262] (-) TimerEvent: {}
+[81.015810] (-) TimerEvent: {}
+[81.117025] (-) TimerEvent: {}
+[81.218427] (-) TimerEvent: {}
+[81.320446] (-) TimerEvent: {}
+[81.422912] (-) TimerEvent: {}
+[81.524605] (-) TimerEvent: {}
+[81.625794] (-) TimerEvent: {}
+[81.727368] (-) TimerEvent: {}
+[81.829586] (-) TimerEvent: {}
+[81.932104] (-) TimerEvent: {}
+[82.034770] (-) TimerEvent: {}
+[82.136722] (-) TimerEvent: {}
+[82.238483] (-) TimerEvent: {}
+[82.340013] (-) TimerEvent: {}
+[82.442280] (-) TimerEvent: {}
+[82.543803] (-) TimerEvent: {}
+[82.645975] (-) TimerEvent: {}
+[82.748465] (-) TimerEvent: {}
+[82.850649] (-) TimerEvent: {}
+[82.953533] (-) TimerEvent: {}
+[83.003953] (amr_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[83.053696] (-) TimerEvent: {}
+[83.155396] (-) TimerEvent: {}
+[83.257733] (-) TimerEvent: {}
+[83.360110] (-) TimerEvent: {}
+[83.462046] (-) TimerEvent: {}
+[83.563391] (-) TimerEvent: {}
+[83.664745] (-) TimerEvent: {}
+[83.766702] (-) TimerEvent: {}
+[83.868450] (-) TimerEvent: {}
+[83.970665] (-) TimerEvent: {}
+[84.073163] (-) TimerEvent: {}
+[84.174810] (-) TimerEvent: {}
+[84.277265] (-) TimerEvent: {}
+[84.379625] (-) TimerEvent: {}
+[84.481356] (-) TimerEvent: {}
+[84.583355] (-) TimerEvent: {}
+[84.685372] (-) TimerEvent: {}
+[84.787031] (-) TimerEvent: {}
+[84.889111] (-) TimerEvent: {}
+[84.992026] (-) TimerEvent: {}
+[85.094417] (-) TimerEvent: {}
+[85.197041] (-) TimerEvent: {}
+[85.299334] (-) TimerEvent: {}
+[85.401179] (-) TimerEvent: {}
+[85.503493] (-) TimerEvent: {}
+[85.605146] (-) TimerEvent: {}
+[85.707064] (-) TimerEvent: {}
+[85.808891] (-) TimerEvent: {}
+[85.910874] (-) TimerEvent: {}
+[86.012664] (-) TimerEvent: {}
+[86.114483] (-) TimerEvent: {}
+[86.216534] (-) TimerEvent: {}
+[86.223995] (amr_msgs) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[86.318662] (-) TimerEvent: {}
+[86.420279] (-) TimerEvent: {}
+[86.521610] (-) TimerEvent: {}
+[86.623257] (-) TimerEvent: {}
+[86.724792] (-) TimerEvent: {}
+[86.826344] (-) TimerEvent: {}
+[86.927911] (-) TimerEvent: {}
+[87.029589] (-) TimerEvent: {}
+[87.131448] (-) TimerEvent: {}
+[87.233427] (-) TimerEvent: {}
+[87.335488] (-) TimerEvent: {}
+[87.437409] (-) TimerEvent: {}
+[87.538936] (-) TimerEvent: {}
+[87.640271] (-) TimerEvent: {}
+[87.741910] (-) TimerEvent: {}
+[87.843618] (-) TimerEvent: {}
+[87.944924] (-) TimerEvent: {}
+[88.046407] (-) TimerEvent: {}
+[88.148124] (-) TimerEvent: {}
+[88.250090] (-) TimerEvent: {}
+[88.351580] (-) TimerEvent: {}
+[88.453866] (-) TimerEvent: {}
+[88.551592] (amr_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[88.554976] (-) TimerEvent: {}
+[88.656382] (-) TimerEvent: {}
+[88.758489] (-) TimerEvent: {}
+[88.860150] (-) TimerEvent: {}
+[88.961702] (-) TimerEvent: {}
+[89.063187] (-) TimerEvent: {}
+[89.164823] (-) TimerEvent: {}
+[89.266474] (-) TimerEvent: {}
+[89.368188] (-) TimerEvent: {}
+[89.470270] (-) TimerEvent: {}
+[89.571981] (-) TimerEvent: {}
+[89.673508] (-) TimerEvent: {}
+[89.775405] (-) TimerEvent: {}
+[89.779299] (amr_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[89.875731] (-) TimerEvent: {}
+[89.977535] (-) TimerEvent: {}
+[90.079472] (-) TimerEvent: {}
+[90.181606] (-) TimerEvent: {}
+[90.283742] (-) TimerEvent: {}
+[90.385762] (-) TimerEvent: {}
+[90.487822] (-) TimerEvent: {}
+[90.590142] (-) TimerEvent: {}
+[90.692771] (-) TimerEvent: {}
+[90.794838] (-) TimerEvent: {}
+[90.896821] (-) TimerEvent: {}
+[90.998363] (-) TimerEvent: {}
+[91.100546] (-) TimerEvent: {}
+[91.202334] (-) TimerEvent: {}
+[91.304020] (-) TimerEvent: {}
+[91.405586] (-) TimerEvent: {}
+[91.507415] (-) TimerEvent: {}
+[91.609071] (-) TimerEvent: {}
+[91.710669] (-) TimerEvent: {}
+[91.812550] (-) TimerEvent: {}
+[91.914399] (-) TimerEvent: {}
+[91.993776] (amr_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[92.014881] (-) TimerEvent: {}
+[92.116764] (-) TimerEvent: {}
+[92.219100] (-) TimerEvent: {}
+[92.320896] (-) TimerEvent: {}
+[92.422368] (-) TimerEvent: {}
+[92.523984] (-) TimerEvent: {}
+[92.625577] (-) TimerEvent: {}
+[92.726925] (-) TimerEvent: {}
+[92.828397] (-) TimerEvent: {}
+[92.929957] (-) TimerEvent: {}
+[93.031598] (-) TimerEvent: {}
+[93.133901] (-) TimerEvent: {}
+[93.235691] (-) TimerEvent: {}
+[93.337246] (-) TimerEvent: {}
+[93.439189] (-) TimerEvent: {}
+[93.540970] (-) TimerEvent: {}
+[93.643269] (-) TimerEvent: {}
+[93.745453] (-) TimerEvent: {}
+[93.847989] (-) TimerEvent: {}
+[93.950160] (-) TimerEvent: {}
+[94.052719] (-) TimerEvent: {}
+[94.154935] (-) TimerEvent: {}
+[94.256894] (-) TimerEvent: {}
+[94.359190] (-) TimerEvent: {}
+[94.461873] (-) TimerEvent: {}
+[94.563713] (-) TimerEvent: {}
+[94.665621] (-) TimerEvent: {}
+[94.767782] (-) TimerEvent: {}
+[94.869510] (-) TimerEvent: {}
+[94.972345] (-) TimerEvent: {}
+[95.074846] (-) TimerEvent: {}
+[95.177163] (-) TimerEvent: {}
+[95.278709] (-) TimerEvent: {}
+[95.380704] (-) TimerEvent: {}
+[95.482635] (-) TimerEvent: {}
+[95.584362] (-) TimerEvent: {}
+[95.686204] (-) TimerEvent: {}
+[95.788376] (-) TimerEvent: {}
+[95.890407] (-) TimerEvent: {}
+[95.992136] (-) TimerEvent: {}
+[96.094284] (-) TimerEvent: {}
+[96.195690] (-) TimerEvent: {}
+[96.297292] (-) TimerEvent: {}
+[96.398942] (-) TimerEvent: {}
+[96.500512] (-) TimerEvent: {}
+[96.602406] (-) TimerEvent: {}
+[96.704165] (-) TimerEvent: {}
+[96.806428] (-) TimerEvent: {}
+[96.908531] (-) TimerEvent: {}
+[97.009980] (-) TimerEvent: {}
+[97.111530] (-) TimerEvent: {}
+[97.214253] (-) TimerEvent: {}
+[97.316809] (-) TimerEvent: {}
+[97.419143] (-) TimerEvent: {}
+[97.521364] (-) TimerEvent: {}
+[97.623485] (-) TimerEvent: {}
+[97.725834] (-) TimerEvent: {}
+[97.828713] (-) TimerEvent: {}
+[97.930691] (-) TimerEvent: {}
+[98.033080] (-) TimerEvent: {}
+[98.135458] (-) TimerEvent: {}
+[98.238165] (-) TimerEvent: {}
+[98.340532] (-) TimerEvent: {}
+[98.442806] (-) TimerEvent: {}
+[98.544854] (-) TimerEvent: {}
+[98.646734] (-) TimerEvent: {}
+[98.748790] (-) TimerEvent: {}
+[98.851425] (-) TimerEvent: {}
+[98.954337] (-) TimerEvent: {}
+[99.056402] (-) TimerEvent: {}
+[99.158476] (-) TimerEvent: {}
+[99.259921] (-) TimerEvent: {}
+[99.362467] (-) TimerEvent: {}
+[99.465067] (-) TimerEvent: {}
+[99.567833] (-) TimerEvent: {}
+[99.669710] (-) TimerEvent: {}
+[99.772085] (-) TimerEvent: {}
+[99.873694] (-) TimerEvent: {}
+[99.977090] (-) TimerEvent: {}
+[100.079280] (-) TimerEvent: {}
+[100.181025] (-) TimerEvent: {}
+[100.283204] (-) TimerEvent: {}
+[100.385042] (-) TimerEvent: {}
+[100.440640] (amr_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[100.485515] (-) TimerEvent: {}
+[100.587181] (-) TimerEvent: {}
+[100.691810] (-) TimerEvent: {}
+[100.793341] (-) TimerEvent: {}
+[100.894803] (-) TimerEvent: {}
+[100.997061] (-) TimerEvent: {}
+[101.099528] (-) TimerEvent: {}
+[101.201157] (-) TimerEvent: {}
+[101.303055] (-) TimerEvent: {}
+[101.405223] (-) TimerEvent: {}
+[101.507675] (-) TimerEvent: {}
+[101.609750] (-) TimerEvent: {}
+[101.712475] (-) TimerEvent: {}
+[101.814390] (-) TimerEvent: {}
+[101.916266] (-) TimerEvent: {}
+[102.018310] (-) TimerEvent: {}
+[102.121222] (-) TimerEvent: {}
+[102.223291] (-) TimerEvent: {}
+[102.325898] (-) TimerEvent: {}
+[102.428968] (-) TimerEvent: {}
+[102.531240] (-) TimerEvent: {}
+[102.634048] (-) TimerEvent: {}
+[102.736716] (-) TimerEvent: {}
+[102.839766] (-) TimerEvent: {}
+[102.942354] (-) TimerEvent: {}
+[103.044438] (-) TimerEvent: {}
+[103.147444] (-) TimerEvent: {}
+[103.249701] (-) TimerEvent: {}
+[103.351685] (-) TimerEvent: {}
+[103.454625] (-) TimerEvent: {}
+[103.556249] (-) TimerEvent: {}
+[103.659251] (-) TimerEvent: {}
+[103.761867] (-) TimerEvent: {}
+[103.864648] (-) TimerEvent: {}
+[103.967273] (-) TimerEvent: {}
+[104.070455] (-) TimerEvent: {}
+[104.172097] (-) TimerEvent: {}
+[104.256340] (amr_msgs) StdoutLine: {'line': b'-- Build files have been written to: /workspaces/amr_ws/src/build/amr_msgs\n'}
+[104.272428] (-) TimerEvent: {}
+[104.285854] (amr_msgs) CommandEnded: {'returncode': 0}
+[104.302312] (amr_msgs) JobProgress: {'identifier': 'amr_msgs', 'progress': 'build'}
+[104.321776] (amr_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspaces/amr_ws/src/build/amr_msgs', '--', '-j12', '-l12'], 'cwd': '/workspaces/amr_ws/src/build/amr_msgs', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('HOSTNAME', 'humble'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/bin/helpers/browser.sh'), ('HOME', '/home/ros'), ('OLDPWD', '/workspaces/amr_ws'), ('TERM_PROGRAM_VERSION', '1.108.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-dd0fea95-e217-4a61-937a-0386aa99568f.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('WAYLAND_DISPLAY', 'vscode-wayland-b4e83e19-6220-4ced-9c64-35eaf5abf0ef.sock'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-437ba7c6-c449-40f6-9493-c3108ccab163.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/tmp/user/1000'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/.X11-unix/X5","/home/ros/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':5'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-e3d230fdb7b95ebd.txt'), ('LANG', 'C.UTF-8'), ('PYTHONSTARTUP', '/home/ros/.vscode-server/data/User/workspaceStorage/9443f1eff74ed665d8e8109805ee5a51/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/user/1000/vscode-git-842091ba8a.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X5'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/amr_ws/src/build/amr_msgs'), ('LC_ALL', 'C.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[104.372753] (-) TimerEvent: {}
+[104.474870] (-) TimerEvent: {}
+[104.576926] (-) TimerEvent: {}
+[104.679338] (-) TimerEvent: {}
+[104.781914] (-) TimerEvent: {}
+[104.884062] (-) TimerEvent: {}
+[104.986495] (-) TimerEvent: {}
+[105.088376] (-) TimerEvent: {}
+[105.190458] (-) TimerEvent: {}
+[105.233351] (amr_msgs) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[105.288475] (amr_msgs) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_symlink_amr_msgs\n'}
+[105.291763] (-) TimerEvent: {}
+[105.325355] (amr_msgs) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[105.392137] (-) TimerEvent: {}
+[105.493642] (-) TimerEvent: {}
+[105.594936] (-) TimerEvent: {}
+[105.696495] (-) TimerEvent: {}
+[105.801312] (-) TimerEvent: {}
+[105.902568] (-) TimerEvent: {}
+[106.003897] (-) TimerEvent: {}
+[106.105770] (-) TimerEvent: {}
+[106.207193] (-) TimerEvent: {}
+[106.269106] (amr_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[106.273039] (amr_msgs) StdoutLine: {'line': b'creating amr_msgs.egg-info\n'}
+[106.280732] (amr_msgs) StdoutLine: {'line': b'writing amr_msgs.egg-info/PKG-INFO\n'}
+[106.295783] (amr_msgs) StdoutLine: {'line': b'writing dependency_links to amr_msgs.egg-info/dependency_links.txt\n'}
+[106.307578] (-) TimerEvent: {}
+[106.324683] (amr_msgs) StdoutLine: {'line': b'writing top-level names to amr_msgs.egg-info/top_level.txt\n'}
+[106.344171] (amr_msgs) StdoutLine: {'line': b"writing manifest file 'amr_msgs.egg-info/SOURCES.txt'\n"}
+[106.409471] (-) TimerEvent: {}
+[106.485889] (amr_msgs) StdoutLine: {'line': b"reading manifest file 'amr_msgs.egg-info/SOURCES.txt'\n"}
+[106.509840] (-) TimerEvent: {}
+[106.593751] (amr_msgs) StdoutLine: {'line': b"writing manifest file 'amr_msgs.egg-info/SOURCES.txt'\n"}
+[106.610282] (-) TimerEvent: {}
+[106.712320] (-) TimerEvent: {}
+[106.779206] (amr_msgs) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_build_amr_msgs_egg\n'}
+[106.812541] (-) TimerEvent: {}
+[106.870527] (amr_msgs) StdoutLine: {'line': b'[  5%] Built target amr_msgs__cpp\n'}
+[106.913019] (-) TimerEvent: {}
+[107.015042] (-) TimerEvent: {}
+[107.052125] (amr_msgs) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[107.055660] (amr_msgs) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[107.058817] (amr_msgs) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[107.115296] (-) TimerEvent: {}
+[107.216749] (-) TimerEvent: {}
+[107.240066] (amr_msgs) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/amr_msgs__rosidl_generator_c.dir/rosidl_generator_c/amr_msgs/msg/detail/pose_stamped__functions.c.o\x1b[0m\n'}
+[107.262460] (amr_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/amr_msgs__rosidl_generator_c.dir/rosidl_generator_c/amr_msgs/msg/detail/range_scan__functions.c.o\x1b[0m\n'}
+[107.317086] (-) TimerEvent: {}
+[107.419041] (-) TimerEvent: {}
+[107.520933] (-) TimerEvent: {}
+[107.623101] (-) TimerEvent: {}
+[107.724901] (-) TimerEvent: {}
+[107.826368] (-) TimerEvent: {}
+[107.926314] (amr_msgs) StdoutLine: {'line': b'[ 20%] \x1b[32m\x1b[1mLinking C shared library libamr_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[107.930351] (-) TimerEvent: {}
+[108.031842] (-) TimerEvent: {}
+[108.133137] (-) TimerEvent: {}
+[108.151907] (amr_msgs) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/amr_msgs/msg/pose_stamped__type_support.cpp.o\x1b[0m\n'}
+[108.156074] (amr_msgs) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/amr_msgs/msg/range_scan__type_support.cpp.o\x1b[0m\n'}
+[108.233465] (-) TimerEvent: {}
+[108.335046] (-) TimerEvent: {}
+[108.375414] (amr_msgs) StdoutLine: {'line': b'[ 25%] Built target amr_msgs__rosidl_generator_c\n'}
+[108.416453] (amr_msgs) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/amr_msgs/msg/detail/pose_stamped__type_support.cpp.o\x1b[0m\n'}
+[108.435439] (-) TimerEvent: {}
+[108.448510] (amr_msgs) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/amr_msgs/msg/detail/range_scan__type_support.cpp.o\x1b[0m\n'}
+[108.483363] (amr_msgs) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/amr_msgs/msg/detail/dds_fastrtps/pose_stamped__type_support.cpp.o\x1b[0m\n'}
+[108.524905] (amr_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/amr_msgs/msg/detail/dds_fastrtps/range_scan__type_support.cpp.o\x1b[0m\n'}
+[108.535743] (-) TimerEvent: {}
+[108.544948] (amr_msgs) StdoutLine: {'line': b'[ 43%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[108.552242] (amr_msgs) StdoutLine: {'line': b'[ 43%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[108.555975] (amr_msgs) StdoutLine: {'line': b'[ 43%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[108.635998] (-) TimerEvent: {}
+[108.737601] (-) TimerEvent: {}
+[108.839159] (-) TimerEvent: {}
+[108.940616] (-) TimerEvent: {}
+[109.041888] (-) TimerEvent: {}
+[109.143709] (-) TimerEvent: {}
+[109.247606] (-) TimerEvent: {}
+[109.349728] (-) TimerEvent: {}
+[109.451687] (-) TimerEvent: {}
+[109.553280] (-) TimerEvent: {}
+[109.654666] (-) TimerEvent: {}
+[109.755898] (-) TimerEvent: {}
+[109.857367] (-) TimerEvent: {}
+[109.959013] (-) TimerEvent: {}
+[110.060278] (-) TimerEvent: {}
+[110.163011] (-) TimerEvent: {}
+[110.265420] (-) TimerEvent: {}
+[110.368030] (-) TimerEvent: {}
+[110.475465] (-) TimerEvent: {}
+[110.542782] (amr_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/amr_msgs/msg/pose_stamped__type_support.cpp.o\x1b[0m\n'}
+[110.568233] (amr_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/amr_msgs/msg/range_scan__type_support.cpp.o\x1b[0m\n'}
+[110.575768] (-) TimerEvent: {}
+[110.679285] (-) TimerEvent: {}
+[110.789360] (-) TimerEvent: {}
+[110.891837] (-) TimerEvent: {}
+[110.984546] (amr_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding C object CMakeFiles/amr_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/amr_msgs/msg/detail/pose_stamped__type_support.c.o\x1b[0m\n'}
+[110.991677] (amr_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding C object CMakeFiles/amr_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/amr_msgs/msg/detail/range_scan__type_support.c.o\x1b[0m\n'}
+[110.996189] (-) TimerEvent: {}
+[111.034628] (amr_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/amr_msgs/msg/detail/pose_stamped__type_support_c.cpp.o\x1b[0m\n'}
+[111.043175] (amr_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking CXX shared library libamr_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[111.070716] (amr_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/amr_msgs/msg/detail/range_scan__type_support_c.cpp.o\x1b[0m\n'}
+[111.096464] (-) TimerEvent: {}
+[111.198574] (-) TimerEvent: {}
+[111.230579] (amr_msgs) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX shared library libamr_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[111.298803] (-) TimerEvent: {}
+[111.400108] (-) TimerEvent: {}
+[111.503809] (-) TimerEvent: {}
+[111.605345] (-) TimerEvent: {}
+[111.707389] (-) TimerEvent: {}
+[111.809991] (-) TimerEvent: {}
+[111.905077] (amr_msgs) StdoutLine: {'line': b'[ 64%] Built target amr_msgs__rosidl_typesupport_cpp\n'}
+[111.910359] (-) TimerEvent: {}
+[111.964648] (amr_msgs) StdoutLine: {'line': b'[ 64%] Built target amr_msgs__rosidl_typesupport_c\n'}
+[112.010661] (-) TimerEvent: {}
+[112.112108] (-) TimerEvent: {}
+[112.213726] (-) TimerEvent: {}
+[112.219359] (amr_msgs) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking C shared library libamr_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[112.313941] (-) TimerEvent: {}
+[112.415532] (-) TimerEvent: {}
+[112.517292] (-) TimerEvent: {}
+[112.618914] (-) TimerEvent: {}
+[112.705716] (amr_msgs) StdoutLine: {'line': b'[ 69%] \x1b[32m\x1b[1mLinking CXX shared library libamr_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[112.719140] (-) TimerEvent: {}
+[112.750875] (amr_msgs) StdoutLine: {'line': b'[ 69%] Built target amr_msgs__rosidl_typesupport_introspection_c\n'}
+[112.819382] (-) TimerEvent: {}
+[112.909469] (amr_msgs) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX shared library libamr_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[112.919637] (-) TimerEvent: {}
+[113.020838] (-) TimerEvent: {}
+[113.122466] (-) TimerEvent: {}
+[113.224115] (-) TimerEvent: {}
+[113.321311] (amr_msgs) StdoutLine: {'line': b'[ 71%] Built target amr_msgs__rosidl_typesupport_introspection_cpp\n'}
+[113.324303] (-) TimerEvent: {}
+[113.425384] (-) TimerEvent: {}
+[113.526875] (-) TimerEvent: {}
+[113.595619] (amr_msgs) StdoutLine: {'line': b'[ 74%] Built target amr_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[113.600106] (amr_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX shared library libamr_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[113.627176] (-) TimerEvent: {}
+[113.728596] (-) TimerEvent: {}
+[113.829978] (-) TimerEvent: {}
+[113.931572] (-) TimerEvent: {}
+[114.032889] (-) TimerEvent: {}
+[114.134374] (-) TimerEvent: {}
+[114.145306] (amr_msgs) StdoutLine: {'line': b'[ 74%] Built target amr_msgs__rosidl_typesupport_fastrtps_c\n'}
+[114.234783] (-) TimerEvent: {}
+[114.336331] (-) TimerEvent: {}
+[114.432033] (amr_msgs) StdoutLine: {'line': b'[ 74%] Built target amr_msgs\n'}
+[114.436528] (-) TimerEvent: {}
+[114.538035] (-) TimerEvent: {}
+[114.639173] (-) TimerEvent: {}
+[114.678390] (amr_msgs) StdoutLine: {'line': b'[ 76%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[114.739320] (-) TimerEvent: {}
+[114.840505] (-) TimerEvent: {}
+[114.942011] (-) TimerEvent: {}
+[115.043626] (-) TimerEvent: {}
+[115.145368] (-) TimerEvent: {}
+[115.246933] (-) TimerEvent: {}
+[115.348659] (-) TimerEvent: {}
+[115.450316] (-) TimerEvent: {}
+[115.551913] (-) TimerEvent: {}
+[115.653443] (-) TimerEvent: {}
+[115.754868] (-) TimerEvent: {}
+[115.856171] (-) TimerEvent: {}
+[115.957660] (-) TimerEvent: {}
+[115.964785] (amr_msgs) StdoutLine: {'line': b'[ 76%] Built target amr_msgs__py\n'}
+[116.058005] (-) TimerEvent: {}
+[116.160032] (-) TimerEvent: {}
+[116.262350] (-) TimerEvent: {}
+[116.334236] (amr_msgs) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding C object CMakeFiles/amr_msgs__rosidl_generator_py.dir/rosidl_generator_py/amr_msgs/msg/_pose_stamped_s.c.o\x1b[0m\n'}
+[116.351905] (amr_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/amr_msgs__rosidl_generator_py.dir/rosidl_generator_py/amr_msgs/msg/_range_scan_s.c.o\x1b[0m\n'}
+[116.362723] (-) TimerEvent: {}
+[116.464097] (-) TimerEvent: {}
+[116.565347] (-) TimerEvent: {}
+[116.666596] (-) TimerEvent: {}
+[116.767914] (-) TimerEvent: {}
+[116.869276] (-) TimerEvent: {}
+[116.970685] (-) TimerEvent: {}
+[117.072052] (-) TimerEvent: {}
+[117.173200] (-) TimerEvent: {}
+[117.274506] (-) TimerEvent: {}
+[117.367524] (amr_msgs) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/amr_msgs/libamr_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[117.374795] (-) TimerEvent: {}
+[117.477089] (-) TimerEvent: {}
+[117.579632] (-) TimerEvent: {}
+[117.681211] (-) TimerEvent: {}
+[117.782522] (-) TimerEvent: {}
+[117.884540] (-) TimerEvent: {}
+[117.986461] (-) TimerEvent: {}
+[118.036080] (amr_msgs) StdoutLine: {'line': b'[ 84%] Built target amr_msgs__rosidl_generator_py\n'}
+[118.086867] (-) TimerEvent: {}
+[118.188321] (-) TimerEvent: {}
+[118.242505] (amr_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/amr_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/amr_msgs/_amr_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[118.246766] (amr_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/amr_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/amr_msgs/_amr_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[118.263275] (amr_msgs) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/amr_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/amr_msgs/_amr_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[118.288632] (-) TimerEvent: {}
+[118.390422] (-) TimerEvent: {}
+[118.491671] (-) TimerEvent: {}
+[118.593183] (-) TimerEvent: {}
+[118.696566] (-) TimerEvent: {}
+[118.798462] (-) TimerEvent: {}
+[118.901423] (-) TimerEvent: {}
+[119.003356] (-) TimerEvent: {}
+[119.105291] (-) TimerEvent: {}
+[119.207069] (-) TimerEvent: {}
+[119.308947] (-) TimerEvent: {}
+[119.411214] (-) TimerEvent: {}
+[119.512306] (-) TimerEvent: {}
+[119.614028] (-) TimerEvent: {}
+[119.620970] (amr_msgs) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/amr_msgs/amr_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[119.714360] (-) TimerEvent: {}
+[119.800816] (amr_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/amr_msgs/amr_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[119.808098] (amr_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/amr_msgs/amr_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[119.814604] (-) TimerEvent: {}
+[119.915942] (-) TimerEvent: {}
+[120.017930] (-) TimerEvent: {}
+[120.119626] (-) TimerEvent: {}
+[120.200528] (amr_msgs) StdoutLine: {'line': b'[100%] Built target amr_msgs__rosidl_typesupport_c__pyext\n'}
+[120.219911] (-) TimerEvent: {}
+[120.236452] (amr_msgs) StdoutLine: {'line': b'[100%] Built target amr_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[120.239936] (amr_msgs) StdoutLine: {'line': b'[100%] Built target amr_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[120.320400] (-) TimerEvent: {}
+[120.422368] (-) TimerEvent: {}
+[120.523958] (-) TimerEvent: {}
+[120.626293] (-) TimerEvent: {}
+[120.728004] (-) TimerEvent: {}
+[120.830497] (-) TimerEvent: {}
+[120.932367] (-) TimerEvent: {}
+[120.940519] (amr_msgs) CommandEnded: {'returncode': 0}
+[121.027761] (amr_msgs) JobProgress: {'identifier': 'amr_msgs', 'progress': 'install'}
+[121.032758] (-) TimerEvent: {}
+[121.079540] (amr_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/workspaces/amr_ws/src/build/amr_msgs'], 'cwd': '/workspaces/amr_ws/src/build/amr_msgs', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('HOSTNAME', 'humble'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/bin/helpers/browser.sh'), ('HOME', '/home/ros'), ('OLDPWD', '/workspaces/amr_ws'), ('TERM_PROGRAM_VERSION', '1.108.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-dd0fea95-e217-4a61-937a-0386aa99568f.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('WAYLAND_DISPLAY', 'vscode-wayland-b4e83e19-6220-4ced-9c64-35eaf5abf0ef.sock'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-437ba7c6-c449-40f6-9493-c3108ccab163.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/tmp/user/1000'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/.X11-unix/X5","/home/ros/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':5'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-e3d230fdb7b95ebd.txt'), ('LANG', 'C.UTF-8'), ('PYTHONSTARTUP', '/home/ros/.vscode-server/data/User/workspaceStorage/9443f1eff74ed665d8e8109805ee5a51/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/user/1000/vscode-git-842091ba8a.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X5'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/amr_ws/src/build/amr_msgs'), ('LC_ALL', 'C.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[121.118229] (amr_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[121.133143] (-) TimerEvent: {}
+[121.163068] (amr_msgs) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[121.233858] (-) TimerEvent: {}
+[121.293263] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/ament_index/resource_index/rosidl_interfaces/amr_msgs\n'}
+[121.334142] (-) TimerEvent: {}
+[121.436477] (-) TimerEvent: {}
+[121.538520] (-) TimerEvent: {}
+[121.640284] (-) TimerEvent: {}
+[121.742844] (-) TimerEvent: {}
+[121.844520] (-) TimerEvent: {}
+[121.946645] (-) TimerEvent: {}
+[121.955082] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__functions.h\n'}
+[122.046894] (-) TimerEvent: {}
+[122.149201] (-) TimerEvent: {}
+[122.158979] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__struct.h\n'}
+[122.249565] (-) TimerEvent: {}
+[122.351428] (-) TimerEvent: {}
+[122.381817] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__type_support.h\n'}
+[122.451785] (-) TimerEvent: {}
+[122.553377] (-) TimerEvent: {}
+[122.558046] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__functions.h\n'}
+[122.653629] (-) TimerEvent: {}
+[122.739584] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__struct.h\n'}
+[122.754029] (-) TimerEvent: {}
+[122.855562] (-) TimerEvent: {}
+[122.899534] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__type_support.h\n'}
+[122.955783] (-) TimerEvent: {}
+[123.057441] (-) TimerEvent: {}
+[123.096260] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/pose_stamped.h\n'}
+[123.158060] (-) TimerEvent: {}
+[123.260355] (-) TimerEvent: {}
+[123.266565] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/range_scan.h\n'}
+[123.360869] (-) TimerEvent: {}
+[123.463133] (-) TimerEvent: {}
+[123.464959] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[123.563802] (-) TimerEvent: {}
+[123.665519] (-) TimerEvent: {}
+[123.689578] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/environment/library_path.sh\n'}
+[123.765992] (-) TimerEvent: {}
+[123.832433] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/environment/library_path.dsv\n'}
+[123.866262] (-) TimerEvent: {}
+[123.968092] (-) TimerEvent: {}
+[124.069796] (-) TimerEvent: {}
+[124.171569] (-) TimerEvent: {}
+[124.273472] (-) TimerEvent: {}
+[124.313318] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__rosidl_typesupport_fastrtps_c.h\n'}
+[124.373864] (-) TimerEvent: {}
+[124.475478] (-) TimerEvent: {}
+[124.518044] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__rosidl_typesupport_fastrtps_c.h\n'}
+[124.575932] (-) TimerEvent: {}
+[124.678532] (-) TimerEvent: {}
+[124.774517] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[124.779000] (-) TimerEvent: {}
+[124.881053] (-) TimerEvent: {}
+[124.983066] (-) TimerEvent: {}
+[125.085498] (-) TimerEvent: {}
+[125.137985] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__rosidl_typesupport_introspection_c.h\n'}
+[125.185723] (-) TimerEvent: {}
+[125.287607] (-) TimerEvent: {}
+[125.367414] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__rosidl_typesupport_introspection_c.h\n'}
+[125.388091] (-) TimerEvent: {}
+[125.490329] (-) TimerEvent: {}
+[125.565541] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[125.590630] (-) TimerEvent: {}
+[125.692653] (-) TimerEvent: {}
+[125.794241] (-) TimerEvent: {}
+[125.895908] (-) TimerEvent: {}
+[125.974428] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__builder.hpp\n'}
+[125.996247] (-) TimerEvent: {}
+[126.098319] (-) TimerEvent: {}
+[126.176790] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__struct.hpp\n'}
+[126.198775] (-) TimerEvent: {}
+[126.300195] (-) TimerEvent: {}
+[126.339902] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__traits.hpp\n'}
+[126.400532] (-) TimerEvent: {}
+[126.502414] (-) TimerEvent: {}
+[126.511202] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__type_support.hpp\n'}
+[126.602734] (-) TimerEvent: {}
+[126.668890] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__builder.hpp\n'}
+[126.702956] (-) TimerEvent: {}
+[126.804501] (-) TimerEvent: {}
+[126.844657] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__struct.hpp\n'}
+[126.905297] (-) TimerEvent: {}
+[127.007366] (-) TimerEvent: {}
+[127.057408] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__traits.hpp\n'}
+[127.107970] (-) TimerEvent: {}
+[127.210353] (-) TimerEvent: {}
+[127.259553] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__type_support.hpp\n'}
+[127.310600] (-) TimerEvent: {}
+[127.412667] (-) TimerEvent: {}
+[127.453908] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/pose_stamped.hpp\n'}
+[127.513037] (-) TimerEvent: {}
+[127.615002] (-) TimerEvent: {}
+[127.643702] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/range_scan.hpp\n'}
+[127.715231] (-) TimerEvent: {}
+[127.817031] (-) TimerEvent: {}
+[127.823603] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[127.917630] (-) TimerEvent: {}
+[128.019493] (-) TimerEvent: {}
+[128.120778] (-) TimerEvent: {}
+[128.222294] (-) TimerEvent: {}
+[128.324444] (-) TimerEvent: {}
+[128.387911] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[128.424817] (-) TimerEvent: {}
+[128.526609] (-) TimerEvent: {}
+[128.598807] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[128.626976] (-) TimerEvent: {}
+[128.729302] (-) TimerEvent: {}
+[128.770111] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[128.829889] (-) TimerEvent: {}
+[128.932243] (-) TimerEvent: {}
+[129.034930] (-) TimerEvent: {}
+[129.082048] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__rosidl_typesupport_introspection_cpp.hpp\n'}
+[129.135710] (-) TimerEvent: {}
+[129.237907] (-) TimerEvent: {}
+[129.323907] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__rosidl_typesupport_introspection_cpp.hpp\n'}
+[129.338260] (-) TimerEvent: {}
+[129.440572] (-) TimerEvent: {}
+[129.528412] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/environment/pythonpath.sh\n'}
+[129.540953] (-) TimerEvent: {}
+[129.642810] (-) TimerEvent: {}
+[129.705161] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/environment/pythonpath.dsv\n'}
+[129.743407] (-) TimerEvent: {}
+[129.845209] (-) TimerEvent: {}
+[129.948302] (-) TimerEvent: {}
+[130.049882] (-) TimerEvent: {}
+[130.152513] (-) TimerEvent: {}
+[130.225805] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs-1.0.0-py3.10.egg-info/PKG-INFO\n'}
+[130.253022] (-) TimerEvent: {}
+[130.356138] (-) TimerEvent: {}
+[130.459783] (-) TimerEvent: {}
+[130.532384] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs-1.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[130.560121] (-) TimerEvent: {}
+[130.661911] (-) TimerEvent: {}
+[130.737669] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs-1.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[130.762348] (-) TimerEvent: {}
+[130.864302] (-) TimerEvent: {}
+[130.933783] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs-1.0.0-py3.10.egg-info/top_level.txt\n'}
+[130.964734] (-) TimerEvent: {}
+[131.066609] (-) TimerEvent: {}
+[131.168486] (-) TimerEvent: {}
+[131.270697] (-) TimerEvent: {}
+[131.373047] (-) TimerEvent: {}
+[131.475212] (-) TimerEvent: {}
+[131.577020] (-) TimerEvent: {}
+[131.678745] (-) TimerEvent: {}
+[131.780467] (-) TimerEvent: {}
+[131.813268] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/__init__.py\n'}
+[131.881091] (-) TimerEvent: {}
+[131.983529] (-) TimerEvent: {}
+[132.022113] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/_amr_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[132.084239] (-) TimerEvent: {}
+[132.186531] (-) TimerEvent: {}
+[132.250579] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/_amr_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[132.287014] (-) TimerEvent: {}
+[132.389988] (-) TimerEvent: {}
+[132.492139] (-) TimerEvent: {}
+[132.506248] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/_amr_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[132.592493] (-) TimerEvent: {}
+[132.669016] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/amr_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[132.692858] (-) TimerEvent: {}
+[132.794673] (-) TimerEvent: {}
+[132.833075] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/amr_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[132.895232] (-) TimerEvent: {}
+[132.997224] (-) TimerEvent: {}
+[133.046488] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/amr_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[133.097578] (-) TimerEvent: {}
+[133.199112] (-) TimerEvent: {}
+[133.250822] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/libamr_msgs__rosidl_generator_py.so\n'}
+[133.299418] (-) TimerEvent: {}
+[133.401286] (-) TimerEvent: {}
+[133.503074] (-) TimerEvent: {}
+[133.554826] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg/__init__.py\n'}
+[133.603414] (-) TimerEvent: {}
+[133.705929] (-) TimerEvent: {}
+[133.807925] (-) TimerEvent: {}
+[133.858493] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg/_pose_stamped.py\n'}
+[133.908240] (-) TimerEvent: {}
+[134.009836] (-) TimerEvent: {}
+[134.059349] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg/_pose_stamped_s.c\n'}
+[134.110444] (-) TimerEvent: {}
+[134.212481] (-) TimerEvent: {}
+[134.273185] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg/_range_scan.py\n'}
+[134.312904] (-) TimerEvent: {}
+[134.415182] (-) TimerEvent: {}
+[134.507368] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg/_range_scan_s.c\n'}
+[134.515425] (-) TimerEvent: {}
+[134.617004] (-) TimerEvent: {}
+[134.719555] (-) TimerEvent: {}
+[134.796597] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/amr_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[134.819925] (-) TimerEvent: {}
+[134.921590] (-) TimerEvent: {}
+[134.951958] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/amr_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[135.022822] (-) TimerEvent: {}
+[135.125400] (-) TimerEvent: {}
+[135.138830] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/amr_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[135.226620] (-) TimerEvent: {}
+[135.253508] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/msg/PoseStamped.idl\n'}
+[135.327093] (-) TimerEvent: {}
+[135.428980] (-) TimerEvent: {}
+[135.435682] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/msg/RangeScan.idl\n'}
+[135.529382] (-) TimerEvent: {}
+[135.588545] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/msg/PoseStamped.msg\n'}
+[135.629883] (-) TimerEvent: {}
+[135.731354] (-) TimerEvent: {}
+[135.768578] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/msg/RangeScan.msg\n'}
+[135.831665] (-) TimerEvent: {}
+[135.933550] (-) TimerEvent: {}
+[135.956293] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/ament_index/resource_index/package_run_dependencies/amr_msgs\n'}
+[136.034479] (-) TimerEvent: {}
+[136.136907] (-) TimerEvent: {}
+[136.238895] (-) TimerEvent: {}
+[136.243680] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/ament_index/resource_index/parent_prefix_path/amr_msgs\n'}
+[136.339534] (-) TimerEvent: {}
+[136.441569] (-) TimerEvent: {}
+[136.470929] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/environment/ament_prefix_path.sh\n'}
+[136.542436] (-) TimerEvent: {}
+[136.602578] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/environment/ament_prefix_path.dsv\n'}
+[136.642824] (-) TimerEvent: {}
+[136.744575] (-) TimerEvent: {}
+[136.757540] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/environment/path.sh\n'}
+[136.844991] (-) TimerEvent: {}
+[136.892550] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/environment/path.dsv\n'}
+[136.945452] (-) TimerEvent: {}
+[137.047817] (-) TimerEvent: {}
+[137.067620] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/local_setup.bash\n'}
+[137.148148] (-) TimerEvent: {}
+[137.186695] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/local_setup.sh\n'}
+[137.248508] (-) TimerEvent: {}
+[137.333037] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/local_setup.zsh\n'}
+[137.349090] (-) TimerEvent: {}
+[137.451614] (-) TimerEvent: {}
+[137.522111] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/local_setup.dsv\n'}
+[137.552264] (-) TimerEvent: {}
+[137.655260] (-) TimerEvent: {}
+[137.690990] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/package.dsv\n'}
+[137.755577] (-) TimerEvent: {}
+[137.857587] (-) TimerEvent: {}
+[137.948801] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/ament_index/resource_index/packages/amr_msgs\n'}
+[137.957904] (-) TimerEvent: {}
+[138.060381] (-) TimerEvent: {}
+[138.163664] (-) TimerEvent: {}
+[138.245591] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[138.264052] (-) TimerEvent: {}
+[138.366323] (-) TimerEvent: {}
+[138.422083] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[138.466573] (-) TimerEvent: {}
+[138.568351] (-) TimerEvent: {}
+[138.570577] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[138.668733] (-) TimerEvent: {}
+[138.765394] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[138.772060] (-) TimerEvent: {}
+[138.874395] (-) TimerEvent: {}
+[138.962896] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[138.974767] (-) TimerEvent: {}
+[139.076550] (-) TimerEvent: {}
+[139.178833] (-) TimerEvent: {}
+[139.192300] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[139.279191] (-) TimerEvent: {}
+[139.336467] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[139.379472] (-) TimerEvent: {}
+[139.481905] (-) TimerEvent: {}
+[139.501675] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgsConfig.cmake\n'}
+[139.582381] (-) TimerEvent: {}
+[139.678147] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgsConfig-version.cmake\n'}
+[139.684430] (-) TimerEvent: {}
+[139.786628] (-) TimerEvent: {}
+[139.837827] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/package.xml\n'}
+[139.886930] (-) TimerEvent: {}
+[139.988915] (-) TimerEvent: {}
+[140.043567] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_generator_c.so\n'}
+[140.089401] (-) TimerEvent: {}
+[140.191868] (-) TimerEvent: {}
+[140.294988] (-) TimerEvent: {}
+[140.396817] (-) TimerEvent: {}
+[140.498706] (-) TimerEvent: {}
+[140.600280] (-) TimerEvent: {}
+[140.608161] (amr_msgs) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_generator_c.so" to ""\n'}
+[140.686829] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[140.700712] (-) TimerEvent: {}
+[140.803017] (-) TimerEvent: {}
+[140.904326] (-) TimerEvent: {}
+[141.005846] (-) TimerEvent: {}
+[141.107500] (-) TimerEvent: {}
+[141.109665] (amr_msgs) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[141.187261] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_introspection_c.so\n'}
+[141.207759] (-) TimerEvent: {}
+[141.309453] (-) TimerEvent: {}
+[141.411944] (-) TimerEvent: {}
+[141.513933] (-) TimerEvent: {}
+[141.613156] (amr_msgs) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[141.617784] (-) TimerEvent: {}
+[141.682831] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_c.so\n'}
+[141.718352] (-) TimerEvent: {}
+[141.820373] (-) TimerEvent: {}
+[141.922775] (-) TimerEvent: {}
+[142.024846] (-) TimerEvent: {}
+[142.127068] (-) TimerEvent: {}
+[142.137342] (amr_msgs) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_c.so" to ""\n'}
+[142.204433] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[142.227183] (-) TimerEvent: {}
+[142.329119] (-) TimerEvent: {}
+[142.431320] (-) TimerEvent: {}
+[142.500699] (amr_msgs) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[142.531666] (-) TimerEvent: {}
+[142.545642] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[142.631868] (-) TimerEvent: {}
+[142.733130] (-) TimerEvent: {}
+[142.813818] (amr_msgs) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[142.833426] (-) TimerEvent: {}
+[142.847887] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_cpp.so\n'}
+[142.933664] (-) TimerEvent: {}
+[143.035558] (-) TimerEvent: {}
+[143.136703] (-) TimerEvent: {}
+[143.157712] (amr_msgs) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[143.236905] (-) TimerEvent: {}
+[143.338897] (-) TimerEvent: {}
+[143.441208] (-) TimerEvent: {}
+[143.543242] (-) TimerEvent: {}
+[143.644457] (-) TimerEvent: {}
+[143.745950] (-) TimerEvent: {}
+[143.847457] (-) TimerEvent: {}
+[143.948900] (-) TimerEvent: {}
+[144.050379] (-) TimerEvent: {}
+[144.151552] (-) TimerEvent: {}
+[144.253489] (-) TimerEvent: {}
+[144.355423] (-) TimerEvent: {}
+[144.456727] (-) TimerEvent: {}
+[144.558501] (-) TimerEvent: {}
+[144.659949] (-) TimerEvent: {}
+[144.707301] (amr_msgs) StdoutLine: {'line': b"Listing '/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs'...\n"}
+[144.710644] (amr_msgs) StdoutLine: {'line': b"Compiling '/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/__init__.py'...\n"}
+[144.714215] (amr_msgs) StdoutLine: {'line': b"Listing '/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg'...\n"}
+[144.717170] (amr_msgs) StdoutLine: {'line': b"Compiling '/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg/__init__.py'...\n"}
+[144.719770] (amr_msgs) StdoutLine: {'line': b"Compiling '/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg/_pose_stamped.py'...\n"}
+[144.722120] (amr_msgs) StdoutLine: {'line': b"Compiling '/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg/_range_scan.py'...\n"}
+[144.760364] (-) TimerEvent: {}
+[144.774151] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_generator_py.so\n'}
+[144.860652] (-) TimerEvent: {}
+[144.961859] (-) TimerEvent: {}
+[145.063420] (-) TimerEvent: {}
+[145.097439] (amr_msgs) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_generator_py.so" to ""\n'}
+[145.163789] (-) TimerEvent: {}
+[145.188985] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_generator_cExport.cmake\n'}
+[145.264180] (-) TimerEvent: {}
+[145.365559] (-) TimerEvent: {}
+[145.467248] (-) TimerEvent: {}
+[145.541455] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[145.567705] (-) TimerEvent: {}
+[145.669391] (-) TimerEvent: {}
+[145.771031] (-) TimerEvent: {}
+[145.856370] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[145.871272] (-) TimerEvent: {}
+[145.972786] (-) TimerEvent: {}
+[146.075012] (-) TimerEvent: {}
+[146.176864] (-) TimerEvent: {}
+[146.227254] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[146.277299] (-) TimerEvent: {}
+[146.379050] (-) TimerEvent: {}
+[146.480808] (-) TimerEvent: {}
+[146.582463] (-) TimerEvent: {}
+[146.614146] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[146.682721] (-) TimerEvent: {}
+[146.784362] (-) TimerEvent: {}
+[146.866162] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[146.884620] (-) TimerEvent: {}
+[146.986163] (-) TimerEvent: {}
+[147.064551] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgs__rosidl_typesupport_cExport.cmake\n'}
+[147.086479] (-) TimerEvent: {}
+[147.187747] (-) TimerEvent: {}
+[147.289581] (-) TimerEvent: {}
+[147.390967] (-) TimerEvent: {}
+[147.435182] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[147.491383] (-) TimerEvent: {}
+[147.593154] (-) TimerEvent: {}
+[147.694804] (-) TimerEvent: {}
+[147.796983] (-) TimerEvent: {}
+[147.805551] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_generator_cppExport.cmake\n'}
+[147.897463] (-) TimerEvent: {}
+[147.999583] (-) TimerEvent: {}
+[148.101630] (-) TimerEvent: {}
+[148.203237] (-) TimerEvent: {}
+[148.230392] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[148.303537] (-) TimerEvent: {}
+[148.404782] (-) TimerEvent: {}
+[148.506366] (-) TimerEvent: {}
+[148.518595] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[148.606594] (-) TimerEvent: {}
+[148.708829] (-) TimerEvent: {}
+[148.810675] (-) TimerEvent: {}
+[148.912507] (-) TimerEvent: {}
+[148.937461] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[149.012826] (-) TimerEvent: {}
+[149.114940] (-) TimerEvent: {}
+[149.216590] (-) TimerEvent: {}
+[149.278701] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[149.316952] (-) TimerEvent: {}
+[149.418836] (-) TimerEvent: {}
+[149.520611] (-) TimerEvent: {}
+[149.591199] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[149.621148] (-) TimerEvent: {}
+[149.722773] (-) TimerEvent: {}
+[149.824446] (-) TimerEvent: {}
+[149.926130] (-) TimerEvent: {}
+[149.937672] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[150.026523] (-) TimerEvent: {}
+[150.128139] (-) TimerEvent: {}
+[150.196213] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_generator_pyExport.cmake\n'}
+[150.228558] (-) TimerEvent: {}
+[150.329615] (-) TimerEvent: {}
+[150.431075] (-) TimerEvent: {}
+[150.467280] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[150.531291] (-) TimerEvent: {}
+[150.632804] (-) TimerEvent: {}
+[150.655831] (amr_msgs) CommandEnded: {'returncode': 0}
+[150.733068] (-) TimerEvent: {}
+[150.835325] (-) TimerEvent: {}
+[150.937176] (-) TimerEvent: {}
+[151.039210] (-) TimerEvent: {}
+[151.140687] (-) TimerEvent: {}
+[151.242838] (-) TimerEvent: {}
+[151.344572] (-) TimerEvent: {}
+[151.446347] (-) TimerEvent: {}
+[151.547670] (-) TimerEvent: {}
+[151.649358] (-) TimerEvent: {}
+[151.750863] (-) TimerEvent: {}
+[151.863331] (-) TimerEvent: {}
+[151.986730] (-) TimerEvent: {}
+[152.134029] (-) TimerEvent: {}
+[152.286597] (-) TimerEvent: {}
+[152.410411] (-) TimerEvent: {}
+[152.527192] (-) TimerEvent: {}
+[152.641973] (-) TimerEvent: {}
+[152.748931] (-) TimerEvent: {}
+[152.863803] (-) TimerEvent: {}
+[152.974653] (-) TimerEvent: {}
+[153.076997] (-) TimerEvent: {}
+[153.178403] (-) TimerEvent: {}
+[153.279878] (-) TimerEvent: {}
+[153.381578] (-) TimerEvent: {}
+[153.483408] (-) TimerEvent: {}
+[153.585653] (-) TimerEvent: {}
+[153.687738] (-) TimerEvent: {}
+[153.790317] (-) TimerEvent: {}
+[153.892446] (-) TimerEvent: {}
+[153.994269] (-) TimerEvent: {}
+[154.095628] (-) TimerEvent: {}
+[154.197777] (-) TimerEvent: {}
+[154.299263] (-) TimerEvent: {}
+[154.400696] (-) TimerEvent: {}
+[154.502482] (-) TimerEvent: {}
+[154.603975] (-) TimerEvent: {}
+[154.705367] (-) TimerEvent: {}
+[154.806658] (-) TimerEvent: {}
+[154.908226] (-) TimerEvent: {}
+[155.018700] (-) TimerEvent: {}
+[155.147949] (-) TimerEvent: {}
+[155.255243] (-) TimerEvent: {}
+[155.387768] (-) TimerEvent: {}
+[155.522350] (-) TimerEvent: {}
+[155.623600] (-) TimerEvent: {}
+[155.724760] (-) TimerEvent: {}
+[155.825679] (-) TimerEvent: {}
+[155.926829] (-) TimerEvent: {}
+[156.028020] (-) TimerEvent: {}
+[156.129457] (-) TimerEvent: {}
+[156.230537] (-) TimerEvent: {}
+[156.259279] (amr_msgs) JobEnded: {'identifier': 'amr_msgs', 'rc': 0}
+[156.290396] (amr_control) JobStarted: {'identifier': 'amr_control'}
+[156.330863] (-) TimerEvent: {}
+[156.432221] (-) TimerEvent: {}
+[156.501079] (amr_localization) JobStarted: {'identifier': 'amr_localization'}
+[156.532556] (-) TimerEvent: {}
+[156.633937] (-) TimerEvent: {}
+[156.693240] (amr_simulation) JobStarted: {'identifier': 'amr_simulation'}
+[156.734402] (-) TimerEvent: {}
+[156.836470] (-) TimerEvent: {}
+[156.938406] (-) TimerEvent: {}
+[157.040541] (-) TimerEvent: {}
+[157.143685] (-) TimerEvent: {}
+[157.246002] (-) TimerEvent: {}
+[157.347989] (-) TimerEvent: {}
+[157.450311] (-) TimerEvent: {}
+[157.552444] (-) TimerEvent: {}
+[157.653927] (-) TimerEvent: {}
+[157.756096] (-) TimerEvent: {}
+[157.859010] (-) TimerEvent: {}
+[157.961301] (-) TimerEvent: {}
+[158.063974] (-) TimerEvent: {}
+[158.165345] (-) TimerEvent: {}
+[158.267504] (-) TimerEvent: {}
+[158.369235] (-) TimerEvent: {}
+[158.471467] (-) TimerEvent: {}
+[158.572843] (-) TimerEvent: {}
+[158.674539] (-) TimerEvent: {}
+[158.777082] (-) TimerEvent: {}
+[158.879024] (-) TimerEvent: {}
+[158.981169] (-) TimerEvent: {}
+[159.083401] (-) TimerEvent: {}
+[159.185045] (-) TimerEvent: {}
+[159.286573] (-) TimerEvent: {}
+[159.388653] (-) TimerEvent: {}
+[159.490024] (-) TimerEvent: {}
+[159.592388] (-) TimerEvent: {}
+[159.695316] (-) TimerEvent: {}
+[159.796857] (-) TimerEvent: {}
+[159.899112] (-) TimerEvent: {}
+[160.000839] (-) TimerEvent: {}
+[160.102819] (-) TimerEvent: {}
+[160.205218] (-) TimerEvent: {}
+[160.307718] (-) TimerEvent: {}
+[160.409580] (-) TimerEvent: {}
+[160.511491] (-) TimerEvent: {}
+[160.613178] (-) TimerEvent: {}
+[160.715357] (-) TimerEvent: {}
+[160.817177] (-) TimerEvent: {}
+[160.919294] (-) TimerEvent: {}
+[161.021443] (-) TimerEvent: {}
+[161.122899] (-) TimerEvent: {}
+[161.224573] (-) TimerEvent: {}
+[161.326468] (-) TimerEvent: {}
+[161.428383] (-) TimerEvent: {}
+[161.530463] (-) TimerEvent: {}
+[161.632179] (-) TimerEvent: {}
+[161.733907] (-) TimerEvent: {}
+[161.835330] (-) TimerEvent: {}
+[161.936780] (-) TimerEvent: {}
+[162.038497] (-) TimerEvent: {}
+[162.140859] (-) TimerEvent: {}
+[162.242457] (-) TimerEvent: {}
+[162.344320] (-) TimerEvent: {}
+[162.447072] (-) TimerEvent: {}
+[162.549342] (-) TimerEvent: {}
+[162.651184] (-) TimerEvent: {}
+[162.753592] (-) TimerEvent: {}
+[162.855831] (-) TimerEvent: {}
+[162.958116] (-) TimerEvent: {}
+[163.060184] (-) TimerEvent: {}
+[163.161831] (-) TimerEvent: {}
+[163.264097] (-) TimerEvent: {}
+[163.366150] (-) TimerEvent: {}
+[163.467803] (-) TimerEvent: {}
+[163.569448] (-) TimerEvent: {}
+[163.671170] (-) TimerEvent: {}
+[163.772928] (-) TimerEvent: {}
+[163.874388] (-) TimerEvent: {}
+[163.976398] (-) TimerEvent: {}
+[164.078056] (-) TimerEvent: {}
+[164.180071] (-) TimerEvent: {}
+[164.281341] (-) TimerEvent: {}
+[164.382995] (-) TimerEvent: {}
+[164.485403] (-) TimerEvent: {}
+[164.587202] (-) TimerEvent: {}
+[164.688676] (-) TimerEvent: {}
+[164.789956] (-) TimerEvent: {}
+[164.891389] (-) TimerEvent: {}
+[164.992803] (-) TimerEvent: {}
+[165.094489] (-) TimerEvent: {}
+[165.195679] (-) TimerEvent: {}
+[165.297461] (-) TimerEvent: {}
+[165.399750] (-) TimerEvent: {}
+[165.501848] (-) TimerEvent: {}
+[165.603937] (-) TimerEvent: {}
+[165.705973] (-) TimerEvent: {}
+[165.807779] (-) TimerEvent: {}
+[165.909952] (-) TimerEvent: {}
+[166.011211] (-) TimerEvent: {}
+[166.113396] (-) TimerEvent: {}
+[166.214927] (-) TimerEvent: {}
+[166.316788] (-) TimerEvent: {}
+[166.418666] (-) TimerEvent: {}
+[166.520201] (-) TimerEvent: {}
+[166.621574] (-) TimerEvent: {}
+[166.728175] (-) TimerEvent: {}
+[166.829828] (-) TimerEvent: {}
+[166.931151] (-) TimerEvent: {}
+[167.033318] (-) TimerEvent: {}
+[167.135094] (-) TimerEvent: {}
+[167.236689] (-) TimerEvent: {}
+[167.338467] (-) TimerEvent: {}
+[167.440248] (-) TimerEvent: {}
+[167.541983] (-) TimerEvent: {}
+[167.644053] (-) TimerEvent: {}
+[167.746024] (-) TimerEvent: {}
+[167.847695] (-) TimerEvent: {}
+[167.949255] (-) TimerEvent: {}
+[168.051064] (-) TimerEvent: {}
+[168.152944] (-) TimerEvent: {}
+[168.255648] (-) TimerEvent: {}
+[168.358901] (-) TimerEvent: {}
+[168.461143] (-) TimerEvent: {}
+[168.563216] (-) TimerEvent: {}
+[168.665949] (-) TimerEvent: {}
+[168.767647] (-) TimerEvent: {}
+[168.869193] (-) TimerEvent: {}
+[168.971046] (-) TimerEvent: {}
+[169.065261] (amr_control) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/workspaces/amr_ws/src/build/amr_control/build', '--no-deps', 'symlink_data'], 'cwd': '/workspaces/amr_ws/src/build/amr_control', 'env': {'PYTHON_BASIC_REPL': '1', 'HOSTNAME': 'humble', 'GIT_ASKPASS': '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/workspaces/amr_ws/src/install/amr_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/bin/helpers/browser.sh', 'HOME': '/home/ros', 'OLDPWD': '/workspaces/amr_ws', 'TERM_PROGRAM_VERSION': '1.108.2', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-dd0fea95-e217-4a61-937a-0386aa99568f.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'WAYLAND_DISPLAY': 'vscode-wayland-b4e83e19-6220-4ced-9c64-35eaf5abf0ef.sock', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-437ba7c6-c449-40f6-9493-c3108ccab163.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts', 'XDG_RUNTIME_DIR': '/tmp/user/1000', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/.X11-unix/X5","/home/ros/.gnupg/S.gpg-agent"]', 'DISPLAY': ':5', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-e3d230fdb7b95ebd.txt', 'LANG': 'C.UTF-8', 'PYTHONSTARTUP': '/home/ros/.vscode-server/data/User/workspaceStorage/9443f1eff74ed665d8e8109805ee5a51/ms-python.python/pythonrc.py', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/user/1000/vscode-git-842091ba8a.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/workspaces/amr_ws/src/install/amr_msgs:/opt/ros/humble', 'REMOTE_CONTAINERS_DISPLAY_SOCK': '/tmp/.X11-unix/X5', 'SHELL': '/bin/bash', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/workspaces/amr_ws/src/build/amr_control', 'LC_ALL': 'C.UTF-8', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/workspaces/amr_ws/src/build/amr_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/amr_ws/src/install/amr_control/lib/python3.10/site-packages:/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspaces/amr_ws/src/install/amr_msgs'}, 'shell': False}
+[169.110302] (-) TimerEvent: {}
+[169.194533] (amr_localization) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/workspaces/amr_ws/src/build/amr_localization/build', '--no-deps', 'symlink_data'], 'cwd': '/workspaces/amr_ws/src/build/amr_localization', 'env': {'PYTHON_BASIC_REPL': '1', 'HOSTNAME': 'humble', 'GIT_ASKPASS': '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/workspaces/amr_ws/src/install/amr_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/bin/helpers/browser.sh', 'HOME': '/home/ros', 'OLDPWD': '/workspaces/amr_ws', 'TERM_PROGRAM_VERSION': '1.108.2', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-dd0fea95-e217-4a61-937a-0386aa99568f.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'WAYLAND_DISPLAY': 'vscode-wayland-b4e83e19-6220-4ced-9c64-35eaf5abf0ef.sock', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-437ba7c6-c449-40f6-9493-c3108ccab163.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts', 'XDG_RUNTIME_DIR': '/tmp/user/1000', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/.X11-unix/X5","/home/ros/.gnupg/S.gpg-agent"]', 'DISPLAY': ':5', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-e3d230fdb7b95ebd.txt', 'LANG': 'C.UTF-8', 'PYTHONSTARTUP': '/home/ros/.vscode-server/data/User/workspaceStorage/9443f1eff74ed665d8e8109805ee5a51/ms-python.python/pythonrc.py', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/user/1000/vscode-git-842091ba8a.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/workspaces/amr_ws/src/install/amr_msgs:/opt/ros/humble', 'REMOTE_CONTAINERS_DISPLAY_SOCK': '/tmp/.X11-unix/X5', 'SHELL': '/bin/bash', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/workspaces/amr_ws/src/build/amr_localization', 'LC_ALL': 'C.UTF-8', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/workspaces/amr_ws/src/build/amr_localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/amr_ws/src/install/amr_localization/lib/python3.10/site-packages:/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspaces/amr_ws/src/install/amr_msgs'}, 'shell': False}
+[169.234124] (-) TimerEvent: {}
+[169.315548] (amr_simulation) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/workspaces/amr_ws/src/build/amr_simulation/build', '--no-deps', 'symlink_data'], 'cwd': '/workspaces/amr_ws/src/build/amr_simulation', 'env': {'PYTHON_BASIC_REPL': '1', 'HOSTNAME': 'humble', 'GIT_ASKPASS': '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/workspaces/amr_ws/src/install/amr_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/bin/helpers/browser.sh', 'HOME': '/home/ros', 'OLDPWD': '/workspaces/amr_ws', 'TERM_PROGRAM_VERSION': '1.108.2', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-dd0fea95-e217-4a61-937a-0386aa99568f.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'WAYLAND_DISPLAY': 'vscode-wayland-b4e83e19-6220-4ced-9c64-35eaf5abf0ef.sock', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-437ba7c6-c449-40f6-9493-c3108ccab163.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-x64/c9d77990917f3102ada88be140d28b038d1dd7c7/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts', 'XDG_RUNTIME_DIR': '/tmp/user/1000', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/.X11-unix/X5","/home/ros/.gnupg/S.gpg-agent"]', 'DISPLAY': ':5', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-e3d230fdb7b95ebd.txt', 'LANG': 'C.UTF-8', 'PYTHONSTARTUP': '/home/ros/.vscode-server/data/User/workspaceStorage/9443f1eff74ed665d8e8109805ee5a51/ms-python.python/pythonrc.py', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/user/1000/vscode-git-842091ba8a.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/workspaces/amr_ws/src/install/amr_msgs:/opt/ros/humble', 'REMOTE_CONTAINERS_DISPLAY_SOCK': '/tmp/.X11-unix/X5', 'SHELL': '/bin/bash', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/workspaces/amr_ws/src/build/amr_simulation', 'LC_ALL': 'C.UTF-8', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/workspaces/amr_ws/src/build/amr_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/amr_ws/src/install/amr_simulation/lib/python3.10/site-packages:/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspaces/amr_ws/src/install/amr_msgs'}, 'shell': False}
+[169.359842] (-) TimerEvent: {}
+[169.460823] (-) TimerEvent: {}
+[169.562372] (-) TimerEvent: {}
+[169.664015] (-) TimerEvent: {}
+[169.765948] (-) TimerEvent: {}
+[169.867606] (-) TimerEvent: {}
+[169.969498] (-) TimerEvent: {}
+[170.071549] (-) TimerEvent: {}
+[170.173882] (-) TimerEvent: {}
+[170.275521] (-) TimerEvent: {}
+[170.377864] (-) TimerEvent: {}
+[170.479824] (-) TimerEvent: {}
+[170.581622] (-) TimerEvent: {}
+[170.684176] (-) TimerEvent: {}
+[170.786567] (-) TimerEvent: {}
+[170.888651] (-) TimerEvent: {}
+[170.990794] (-) TimerEvent: {}
+[171.092873] (-) TimerEvent: {}
+[171.194634] (-) TimerEvent: {}
+[171.296619] (-) TimerEvent: {}
+[171.398162] (-) TimerEvent: {}
+[171.499754] (-) TimerEvent: {}
+[171.601370] (-) TimerEvent: {}
+[171.702618] (-) TimerEvent: {}
+[171.803912] (-) TimerEvent: {}
+[171.905538] (-) TimerEvent: {}
+[172.007095] (-) TimerEvent: {}
+[172.108487] (-) TimerEvent: {}
+[172.209997] (-) TimerEvent: {}
+[172.311595] (-) TimerEvent: {}
+[172.412604] (-) TimerEvent: {}
+[172.514797] (-) TimerEvent: {}
+[172.616132] (-) TimerEvent: {}
+[172.717760] (-) TimerEvent: {}
+[172.819929] (-) TimerEvent: {}
+[172.921242] (-) TimerEvent: {}
+[172.930891] (amr_control) StdoutLine: {'line': b'running develop\n'}
+[172.944989] (amr_localization) StdoutLine: {'line': b'running develop\n'}
+[172.998138] (amr_simulation) StdoutLine: {'line': b'running develop\n'}
+[173.021491] (-) TimerEvent: {}
+[173.123371] (-) TimerEvent: {}
+[173.225099] (-) TimerEvent: {}
+[173.326423] (-) TimerEvent: {}
+[173.427631] (-) TimerEvent: {}
+[173.528862] (-) TimerEvent: {}
+[173.630069] (-) TimerEvent: {}
+[173.731082] (-) TimerEvent: {}
+[173.735374] (amr_localization) StdoutLine: {'line': b'running egg_info\n'}
+[173.739710] (amr_localization) StdoutLine: {'line': b'creating amr_localization.egg-info\n'}
+[173.743193] (amr_localization) StdoutLine: {'line': b'writing amr_localization.egg-info/PKG-INFO\n'}
+[173.746132] (amr_control) StdoutLine: {'line': b'running egg_info\n'}
+[173.752385] (amr_control) StdoutLine: {'line': b'creating amr_control.egg-info\n'}
+[173.756670] (amr_control) StdoutLine: {'line': b'writing amr_control.egg-info/PKG-INFO\n'}
+[173.769805] (amr_localization) StdoutLine: {'line': b'writing dependency_links to amr_localization.egg-info/dependency_links.txt\n'}
+[173.779697] (amr_control) StdoutLine: {'line': b'writing dependency_links to amr_control.egg-info/dependency_links.txt\n'}
+[173.787328] (amr_localization) StdoutLine: {'line': b'writing entry points to amr_localization.egg-info/entry_points.txt\n'}
+[173.797981] (amr_control) StdoutLine: {'line': b'writing entry points to amr_control.egg-info/entry_points.txt\n'}
+[173.803287] (amr_localization) StdoutLine: {'line': b'writing requirements to amr_localization.egg-info/requires.txt\n'}
+[173.812094] (amr_control) StdoutLine: {'line': b'writing requirements to amr_control.egg-info/requires.txt\n'}
+[173.814653] (amr_localization) StdoutLine: {'line': b'writing top-level names to amr_localization.egg-info/top_level.txt\n'}
+[173.823486] (amr_control) StdoutLine: {'line': b'writing top-level names to amr_control.egg-info/top_level.txt\n'}
+[173.830220] (amr_localization) StdoutLine: {'line': b"writing manifest file 'amr_localization.egg-info/SOURCES.txt'\n"}
+[173.833854] (-) TimerEvent: {}
+[173.839103] (amr_control) StdoutLine: {'line': b"writing manifest file 'amr_control.egg-info/SOURCES.txt'\n"}
+[173.931695] (amr_simulation) StdoutLine: {'line': b'running egg_info\n'}
+[173.934525] (-) TimerEvent: {}
+[173.935300] (amr_simulation) StdoutLine: {'line': b'creating amr_simulation.egg-info\n'}
+[173.940257] (amr_simulation) StdoutLine: {'line': b'writing amr_simulation.egg-info/PKG-INFO\n'}
+[173.974485] (amr_simulation) StdoutLine: {'line': b'writing dependency_links to amr_simulation.egg-info/dependency_links.txt\n'}
+[173.991442] (amr_simulation) StdoutLine: {'line': b'writing entry points to amr_simulation.egg-info/entry_points.txt\n'}
+[173.994626] (amr_control) StdoutLine: {'line': b"reading manifest file 'amr_control.egg-info/SOURCES.txt'\n"}
+[173.998523] (amr_localization) StdoutLine: {'line': b"reading manifest file 'amr_localization.egg-info/SOURCES.txt'\n"}
+[174.004773] (amr_simulation) StdoutLine: {'line': b'writing requirements to amr_simulation.egg-info/requires.txt\n'}
+[174.016254] (amr_simulation) StdoutLine: {'line': b'writing top-level names to amr_simulation.egg-info/top_level.txt\n'}
+[174.032001] (amr_simulation) StdoutLine: {'line': b"writing manifest file 'amr_simulation.egg-info/SOURCES.txt'\n"}
+[174.035598] (-) TimerEvent: {}
+[174.137048] (-) TimerEvent: {}
+[174.208611] (amr_control) StdoutLine: {'line': b"writing manifest file 'amr_control.egg-info/SOURCES.txt'\n"}
+[174.233906] (amr_localization) StdoutLine: {'line': b"writing manifest file 'amr_localization.egg-info/SOURCES.txt'\n"}
+[174.239263] (-) TimerEvent: {}
+[174.256480] (amr_simulation) StdoutLine: {'line': b"reading manifest file 'amr_simulation.egg-info/SOURCES.txt'\n"}
+[174.289146] (amr_control) StdoutLine: {'line': b'running build_ext\n'}
+[174.293673] (amr_control) StdoutLine: {'line': b'Creating /workspaces/amr_ws/src/install/amr_control/lib/python3.10/site-packages/amr-control.egg-link (link to .)\n'}
+[174.306136] (amr_localization) StdoutLine: {'line': b'running build_ext\n'}
+[174.310476] (amr_localization) StdoutLine: {'line': b'Creating /workspaces/amr_ws/src/install/amr_localization/lib/python3.10/site-packages/amr-localization.egg-link (link to .)\n'}
+[174.339554] (-) TimerEvent: {}
+[174.393336] (amr_control) StdoutLine: {'line': b'Installing wall_follower script to /workspaces/amr_ws/src/install/amr_control/lib/amr_control\n'}
+[174.407803] (amr_localization) StdoutLine: {'line': b'Installing particle_filter script to /workspaces/amr_ws/src/install/amr_localization/lib/amr_localization\n'}
+[174.439792] (-) TimerEvent: {}
+[174.474957] (amr_control) StdoutLine: {'line': b'\n'}
+[174.479901] (amr_control) StdoutLine: {'line': b'Installed /workspaces/amr_ws/src/build/amr_control\n'}
+[174.487743] (amr_localization) StdoutLine: {'line': b'\n'}
+[174.493346] (amr_localization) StdoutLine: {'line': b'Installed /workspaces/amr_ws/src/build/amr_localization\n'}
+[174.499292] (amr_control) StdoutLine: {'line': b'running symlink_data\n'}
+[174.512217] (amr_localization) StdoutLine: {'line': b'running symlink_data\n'}
+[174.533588] (amr_simulation) StdoutLine: {'line': b"writing manifest file 'amr_simulation.egg-info/SOURCES.txt'\n"}
+[174.539681] (amr_control) StdoutLine: {'line': b'creating /workspaces/amr_ws/src/install/amr_control/share/ament_index\n'}
+[174.544527] (-) TimerEvent: {}
+[174.546269] (amr_localization) StdoutLine: {'line': b'creating /workspaces/amr_ws/src/install/amr_localization/share/ament_index\n'}
+[174.550149] (amr_control) StdoutLine: {'line': b'creating /workspaces/amr_ws/src/install/amr_control/share/ament_index/resource_index\n'}
+[174.554794] (amr_localization) StdoutLine: {'line': b'creating /workspaces/amr_ws/src/install/amr_localization/share/ament_index/resource_index\n'}
+[174.562148] (amr_control) StdoutLine: {'line': b'creating /workspaces/amr_ws/src/install/amr_control/share/ament_index/resource_index/packages\n'}
+[174.570607] (amr_localization) StdoutLine: {'line': b'creating /workspaces/amr_ws/src/install/amr_localization/share/ament_index/resource_index/packages\n'}
+[174.613419] (amr_simulation) StdoutLine: {'line': b'running build_ext\n'}
+[174.617815] (amr_simulation) StdoutLine: {'line': b'Creating /workspaces/amr_ws/src/install/amr_simulation/lib/python3.10/site-packages/amr-simulation.egg-link (link to .)\n'}
+[174.626312] (amr_control) StdoutLine: {'line': b'symbolically linking /workspaces/amr_ws/src/build/amr_control/resource/amr_control -> /workspaces/amr_ws/src/install/amr_control/share/ament_index/resource_index/packages\n'}
+[174.631418] (amr_localization) StdoutLine: {'line': b'symbolically linking /workspaces/amr_ws/src/build/amr_localization/resource/amr_localization -> /workspaces/amr_ws/src/install/amr_localization/share/ament_index/resource_index/packages\n'}
+[174.644785] (-) TimerEvent: {}
+[174.683839] (amr_control) StdoutLine: {'line': b'symbolically linking /workspaces/amr_ws/src/build/amr_control/package.xml -> /workspaces/amr_ws/src/install/amr_control/share/amr_control\n'}
+[174.686864] (amr_localization) StdoutLine: {'line': b'symbolically linking /workspaces/amr_ws/src/build/amr_localization/package.xml -> /workspaces/amr_ws/src/install/amr_localization/share/amr_localization\n'}
+[174.690452] (amr_simulation) StdoutLine: {'line': b'Installing coppeliasim script to /workspaces/amr_ws/src/install/amr_simulation/lib/amr_simulation\n'}
+[174.745035] (-) TimerEvent: {}
+[174.747392] (amr_simulation) StdoutLine: {'line': b'\n'}
+[174.750853] (amr_simulation) StdoutLine: {'line': b'Installed /workspaces/amr_ws/src/build/amr_simulation\n'}
+[174.761023] (amr_simulation) StdoutLine: {'line': b'running symlink_data\n'}
+[174.793475] (amr_simulation) StdoutLine: {'line': b'creating /workspaces/amr_ws/src/install/amr_simulation/share/ament_index\n'}
+[174.804033] (amr_simulation) StdoutLine: {'line': b'creating /workspaces/amr_ws/src/install/amr_simulation/share/ament_index/resource_index\n'}
+[174.816378] (amr_simulation) StdoutLine: {'line': b'creating /workspaces/amr_ws/src/install/amr_simulation/share/ament_index/resource_index/packages\n'}
+[174.840376] (amr_control) CommandEnded: {'returncode': 0}
+[174.845209] (-) TimerEvent: {}
+[174.865969] (amr_simulation) StdoutLine: {'line': b'symbolically linking /workspaces/amr_ws/src/build/amr_simulation/resource/amr_simulation -> /workspaces/amr_ws/src/install/amr_simulation/share/ament_index/resource_index/packages\n'}
+[174.919069] (amr_simulation) StdoutLine: {'line': b'symbolically linking /workspaces/amr_ws/src/build/amr_simulation/package.xml -> /workspaces/amr_ws/src/install/amr_simulation/share/amr_simulation\n'}
+[174.945511] (-) TimerEvent: {}
+[175.047264] (-) TimerEvent: {}
+[175.148815] (-) TimerEvent: {}
+[175.250836] (-) TimerEvent: {}
+[175.354196] (-) TimerEvent: {}
+[175.455961] (-) TimerEvent: {}
+[175.557709] (-) TimerEvent: {}
+[175.659660] (-) TimerEvent: {}
+[175.760994] (-) TimerEvent: {}
+[175.862719] (-) TimerEvent: {}
+[175.964789] (-) TimerEvent: {}
+[175.996198] (amr_control) JobEnded: {'identifier': 'amr_control', 'rc': 0}
+[176.032798] (amr_localization) CommandEnded: {'returncode': 0}
+[176.065430] (-) TimerEvent: {}
+[176.167417] (-) TimerEvent: {}
+[176.268871] (-) TimerEvent: {}
+[176.370409] (-) TimerEvent: {}
+[176.471632] (-) TimerEvent: {}
+[176.573116] (-) TimerEvent: {}
+[176.674560] (-) TimerEvent: {}
+[176.776326] (-) TimerEvent: {}
+[176.879027] (-) TimerEvent: {}
+[176.981086] (-) TimerEvent: {}
+[177.083758] (-) TimerEvent: {}
+[177.150933] (amr_localization) JobEnded: {'identifier': 'amr_localization', 'rc': 0}
+[177.175072] (amr_simulation) CommandEnded: {'returncode': 0}
+[177.184047] (-) TimerEvent: {}
+[177.285493] (-) TimerEvent: {}
+[177.387670] (-) TimerEvent: {}
+[177.489955] (-) TimerEvent: {}
+[177.591652] (-) TimerEvent: {}
+[177.693846] (-) TimerEvent: {}
+[177.795751] (-) TimerEvent: {}
+[177.898705] (-) TimerEvent: {}
+[178.000166] (-) TimerEvent: {}
+[178.101754] (-) TimerEvent: {}
+[178.203592] (-) TimerEvent: {}
+[178.304994] (-) TimerEvent: {}
+[178.316928] (amr_simulation) JobEnded: {'identifier': 'amr_simulation', 'rc': 0}
+[178.357962] (-) EventReactorShutdown: {}

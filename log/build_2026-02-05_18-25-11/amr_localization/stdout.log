@@ -1,0 +1,22 @@
+running develop
+running egg_info
+creating amr_localization.egg-info
+writing amr_localization.egg-info/PKG-INFO
+writing dependency_links to amr_localization.egg-info/dependency_links.txt
+writing entry points to amr_localization.egg-info/entry_points.txt
+writing requirements to amr_localization.egg-info/requires.txt
+writing top-level names to amr_localization.egg-info/top_level.txt
+writing manifest file 'amr_localization.egg-info/SOURCES.txt'
+reading manifest file 'amr_localization.egg-info/SOURCES.txt'
+writing manifest file 'amr_localization.egg-info/SOURCES.txt'
+running build_ext
+Creating /workspaces/amr_ws/src/install/amr_localization/lib/python3.10/site-packages/amr-localization.egg-link (link to .)
+Installing particle_filter script to /workspaces/amr_ws/src/install/amr_localization/lib/amr_localization
+
+Installed /workspaces/amr_ws/src/build/amr_localization
+running symlink_data
+creating /workspaces/amr_ws/src/install/amr_localization/share/ament_index
+creating /workspaces/amr_ws/src/install/amr_localization/share/ament_index/resource_index
+creating /workspaces/amr_ws/src/install/amr_localization/share/ament_index/resource_index/packages
+symbolically linking /workspaces/amr_ws/src/build/amr_localization/resource/amr_localization -> /workspaces/amr_ws/src/install/amr_localization/share/ament_index/resource_index/packages
+symbolically linking /workspaces/amr_ws/src/build/amr_localization/package.xml -> /workspaces/amr_ws/src/install/amr_localization/share/amr_localization

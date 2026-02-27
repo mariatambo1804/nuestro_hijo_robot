@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+amr_localization/__init__.py
+amr_localization/intersect.py
+amr_localization/map.py
+amr_localization/particle_filter.py
+amr_localization/particle_filter_node.py
+amr_localization.egg-info/PKG-INFO
+amr_localization.egg-info/SOURCES.txt
+amr_localization.egg-info/dependency_links.txt
+amr_localization.egg-info/entry_points.txt
+amr_localization.egg-info/requires.txt
+amr_localization.egg-info/top_level.txt
+amr_localization.egg-info/zip-safe
+resource/amr_localization

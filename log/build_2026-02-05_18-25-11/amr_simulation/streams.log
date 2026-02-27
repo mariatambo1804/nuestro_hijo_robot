@@ -1,0 +1,24 @@
+[12.663s] Invoking command in '/workspaces/amr_ws/src/build/amr_simulation': AMENT_PREFIX_PATH=/workspaces/amr_ws/src/install/amr_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/amr_ws/src/install/amr_msgs LD_LIBRARY_PATH=/workspaces/amr_ws/src/install/amr_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/workspaces/amr_ws/src/build/amr_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/amr_ws/src/install/amr_simulation/lib/python3.10/site-packages:/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspaces/amr_ws/src/build/amr_simulation/build --no-deps symlink_data
+[16.307s] running develop
+[17.240s] running egg_info
+[17.244s] creating amr_simulation.egg-info
+[17.249s] writing amr_simulation.egg-info/PKG-INFO
+[17.284s] writing dependency_links to amr_simulation.egg-info/dependency_links.txt
+[17.300s] writing entry points to amr_simulation.egg-info/entry_points.txt
+[17.314s] writing requirements to amr_simulation.egg-info/requires.txt
+[17.325s] writing top-level names to amr_simulation.egg-info/top_level.txt
+[17.341s] writing manifest file 'amr_simulation.egg-info/SOURCES.txt'
+[17.567s] reading manifest file 'amr_simulation.egg-info/SOURCES.txt'
+[17.844s] writing manifest file 'amr_simulation.egg-info/SOURCES.txt'
+[17.923s] running build_ext
+[17.927s] Creating /workspaces/amr_ws/src/install/amr_simulation/lib/python3.10/site-packages/amr-simulation.egg-link (link to .)
+[17.998s] Installing coppeliasim script to /workspaces/amr_ws/src/install/amr_simulation/lib/amr_simulation
+[18.056s] 
+[18.059s] Installed /workspaces/amr_ws/src/build/amr_simulation
+[18.070s] running symlink_data
+[18.102s] creating /workspaces/amr_ws/src/install/amr_simulation/share/ament_index
+[18.113s] creating /workspaces/amr_ws/src/install/amr_simulation/share/ament_index/resource_index
+[18.125s] creating /workspaces/amr_ws/src/install/amr_simulation/share/ament_index/resource_index/packages
+[18.174s] symbolically linking /workspaces/amr_ws/src/build/amr_simulation/resource/amr_simulation -> /workspaces/amr_ws/src/install/amr_simulation/share/ament_index/resource_index/packages
+[18.227s] symbolically linking /workspaces/amr_ws/src/build/amr_simulation/package.xml -> /workspaces/amr_ws/src/install/amr_simulation/share/amr_simulation
+[20.483s] Invoked command in '/workspaces/amr_ws/src/build/amr_simulation' returned '0': AMENT_PREFIX_PATH=/workspaces/amr_ws/src/install/amr_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/amr_ws/src/install/amr_msgs LD_LIBRARY_PATH=/workspaces/amr_ws/src/install/amr_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/workspaces/amr_ws/src/build/amr_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/amr_ws/src/install/amr_simulation/lib/python3.10/site-packages:/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspaces/amr_ws/src/build/amr_simulation/build --no-deps symlink_data

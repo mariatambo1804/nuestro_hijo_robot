@@ -1,0 +1,1 @@
+/workspaces/amr_ws/src/build/amr_msgs/rosidl_generator_py/amr_msgs/_amr_msgs_s.ep.rosidl_typesupport_c.c

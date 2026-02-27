@@ -1,0 +1,7 @@
+{
+  "package_name": "amr_msgs",
+  "non_idl_tuples": [
+    "/workspaces/amr_ws/src/amr_msgs:msg/PoseStamped.msg",
+    "/workspaces/amr_ws/src/amr_msgs:msg/RangeScan.msg"
+  ]
+}

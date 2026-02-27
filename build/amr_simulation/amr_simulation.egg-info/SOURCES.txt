@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+amr_simulation/__init__.py
+amr_simulation/coppeliasim.py
+amr_simulation/coppeliasim_node.py
+amr_simulation/robot.py
+amr_simulation/robot_p3dx.py
+amr_simulation.egg-info/PKG-INFO
+amr_simulation.egg-info/SOURCES.txt
+amr_simulation.egg-info/dependency_links.txt
+amr_simulation.egg-info/entry_points.txt
+amr_simulation.egg-info/requires.txt
+amr_simulation.egg-info/top_level.txt
+amr_simulation.egg-info/zip-safe
+resource/amr_simulation

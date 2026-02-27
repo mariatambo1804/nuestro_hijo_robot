@@ -1,0 +1,3 @@
+[console_scripts]
+lifecycle_manager = amr_bringup.lifecycle_manager_node:main
+

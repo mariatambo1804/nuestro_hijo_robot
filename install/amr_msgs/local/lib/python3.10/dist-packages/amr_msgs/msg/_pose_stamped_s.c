@@ -1,0 +1,1 @@
+/workspaces/amr_ws/src/build/amr_msgs/rosidl_generator_py/amr_msgs/msg/_pose_stamped_s.c

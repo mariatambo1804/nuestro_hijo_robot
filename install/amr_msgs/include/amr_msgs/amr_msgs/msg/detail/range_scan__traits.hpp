@@ -1,0 +1,1 @@
+/workspaces/amr_ws/src/build/amr_msgs/rosidl_generator_cpp/amr_msgs/msg/detail/range_scan__traits.hpp
