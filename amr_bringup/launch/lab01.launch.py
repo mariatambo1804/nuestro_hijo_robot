@@ -7,7 +7,7 @@ import math
 def generate_launch_description():
     # start = (4.0, -4.0, 0.5 * math.pi)  # Outer corridor
     # start = (2.0, -3.0, 1.5 * math.pi)  # Inner corridor
-    start = (2.0, -3.0, 1.5 * math.pi)
+    start = (0.0, 2.0, 1.5 * math.pi)
 
     wall_follower_node = LifecycleNode(
         package="amr_control",
@@ -15,7 +15,7 @@ def generate_launch_description():
         name="wall_follower",
         namespace="",
         output="screen",
-        arguments=["--ros-args", "--log-level", "WARN"],
+        arguments=["--ros-args", "--log-level", "INFO"],
     )
 
     coppeliasim_node = LifecycleNode(

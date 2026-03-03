@@ -6,8 +6,8 @@ import math
 
 def generate_launch_description():
     world = "project"
-    start = (0.0, 2.0, 1.5 * math.pi)
-    goal = (4.0, -2.0)
+    start = (-3.0, 0.0, 1.5 * math.pi)
+    goal = (4.0, -4.0)
     particles = 6500
 
     wall_follower_node = LifecycleNode(

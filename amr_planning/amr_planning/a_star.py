@@ -15,7 +15,7 @@ class AStar:
         self,
         map_path: str,
         sensor_range: float,
-        action_costs: tuple[float, float, float, float] = (1.0, 1.0, 1.0, 4.0),
+        action_costs: tuple[float, float, float, float] = (1.0, 1.0, 1.0, 1.0),
     ):
         """A* class initializer.
 
@@ -62,10 +62,12 @@ class AStar:
         path: list[tuple[float, float]] = []
         steps: int = 0
 
-        heuristic_total = self._compute_heuristic(goal) if use_heuristic else np.zeros_like(self._map.grid_map)
+        heuristic_total = (
+            self._compute_heuristic(goal) if use_heuristic else np.zeros_like(self._map.grid_map)
+        )
 
         rc_start = self._xy_to_rc(start)
-        rc_goal  = self._xy_to_rc(goal)
+        rc_goal = self._xy_to_rc(goal)
 
         g_start = 0.0
         f_start = g_start + heuristic_total[rc_start]
@@ -74,6 +76,9 @@ class AStar:
         open_list = {rc_start: (f_start, g_start)}
         closed_list = set()
         ancestors = {}
+
+        turn_penalty = 1.2  # cost for a 90º-like change of direction
+        u_turn_penalty = 1.4  # cost for a 180º U-turn (>= turn_penalty)
 
         while open_list:
             steps += 1
@@ -88,7 +93,7 @@ class AStar:
                 path_rc = self._reconstruct_path(rc_start, rc_goal, ancestors)
                 path = [self._rc_to_xy(rc) for rc in path_rc]
                 return path, steps
-            
+
             for i, action in enumerate(self._actions):
                 dr = int(action[0])
                 dc = int(action[1])
@@ -98,7 +103,10 @@ class AStar:
                 neig_rc = (neig_r, neig_c)
 
                 # límites
-                if not (0 <= neig_r < self._map.grid_map.shape[0] and 0 <= neig_c < self._map.grid_map.shape[1]):
+                if not (
+                    0 <= neig_r < self._map.grid_map.shape[0]
+                    and 0 <= neig_c < self._map.grid_map.shape[1]
+                ):
                     continue
 
                 # obstáculo
@@ -108,7 +116,23 @@ class AStar:
                 if neig_rc in closed_list:
                     continue
 
-                g_new = g_current + self._action_costs[i]
+                # ---- turn penalty (minimal change) ----
+                turn_cost = 0.0
+                parent_rc = ancestors.get(current_rc, None)
+
+                if parent_rc is not None:
+                    prev_move = (current_rc[0] - parent_rc[0], current_rc[1] - parent_rc[1])
+                    new_move = (neig_rc[0] - current_rc[0], neig_rc[1] - current_rc[1])
+
+                    # If direction changes, penalize
+                    if new_move != prev_move:
+                        turn_cost += turn_penalty
+
+                        # Extra penalty for 180º turns (U-turn)
+                        if (new_move[0] == -prev_move[0]) and (new_move[1] == -prev_move[1]):
+                            turn_cost += u_turn_penalty - turn_penalty
+
+                g_new = g_current + self._action_costs[i] + turn_cost
                 f_new = g_new + heuristic_total[neig_rc]
 
                 # actualizar si mejora
@@ -117,6 +141,7 @@ class AStar:
                     ancestors[neig_rc] = current_rc
 
         return path, steps
+
     @staticmethod
     def smooth_path(
         path, data_weight: float = 0.1, smooth_weight: float = 0.8, tolerance: float = 1e-6
@@ -137,16 +162,16 @@ class AStar:
         if len(path) < 2:
             return [(float(x), float(y)) for x, y in path]
         original = [(float(x), float(y)) for x, y in path]
-        n_insert = 3 # number of points we are going to insert
-        smoothedpath = [] # The smoothed path 
-        for i in range(len(original) - 1): #Because the last point must be the goal
+        n_insert = 3  # number of points we are going to insert
+        smoothedpath = []  # The smoothed path
+        for i in range(len(original) - 1):  # Because the last point must be the goal
             x0, y0 = original[i]
             x1, y1 = original[i + 1]
-            if i == 0: #if i am at the first point
-                smoothedpath.append((x0, y0)) # The first point must be the start
+            if i == 0:  # if i am at the first point
+                smoothedpath.append((x0, y0))  # The first point must be the start
             # we interpolate to include points into the original path
             for k in range(1, n_insert + 2):
-                t = k / (n_insert + 1) # The percentage of the distance u move
+                t = k / (n_insert + 1)  # The percentage of the distance u move
                 x = x0 + t * (x1 - x0)
                 y = y0 + t * (y1 - y0)
                 smoothedpath.append((x, y))
@@ -265,16 +290,16 @@ class AStar:
         # TODO: 3.1. Complete the missing function body with your code.
 
         # Get the row and columns of the map
-        rows_map,cols_map = np.shape(self._map.grid_map)
+        rows_map, cols_map = np.shape(self._map.grid_map)
 
         # Change our goal destination into a row, col
-        row_goal, col_goal = self._xy_to_rc(goal) 
+        row_goal, col_goal = self._xy_to_rc(goal)
 
         # Compute the Manhattan distance and add it to the heuristic matrix
         # That contains all of the distances from every cell to the goal
         for row in range(rows_map):
             for col in range(cols_map):
-                heuristic[row,col] = abs(row - row_goal) + abs(col - col_goal)
+                heuristic[row, col] = abs(row - row_goal) + abs(col - col_goal)
         return heuristic
 
     def _reconstruct_path(
@@ -298,7 +323,6 @@ class AStar:
         # TODO 3.3
         # Operates on grid coordinates (row, col) since `ancestors` stores RC keys.
         path: list[tuple[int, int]] = []
-
 
         # Expect start and goal to be RC tuples when called from `a_star`.
         start_rc = start

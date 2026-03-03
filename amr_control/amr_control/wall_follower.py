@@ -42,7 +42,7 @@ class WallFollower:
 
         if self.state == State.TURN_LEFT:
             self.prev_error = 0.0
-            return 0.0, 1.2
+            return 0.0, 1.0
 
         # --- Prefer straight at intersections (keep going vertical) ---
         # thresholds (ajústalos un poco si hace falta)
@@ -54,7 +54,7 @@ class WallFollower:
             self.prev_error = 0.0
             return 0.45, 0.0
 
-        v = 0.5
+        v = 0.3
         ku = 6
         kp = 0.5 * ku
         kd = 2
