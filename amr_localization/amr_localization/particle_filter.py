@@ -19,9 +19,9 @@ class ParticleFilter:
         sensors: list[tuple[float, float, float]],
         sensor_range: float,
         particle_count: int,
-        sigma_v: float = 0.4,
+        sigma_v: float = 0.5,
         sigma_w: float = 0.75,
-        sigma_z: float = 0.25,
+        sigma_z: float = 0.35,
     ):
         """Particle filter class initializer.
 

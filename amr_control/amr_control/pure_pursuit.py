@@ -45,11 +45,15 @@ class PurePursuit:
             alpha = beta - theta
             alpha = math.atan2(math.sin(alpha), math.cos(alpha))
 
-            # --- SIMPLE SAFETY: if target is behind, rotate in place first ---
-            if abs(alpha) > math.radians(25):
+            # Apply rotate-in-place only once after a new path arrives,
+            # and only if the target is clearly behind the robot.
+
+            if self.new_path and abs(alpha) > math.radians(25):
                 v = 0.0
                 w = 1.2 if alpha > 0.0 else -1.2  # turn in place (tune 0.8 if needed)
                 return v, w
+            elif abs(alpha) < math.radians(25):
+                self.new_path = False
 
             # Constant bounds
             v_max, v_min = 1, 0.28
@@ -87,6 +91,7 @@ class PurePursuit:
     @path.setter
     def path(self, value: list[tuple[float, float]]) -> None:
         """Path setter."""
+        self.new_path = True
         self._path = value
 
     def _find_closest_point(self, x: float, y: float) -> tuple[tuple[float, float], int]:
