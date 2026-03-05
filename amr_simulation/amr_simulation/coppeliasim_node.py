@@ -73,7 +73,9 @@ class CoppeliaSimNode(LifecycleNode):
 
             # Publishers
             # TODO: 1.4. Create the /odom (Odometry message) and /us_scan (RangeScan) publishers.
+            # Define the publisher for robot odometry data
             self._odom_pub = self.create_publisher(msg_type=Odometry, topic="/odom", qos_profile=10)
+            # Define the publisher for ultrasonic sensor range scans
             self._us_pub = self.create_publisher(
                 msg_type=RangeScan, topic="/us_scan", qos_profile=10
             )
@@ -122,6 +124,7 @@ class CoppeliaSimNode(LifecycleNode):
         self._check_estimated_pose(pose_msg)
 
         # TODO: 1.13. Parse the velocities from the TwistStamped message (i.e., read v and w).
+        # Parse linear (v) and angular (w) velocities from the cmd_vel_msg
         v: float = cmd_vel_msg.twist.linear.x
         w: float = cmd_vel_msg.twist.angular.z
 
@@ -230,15 +233,15 @@ class CoppeliaSimNode(LifecycleNode):
         # TODO: 1.5. Complete the function body with your code (i.e., replace the pass statement).
         msg = Odometry()
 
-        # Rellenar el Header (estampa de tiempo)
+        # Populate the message header with the current timestamp
         msg.header.stamp = self.get_clock().now().to_msg()
 
-        # Asignar velocidades lineal (z_v) y angular (z_w) al campo twist
-        # Según la cinemática de tracción diferencial, v es en el eje X del robot
+        # Assign linear (z_v) and angular (z_w) velocities to the twist field
+        # Based on differential drive kinematics, linear velocity is on the robot's X-axis
         msg.twist.twist.linear.x = z_v
         msg.twist.twist.angular.z = z_w
 
-        # Publicar a través del publicador creado en on_configure
+        # Broadcast the message via the publisher initialized in on_configure
         self._odom_pub.publish(msg)
 
     def _publish_us(self, z_us: list[float]) -> None:
@@ -250,12 +253,20 @@ class CoppeliaSimNode(LifecycleNode):
         """
         # TODO: 1.6. Complete the function body with your code (i.e., replace the pass statement).
         msg = RangeScan()
+        # Add the current ROS clock timestamp to the header
         msg.header.stamp = self.get_clock().now().to_msg()
         msg.radiation_type = RangeScan.ULTRASOUND
+        
+        # Define sensor characteristics: field of view and distance limits
         msg.field_of_view = 0.0
         msg.min_range = 0.0
+        
         msg.max_range = self._robot.SENSOR_RANGE
+        
+        # Convert raw sensor readings (z_us) to a list and assign to the message
         msg.ranges = list(z_us)
+        
+        # Publish the populated message to the /us_scan topic
         self._us_pub.publish(msg)
 
 

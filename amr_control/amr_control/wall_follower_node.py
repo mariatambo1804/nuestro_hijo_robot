@@ -120,9 +120,10 @@ class WallFollowerNode(LifecycleNode):
 
         """
         # TODO: 1.11. Complete the function body with your code (i.e., replace the pass statement).
-        # Crear la instancia del mensaje
+        # Create the TwistStamped message and populate the header with the current timestamp
         msg = TwistStamped()
         msg.header.stamp = self.get_clock().now().to_msg()
+        # Assign linear (v) and angular (w) velocities to the appropriate fields in the message
         msg.twist.linear.x = v
         msg.twist.angular.z = w
         self._cmd_vel_pub.publish(msg)

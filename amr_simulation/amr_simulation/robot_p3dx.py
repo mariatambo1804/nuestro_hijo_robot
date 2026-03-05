@@ -122,9 +122,12 @@ class RobotP3DX(Robot):
         encoders["right"] = self._sim.getFloatSignal("rightEncoder")
 
         # TODO: 1.2. Compute the derivatives of the angular positions to obtain velocities [rad/s].
+        # Calculate left and right wheel speeds using the time delta
         wl = encoders["left"] / self._dt 
         wr = encoders["right"] / self._dt  
         # TODO: 1.3. Solve forward differential kinematics (i.e., calculate z_v and z_w).
+        # Compute robot linear velocity (v) as the average wheel speed
         z_v = (self._wheel_radius / 2.0) * (wr + wl)  
+        # Compute robot angular velocity (w) based on the speed difference and track width
         z_w = (self._wheel_radius / self._track) * (wr - wl)         
         return z_v, z_w
