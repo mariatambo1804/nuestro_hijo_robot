@@ -6,7 +6,7 @@ import math
 
 def generate_launch_description():
     world = "project"
-    start = (0.0, -1.0, 1.5 * math.pi)
+    start = (0.0, -2.0, 0.5 * math.pi)
     goal = (4.0, 4.0)
     particles = 6500
 
@@ -27,7 +27,7 @@ def generate_launch_description():
         namespace="",
         output="screen",
         arguments=["--ros-args", "--log-level", "WARN"],
-        parameters=[{"enable_plot": True, "particles": particles, "world": world}],
+        parameters=[{"enable_plot": False, "particles": particles, "world": world}],
     )
 
     a_star_node = LifecycleNode(

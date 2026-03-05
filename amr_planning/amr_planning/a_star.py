@@ -66,19 +66,21 @@ class AStar:
             self._compute_heuristic(goal) if use_heuristic else np.zeros_like(self._map.grid_map)
         )
 
+        # Change from xy to rc
         rc_start = self._xy_to_rc(start)
         rc_goal = self._xy_to_rc(goal)
 
+        # We initialize our costs
         g_start = 0.0
         f_start = g_start + heuristic_total[rc_start]
 
-        # CLAVE: open_list debe guardar nodos en (r,c), no en (x,y)
+        # We initialize our lists
         open_list = {rc_start: (f_start, g_start)}
         closed_list = set()
         ancestors = {}
 
         turn_penalty = 1.2  # cost for a 90º-like change of direction
-        u_turn_penalty = 1.4  # cost for a 180º U-turn (>= turn_penalty)
+        u_turn_penalty = 1.4  # cost for a 180º U-turn
 
         while open_list:
             steps += 1
@@ -89,34 +91,34 @@ class AStar:
             closed_list.add(current_rc)
 
             if current_rc == rc_goal:
-                # Reconstruir en rc y convertir a xy
+                # Reconstruct in rc and convert to xy
                 path_rc = self._reconstruct_path(rc_start, rc_goal, ancestors)
                 path = [self._rc_to_xy(rc) for rc in path_rc]
                 return path, steps
 
             for i, action in enumerate(self._actions):
+                # Compute the different actions
                 dr = int(action[0])
                 dc = int(action[1])
-
                 neig_r = current_rc[0] + dr
                 neig_c = current_rc[1] + dc
                 neig_rc = (neig_r, neig_c)
 
-                # límites
+                # if it is inside the limits
                 if not (
                     0 <= neig_r < self._map.grid_map.shape[0]
                     and 0 <= neig_c < self._map.grid_map.shape[1]
                 ):
                     continue
 
-                # obstáculo
+                # Obstacle
                 if self._map.grid_map[neig_rc] == 1:
                     continue
 
                 if neig_rc in closed_list:
                     continue
 
-                # ---- turn penalty (minimal change) ----
+                # Costs for making our robot go straight
                 turn_cost = 0.0
                 parent_rc = ancestors.get(current_rc, None)
 
@@ -128,14 +130,14 @@ class AStar:
                     if new_move != prev_move:
                         turn_cost += turn_penalty
 
-                        # Extra penalty for 180º turns (U-turn)
+                        # Extra penalty for (U-turn)
                         if (new_move[0] == -prev_move[0]) and (new_move[1] == -prev_move[1]):
                             turn_cost += u_turn_penalty - turn_penalty
 
                 g_new = g_current + self._action_costs[i] + turn_cost
                 f_new = g_new + heuristic_total[neig_rc]
 
-                # actualizar si mejora
+                # Actualization if gets better
                 if (neig_rc not in open_list) or (g_new < open_list[neig_rc][1]):
                     open_list[neig_rc] = (f_new, g_new)
                     ancestors[neig_rc] = current_rc
@@ -162,9 +164,11 @@ class AStar:
         if len(path) < 2:
             return [(float(x), float(y)) for x, y in path]
         original = [(float(x), float(y)) for x, y in path]
-        n_insert = 3  # number of points we are going to insert
-        smoothedpath = []  # The smoothed path
-        for i in range(len(original) - 1):  # Because the last point must be the goal
+        # number of points we are going to insert
+        n_insert = 3
+        smoothedpath = []
+        # Because the last point must be the goal
+        for i in range(len(original) - 1):
             x0, y0 = original[i]
             x1, y1 = original[i + 1]
             if i == 0:  # if i am at the first point
@@ -178,9 +182,11 @@ class AStar:
         original = smoothedpath.copy()
         smoothed = smoothedpath.copy()
 
+        # We make the change the tolerance we are going to stop when the change is higher or equal
         change = tolerance
         while change >= tolerance:
             change = 0.0
+            # For every point in the path we correct it with the formula
             for i in range(1, len(smoothed) - 1):
                 x, y = smoothed[i]
                 x_orig, y_orig = original[i]
@@ -188,6 +194,8 @@ class AStar:
                 x_next, y_next = smoothed[i + 1]
                 new_x = x + data_weight * (x_orig - x) + smooth_weight * (x_prev + x_next - 2 * x)
                 new_y = y + data_weight * (y_orig - y) + smooth_weight * (y_prev + y_next - 2 * y)
+                # Every time we comput the change to make sure that is smaller than
+                # the tolerance if not we stop
                 change += abs(new_x - x) + abs(new_y - y)
                 smoothed[i] = (new_x, new_y)
         return smoothed
@@ -321,7 +329,7 @@ class AStar:
         """
 
         # TODO 3.3
-        # Operates on grid coordinates (row, col) since `ancestors` stores RC keys.
+        # Operates on grid coordinates.
         path: list[tuple[int, int]] = []
 
         # Expect start and goal to be RC tuples when called from `a_star`.
@@ -336,10 +344,12 @@ class AStar:
         if goal_rc != start_rc and goal_rc not in ancestors:
             return []
 
+        # Append the points to the ancestors if it is not the start
         while idx_t != start_rc:
             idx_t = ancestors[idx_t]
             path.append(idx_t)
 
+        # Because we keeped it from goal to start
         path.reverse()
         return path
 

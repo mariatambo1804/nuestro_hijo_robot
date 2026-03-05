@@ -54,10 +54,10 @@ class PurePursuit:
             elif abs(alpha) < math.radians(25):
                 self.new_path = False
 
-            # Bounds
-            v_max, v_min = 0.8, 0.22
+            # Velocity and distance bounds
+            v_max, v_min = 0.7, 0.12
             Ld_max = self._lookahead_distance
-            Ld_min = min(Ld_max, max(0.15, 0.35 * Ld_max))
+            Ld_min = min(Ld_max, max(0.30, 0.55 * Ld_max))
 
             # Error scaling [0, 1]
             err = min(abs(alpha) / (math.pi / 2), 1.0)
@@ -68,15 +68,14 @@ class PurePursuit:
             # Lookahead scheduling
             Ld = Ld_max - (Ld_max - Ld_min) * err
 
-            # Pure Pursuit angular command (sin smoothing)
+            # Pure Pursuit angular command 
             k = v / (Ld + 1e-9)
             w_raw = 2 * k * math.sin(alpha)
 
-            # Saturation only
+            # Decision of w
             w_max = 1.2
             w = max(-w_max, min(w_max, w_raw))
 
-            # keep prev for potential future use
             self._prev_w = w
 
             return v, w
@@ -110,15 +109,21 @@ class PurePursuit:
 
         """
         # TODO: 4.2. Complete the function body (i.e., find closest_xy and closest_idx).
+        # if there is no path we return the position (0,0) as the closest point and the index is zero 
         if not self._path:
             return (0.0, 0.0), 0
 
         closest_xy = (0.0, 0.0)
         closest_idx = 0
+
+        # We put a min distance to infinite 
         min_dist = float("inf")
 
+        # we compute the distance to the current position to any point in the path
         for i, point in enumerate(self._path):
             dist = math.sqrt((point[0] - x) ** 2 + (point[1] - y) ** 2)
+            # if the distance to the point is less than the min distance that's the closest point
+    
             if dist < min_dist:
                 min_dist = dist
                 closest_xy = point
@@ -141,9 +146,12 @@ class PurePursuit:
         # TODO: 4.3. Complete the function body with your code (i.e., determine target_xy).
         target_xy = self.path[origin_idx]
         x, y = origin_xy
+        # we do this to not choose a point that is behind of where the robot is
         for idx in range(origin_idx + 1, len(self._path)):
             x_new, y_new = self._path[idx]
             dist_new = ((x - x_new) ** 2 + (y - y_new) ** 2) ** 0.5
+            # we choose the "carrot point" like the point that is at a distance that is 
+            # at a lookahead distance
             if dist_new >= self._lookahead_distance:
                 return self._path[idx]
         target_xy = self._path[-1]

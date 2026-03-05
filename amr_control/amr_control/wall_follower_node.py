@@ -39,6 +39,7 @@ class WallFollowerNode(LifecycleNode):
             # Subscribers
 
             # TODO: 4.5. Add /pose to the synced subscriptions only if localization is enabled.
+            # Suscribe to Odometry and Rangescan if we are not localized
             if not self._enable_localization:
                 self._subscribers: list[message_filters.Subscriber] = []
                 self._subscribers.append(message_filters.Subscriber(self, Odometry, "/odom"))
@@ -47,6 +48,7 @@ class WallFollowerNode(LifecycleNode):
                     self._subscribers, queue_size=10, slop=9.0
                 )
                 ts.registerCallback(self._compute_commands_callback)
+            # Suscribe to Odometry Rangescan and pose if we are not localized
             else:
                 self._subscribers: list[message_filters.Subscriber] = []
                 self._subscribers.append(message_filters.Subscriber(self, Odometry, "/odom"))

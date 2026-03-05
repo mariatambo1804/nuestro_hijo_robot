@@ -114,13 +114,14 @@ class AStarNode(LifecycleNode):
         msg = Path()  # Type of message
         msg.header.stamp = self.get_clock().now().to_msg()
 
+        # We have to include every point in the path
         for x, y in path:
             pose = PoseStamped()
             pose.header.stamp = msg.header.stamp
             pose.pose.position.x = float(x)
             pose.pose.position.y = float(y)
             pose.pose.position.z = 0.0
-            # Neutral orientation (valid quaternion)
+            # Neutral orientation
             pose.pose.orientation.x = 0.0
             pose.pose.orientation.y = 0.0
             pose.pose.orientation.z = 0.0

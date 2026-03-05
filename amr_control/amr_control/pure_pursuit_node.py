@@ -19,7 +19,7 @@ class PurePursuitNode(LifecycleNode):
 
         # Parameters
         self.declare_parameter("dt", 0.05)
-        self.declare_parameter("lookahead_distance", 0.5)
+        self.declare_parameter("lookahead_distance", 0.8)
     
 
     def on_configure(self, state: LifecycleState) -> TransitionCallbackReturn:
@@ -102,6 +102,7 @@ class PurePursuitNode(LifecycleNode):
 
         """
         # TODO: 4.1. Complete the function body with your code (i.e., replace the pass statement).
+        # we introduce the path that was in the path_msg.poses
         self._pure_pursuit.path = [(p.pose.position.x, p.pose.position.y) for p in path_msg.poses]
         
     def _publish_velocity_commands(self, v: float, w: float) -> None:
