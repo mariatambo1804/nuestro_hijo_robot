@@ -1,0 +1,17 @@
+[2.360s] Invoking command in '/workspaces/amr_ws/src/build/amr_planning': PYTHONPATH=/workspaces/amr_ws/src/build/amr_planning/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/amr_ws/src/install/amr_planning/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspaces/amr_ws/src/build/amr_planning/build --no-deps symlink_data
+[2.925s] running develop
+[3.358s] running egg_info
+[3.360s] writing amr_planning.egg-info/PKG-INFO
+[3.363s] writing dependency_links to amr_planning.egg-info/dependency_links.txt
+[3.366s] writing entry points to amr_planning.egg-info/entry_points.txt
+[3.370s] writing requirements to amr_planning.egg-info/requires.txt
+[3.371s] writing top-level names to amr_planning.egg-info/top_level.txt
+[3.382s] reading manifest file 'amr_planning.egg-info/SOURCES.txt'
+[3.391s] writing manifest file 'amr_planning.egg-info/SOURCES.txt'
+[3.396s] running build_ext
+[3.400s] Creating /workspaces/amr_ws/src/install/amr_planning/lib/python3.10/site-packages/amr-planning.egg-link (link to .)
+[3.401s] Installing a_star script to /workspaces/amr_ws/src/install/amr_planning/lib/amr_planning
+[3.407s] 
+[3.411s] Installed /workspaces/amr_ws/src/build/amr_planning
+[3.412s] running symlink_data
+[4.504s] Invoked command in '/workspaces/amr_ws/src/build/amr_planning' returned '0': PYTHONPATH=/workspaces/amr_ws/src/build/amr_planning/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/amr_ws/src/install/amr_planning/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspaces/amr_ws/src/build/amr_planning/build --no-deps symlink_data

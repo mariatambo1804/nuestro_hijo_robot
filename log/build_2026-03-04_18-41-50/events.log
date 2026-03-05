@@ -1,0 +1,602 @@
+[0.000000] (-) TimerEvent: {}
+[0.003275] (amr_bringup) JobQueued: {'identifier': 'amr_bringup', 'dependencies': OrderedDict()}
+[0.004412] (amr_msgs) JobQueued: {'identifier': 'amr_msgs', 'dependencies': OrderedDict()}
+[0.004594] (amr_planning) JobQueued: {'identifier': 'amr_planning', 'dependencies': OrderedDict()}
+[0.004859] (amr_control) JobQueued: {'identifier': 'amr_control', 'dependencies': OrderedDict([('amr_msgs', '/workspaces/amr_ws/src/install/amr_msgs')])}
+[0.005017] (amr_localization) JobQueued: {'identifier': 'amr_localization', 'dependencies': OrderedDict([('amr_msgs', '/workspaces/amr_ws/src/install/amr_msgs')])}
+[0.005191] (amr_simulation) JobQueued: {'identifier': 'amr_simulation', 'dependencies': OrderedDict([('amr_msgs', '/workspaces/amr_ws/src/install/amr_msgs')])}
+[0.005345] (amr_msgs) JobStarted: {'identifier': 'amr_msgs'}
+[0.040333] (amr_bringup) JobStarted: {'identifier': 'amr_bringup'}
+[0.092827] (amr_planning) JobStarted: {'identifier': 'amr_planning'}
+[0.095754] (-) TimerEvent: {}
+[0.139227] (amr_msgs) JobProgress: {'identifier': 'amr_msgs', 'progress': 'cmake'}
+[0.144020] (amr_msgs) JobProgress: {'identifier': 'amr_msgs', 'progress': 'build'}
+[0.153017] (amr_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspaces/amr_ws/src/build/amr_msgs', '--', '-j8', '-l8'], 'cwd': '/workspaces/amr_ws/src/build/amr_msgs', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('HOSTNAME', 'humble'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/bin/helpers/browser.sh'), ('HOME', '/home/ros'), ('OLDPWD', '/workspaces/amr_ws'), ('TERM_PROGRAM_VERSION', '1.109.5'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-514cd1ca-71bf-4a01-8f9f-abc4bbb6d6e8.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-a1f67ff7-9e1b-4802-a420-8a933a743fbb.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-a1f67ff7-9e1b-4802-a420-8a933a743fbb.sock"]'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-e3d230fdb7b95ebd.txt'), ('LANG', 'C.UTF-8'), ('PYTHONSTARTUP', '/home/ros/.vscode-server/data/User/workspaceStorage/d9952c271fe3794896cda7c9bd2f5c36/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-732b402040.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-a1f67ff7-9e1b-4802-a420-8a933a743fbb.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/amr_ws/src/build/amr_msgs'), ('LC_ALL', 'C.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.197135] (-) TimerEvent: {}
+[0.299709] (-) TimerEvent: {}
+[0.400860] (-) TimerEvent: {}
+[0.502800] (-) TimerEvent: {}
+[0.604303] (-) TimerEvent: {}
+[0.712269] (-) TimerEvent: {}
+[0.839843] (-) TimerEvent: {}
+[0.930953] (amr_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.940764] (-) TimerEvent: {}
+[1.041777] (-) TimerEvent: {}
+[1.120186] (amr_msgs) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.142718] (-) TimerEvent: {}
+[1.200999] (amr_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[1.219891] (amr_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.231801] (amr_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.244286] (-) TimerEvent: {}
+[1.347021] (-) TimerEvent: {}
+[1.450145] (-) TimerEvent: {}
+[1.471129] (amr_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.551793] (-) TimerEvent: {}
+[1.618001] (amr_msgs) StdoutLine: {'line': b'-- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[1.652726] (-) TimerEvent: {}
+[1.753741] (-) TimerEvent: {}
+[1.854742] (-) TimerEvent: {}
+[1.956879] (-) TimerEvent: {}
+[2.057898] (-) TimerEvent: {}
+[2.158685] (-) TimerEvent: {}
+[2.259972] (-) TimerEvent: {}
+[2.362823] (-) TimerEvent: {}
+[2.464967] (-) TimerEvent: {}
+[2.558111] (amr_planning) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/workspaces/amr_ws/src/build/amr_planning/build', '--no-deps', 'symlink_data'], 'cwd': '/workspaces/amr_ws/src/build/amr_planning', 'env': {'PYTHON_BASIC_REPL': '1', 'HOSTNAME': 'humble', 'GIT_ASKPASS': '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/bin/helpers/browser.sh', 'HOME': '/home/ros', 'OLDPWD': '/workspaces/amr_ws', 'TERM_PROGRAM_VERSION': '1.109.5', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-514cd1ca-71bf-4a01-8f9f-abc4bbb6d6e8.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-a1f67ff7-9e1b-4802-a420-8a933a743fbb.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-a1f67ff7-9e1b-4802-a420-8a933a743fbb.sock"]', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-e3d230fdb7b95ebd.txt', 'LANG': 'C.UTF-8', 'PYTHONSTARTUP': '/home/ros/.vscode-server/data/User/workspaceStorage/d9952c271fe3794896cda7c9bd2f5c36/ms-python.python/pythonrc.py', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-732b402040.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-a1f67ff7-9e1b-4802-a420-8a933a743fbb.sock', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/workspaces/amr_ws/src/build/amr_planning', 'LC_ALL': 'C.UTF-8', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/workspaces/amr_ws/src/build/amr_planning/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/amr_ws/src/install/amr_planning/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[2.569164] (-) TimerEvent: {}
+[2.583864] (amr_bringup) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/workspaces/amr_ws/src/build/amr_bringup/build', '--no-deps', 'symlink_data'], 'cwd': '/workspaces/amr_ws/src/build/amr_bringup', 'env': {'PYTHON_BASIC_REPL': '1', 'HOSTNAME': 'humble', 'GIT_ASKPASS': '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/bin/helpers/browser.sh', 'HOME': '/home/ros', 'OLDPWD': '/workspaces/amr_ws', 'TERM_PROGRAM_VERSION': '1.109.5', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-514cd1ca-71bf-4a01-8f9f-abc4bbb6d6e8.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-a1f67ff7-9e1b-4802-a420-8a933a743fbb.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-a1f67ff7-9e1b-4802-a420-8a933a743fbb.sock"]', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-e3d230fdb7b95ebd.txt', 'LANG': 'C.UTF-8', 'PYTHONSTARTUP': '/home/ros/.vscode-server/data/User/workspaceStorage/d9952c271fe3794896cda7c9bd2f5c36/ms-python.python/pythonrc.py', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-732b402040.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-a1f67ff7-9e1b-4802-a420-8a933a743fbb.sock', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/workspaces/amr_ws/src/build/amr_bringup', 'LC_ALL': 'C.UTF-8', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/workspaces/amr_ws/src/build/amr_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/amr_ws/src/install/amr_bringup/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[2.669673] (-) TimerEvent: {}
+[2.726429] (amr_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[2.770748] (-) TimerEvent: {}
+[2.876940] (-) TimerEvent: {}
+[2.991042] (-) TimerEvent: {}
+[3.094035] (-) TimerEvent: {}
+[3.202295] (-) TimerEvent: {}
+[3.303903] (-) TimerEvent: {}
+[3.407339] (-) TimerEvent: {}
+[3.509083] (-) TimerEvent: {}
+[3.619655] (-) TimerEvent: {}
+[3.757844] (-) TimerEvent: {}
+[3.844704] (amr_planning) StdoutLine: {'line': b'running develop\n'}
+[3.863525] (-) TimerEvent: {}
+[3.973152] (-) TimerEvent: {}
+[4.058383] (amr_bringup) StdoutLine: {'line': b'running develop\n'}
+[4.073893] (-) TimerEvent: {}
+[4.175895] (-) TimerEvent: {}
+[4.279472] (-) TimerEvent: {}
+[4.381214] (-) TimerEvent: {}
+[4.487519] (-) TimerEvent: {}
+[4.590888] (-) TimerEvent: {}
+[4.699893] (-) TimerEvent: {}
+[4.790452] (amr_planning) StdoutLine: {'line': b'running egg_info\n'}
+[4.792593] (amr_planning) StdoutLine: {'line': b'creating amr_planning.egg-info\n'}
+[4.794678] (amr_planning) StdoutLine: {'line': b'writing amr_planning.egg-info/PKG-INFO\n'}
+[4.800890] (-) TimerEvent: {}
+[4.813888] (amr_planning) StdoutLine: {'line': b'writing dependency_links to amr_planning.egg-info/dependency_links.txt\n'}
+[4.820537] (amr_planning) StdoutLine: {'line': b'writing entry points to amr_planning.egg-info/entry_points.txt\n'}
+[4.824111] (amr_planning) StdoutLine: {'line': b'writing requirements to amr_planning.egg-info/requires.txt\n'}
+[4.826465] (amr_planning) StdoutLine: {'line': b'writing top-level names to amr_planning.egg-info/top_level.txt\n'}
+[4.829773] (amr_planning) StdoutLine: {'line': b"writing manifest file 'amr_planning.egg-info/SOURCES.txt'\n"}
+[4.893960] (amr_planning) StdoutLine: {'line': b"reading manifest file 'amr_planning.egg-info/SOURCES.txt'\n"}
+[4.902582] (-) TimerEvent: {}
+[4.913292] (amr_planning) StdoutLine: {'line': b"writing manifest file 'amr_planning.egg-info/SOURCES.txt'\n"}
+[4.917536] (amr_planning) StdoutLine: {'line': b'running build_ext\n'}
+[4.919896] (amr_planning) StdoutLine: {'line': b'Creating /workspaces/amr_ws/src/install/amr_planning/lib/python3.10/site-packages/amr-planning.egg-link (link to .)\n'}
+[4.928714] (amr_planning) StdoutLine: {'line': b'Installing a_star script to /workspaces/amr_ws/src/install/amr_planning/lib/amr_planning\n'}
+[4.935474] (amr_planning) StdoutLine: {'line': b'\n'}
+[4.938760] (amr_planning) StdoutLine: {'line': b'Installed /workspaces/amr_ws/src/build/amr_planning\n'}
+[4.941685] (amr_planning) StdoutLine: {'line': b'running symlink_data\n'}
+[4.943583] (amr_planning) StdoutLine: {'line': b'creating /workspaces/amr_ws/src/install/amr_planning/share/ament_index\n'}
+[4.946027] (amr_planning) StdoutLine: {'line': b'creating /workspaces/amr_ws/src/install/amr_planning/share/ament_index/resource_index\n'}
+[4.948025] (amr_planning) StdoutLine: {'line': b'creating /workspaces/amr_ws/src/install/amr_planning/share/ament_index/resource_index/packages\n'}
+[4.953088] (amr_planning) StdoutLine: {'line': b'symbolically linking /workspaces/amr_ws/src/build/amr_planning/resource/amr_planning -> /workspaces/amr_ws/src/install/amr_planning/share/ament_index/resource_index/packages\n'}
+[4.955493] (amr_bringup) StdoutLine: {'line': b'running egg_info\n'}
+[4.958516] (amr_bringup) StdoutLine: {'line': b'writing amr_bringup.egg-info/PKG-INFO\n'}
+[4.960095] (amr_planning) StdoutLine: {'line': b'symbolically linking /workspaces/amr_ws/src/build/amr_planning/package.xml -> /workspaces/amr_ws/src/install/amr_planning/share/amr_planning\n'}
+[4.964673] (amr_bringup) StdoutLine: {'line': b'writing dependency_links to amr_bringup.egg-info/dependency_links.txt\n'}
+[4.966705] (amr_bringup) StdoutLine: {'line': b'writing entry points to amr_bringup.egg-info/entry_points.txt\n'}
+[4.971853] (amr_bringup) StdoutLine: {'line': b'writing requirements to amr_bringup.egg-info/requires.txt\n'}
+[4.975319] (amr_bringup) StdoutLine: {'line': b'writing top-level names to amr_bringup.egg-info/top_level.txt\n'}
+[5.012395] (-) TimerEvent: {}
+[5.026190] (amr_bringup) StdoutLine: {'line': b"reading manifest file 'amr_bringup.egg-info/SOURCES.txt'\n"}
+[5.039077] (amr_bringup) StdoutLine: {'line': b"writing manifest file 'amr_bringup.egg-info/SOURCES.txt'\n"}
+[5.044473] (amr_bringup) StdoutLine: {'line': b'running build_ext\n'}
+[5.046734] (amr_bringup) StdoutLine: {'line': b'Creating /workspaces/amr_ws/src/install/amr_bringup/lib/python3.10/site-packages/amr-bringup.egg-link (link to .)\n'}
+[5.054505] (amr_bringup) StdoutLine: {'line': b'Installing lifecycle_manager script to /workspaces/amr_ws/src/install/amr_bringup/lib/amr_bringup\n'}
+[5.064302] (amr_bringup) StdoutLine: {'line': b'\n'}
+[5.065869] (amr_bringup) StdoutLine: {'line': b'Installed /workspaces/amr_ws/src/build/amr_bringup\n'}
+[5.073438] (amr_bringup) StdoutLine: {'line': b'running symlink_data\n'}
+[5.081111] (amr_bringup) StdoutLine: {'line': b'symbolically linking /workspaces/amr_ws/src/build/amr_bringup/launch/lab03.launch.py -> /workspaces/amr_ws/src/install/amr_bringup/share/amr_bringup/launch\n'}
+[5.096228] (amr_planning) CommandEnded: {'returncode': 0}
+[5.102705] (amr_bringup) StdoutLine: {'line': b'symbolically linking /workspaces/amr_ws/src/build/amr_bringup/launch/project.launch.py -> /workspaces/amr_ws/src/install/amr_bringup/share/amr_bringup/launch\n'}
+[5.112867] (-) TimerEvent: {}
+[5.214034] (-) TimerEvent: {}
+[5.247467] (amr_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[5.315000] (-) TimerEvent: {}
+[5.336988] (amr_planning) JobEnded: {'identifier': 'amr_planning', 'rc': 0}
+[5.348860] (amr_bringup) CommandEnded: {'returncode': 0}
+[5.416942] (-) TimerEvent: {}
+[5.526293] (-) TimerEvent: {}
+[5.575811] (amr_bringup) JobEnded: {'identifier': 'amr_bringup', 'rc': 0}
+[5.627395] (-) TimerEvent: {}
+[5.730837] (-) TimerEvent: {}
+[5.833802] (-) TimerEvent: {}
+[5.937666] (-) TimerEvent: {}
+[6.049971] (-) TimerEvent: {}
+[6.159719] (-) TimerEvent: {}
+[6.260822] (-) TimerEvent: {}
+[6.361749] (-) TimerEvent: {}
+[6.462705] (-) TimerEvent: {}
+[6.563715] (-) TimerEvent: {}
+[6.664926] (-) TimerEvent: {}
+[6.766943] (-) TimerEvent: {}
+[6.869953] (-) TimerEvent: {}
+[6.971706] (-) TimerEvent: {}
+[7.073294] (-) TimerEvent: {}
+[7.174897] (-) TimerEvent: {}
+[7.276909] (-) TimerEvent: {}
+[7.378725] (-) TimerEvent: {}
+[7.474668] (amr_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[7.479307] (-) TimerEvent: {}
+[7.522537] (amr_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[7.571660] (amr_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[7.572801] (amr_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[7.573715] (amr_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[7.579751] (-) TimerEvent: {}
+[7.680744] (-) TimerEvent: {}
+[7.781965] (-) TimerEvent: {}
+[7.883186] (-) TimerEvent: {}
+[7.900095] (amr_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[7.983826] (-) TimerEvent: {}
+[8.061316] (amr_msgs) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[8.084693] (-) TimerEvent: {}
+[8.099193] (amr_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[8.121104] (amr_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[8.185745] (-) TimerEvent: {}
+[8.210146] (amr_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[8.286962] (-) TimerEvent: {}
+[8.390777] (-) TimerEvent: {}
+[8.492823] (-) TimerEvent: {}
+[8.602580] (-) TimerEvent: {}
+[8.714481] (-) TimerEvent: {}
+[8.837770] (-) TimerEvent: {}
+[8.940760] (-) TimerEvent: {}
+[9.041746] (-) TimerEvent: {}
+[9.144123] (-) TimerEvent: {}
+[9.248695] (-) TimerEvent: {}
+[9.371145] (-) TimerEvent: {}
+[9.472903] (-) TimerEvent: {}
+[9.579557] (-) TimerEvent: {}
+[9.682057] (-) TimerEvent: {}
+[9.735842] (amr_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[9.782844] (-) TimerEvent: {}
+[9.885204] (-) TimerEvent: {}
+[9.957753] (amr_msgs) StdoutLine: {'line': b'-- Build files have been written to: /workspaces/amr_ws/src/build/amr_msgs\n'}
+[9.985776] (-) TimerEvent: {}
+[10.092785] (-) TimerEvent: {}
+[10.097048] (amr_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target amr_msgs__rosidl_generator_c\x1b[0m\n'}
+[10.108105] (amr_msgs) StdoutLine: {'line': b'[  0%] Built target ament_cmake_python_symlink_amr_msgs\n'}
+[10.193779] (-) TimerEvent: {}
+[10.208887] (amr_msgs) StdoutLine: {'line': b'[  2%] Built target amr_msgs__cpp\n'}
+[10.247249] (amr_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target amr_msgs__rosidl_typesupport_cpp\x1b[0m\n'}
+[10.278878] (amr_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target amr_msgs__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[10.294827] (-) TimerEvent: {}
+[10.330170] (amr_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target amr_msgs__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[10.401778] (-) TimerEvent: {}
+[10.476980] (amr_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/amr_msgs__rosidl_generator_c.dir/rosidl_generator_c/amr_msgs/msg/detail/range_scan__functions.c.o\x1b[0m\n'}
+[10.482418] (amr_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/amr_msgs__rosidl_generator_c.dir/rosidl_generator_c/amr_msgs/msg/detail/pose_stamped__functions.c.o\x1b[0m\n'}
+[10.502041] (-) TimerEvent: {}
+[10.609203] (-) TimerEvent: {}
+[10.712189] (-) TimerEvent: {}
+[10.815206] (-) TimerEvent: {}
+[10.916823] (-) TimerEvent: {}
+[11.019969] (-) TimerEvent: {}
+[11.096040] (amr_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/amr_msgs/msg/detail/dds_fastrtps/pose_stamped__type_support.cpp.o\x1b[0m\n'}
+[11.105982] (amr_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/amr_msgs/msg/range_scan__type_support.cpp.o\x1b[0m\n'}
+[11.121533] (-) TimerEvent: {}
+[11.123635] (amr_msgs) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/amr_msgs/msg/detail/pose_stamped__type_support.cpp.o\x1b[0m\n'}
+[11.130624] (amr_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/amr_msgs/msg/pose_stamped__type_support.cpp.o\x1b[0m\n'}
+[11.139835] (amr_msgs) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/amr_msgs/msg/detail/dds_fastrtps/range_scan__type_support.cpp.o\x1b[0m\n'}
+[11.222270] (-) TimerEvent: {}
+[11.326321] (-) TimerEvent: {}
+[11.430286] (-) TimerEvent: {}
+[11.543141] (-) TimerEvent: {}
+[11.631060] (amr_msgs) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/amr_msgs/msg/detail/range_scan__type_support.cpp.o\x1b[0m\n'}
+[11.643914] (-) TimerEvent: {}
+[11.652155] (amr_msgs) StdoutLine: {'line': b'[ 25%] \x1b[32m\x1b[1mLinking C shared library libamr_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[11.698479] (amr_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[11.703470] (amr_msgs) StdoutLine: {'line': b'writing amr_msgs.egg-info/PKG-INFO\n'}
+[11.709735] (amr_msgs) StdoutLine: {'line': b'writing dependency_links to amr_msgs.egg-info/dependency_links.txt\n'}
+[11.716552] (amr_msgs) StdoutLine: {'line': b'writing top-level names to amr_msgs.egg-info/top_level.txt\n'}
+[11.744840] (-) TimerEvent: {}
+[11.746590] (amr_msgs) StdoutLine: {'line': b"reading manifest file 'amr_msgs.egg-info/SOURCES.txt'\n"}
+[11.768766] (amr_msgs) StdoutLine: {'line': b"writing manifest file 'amr_msgs.egg-info/SOURCES.txt'\n"}
+[11.857407] (-) TimerEvent: {}
+[11.873775] (amr_msgs) StdoutLine: {'line': b'[ 25%] Built target ament_cmake_python_build_amr_msgs_egg\n'}
+[11.957766] (-) TimerEvent: {}
+[12.065686] (-) TimerEvent: {}
+[12.179417] (-) TimerEvent: {}
+[12.243592] (amr_msgs) StdoutLine: {'line': b'[ 28%] Built target amr_msgs__rosidl_generator_c\n'}
+[12.281588] (-) TimerEvent: {}
+[12.342290] (amr_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target amr_msgs__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[12.348962] (amr_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target amr_msgs__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[12.382828] (-) TimerEvent: {}
+[12.485420] (-) TimerEvent: {}
+[12.588344] (-) TimerEvent: {}
+[12.654809] (amr_msgs) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding C object CMakeFiles/amr_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/amr_msgs/msg/detail/pose_stamped__type_support.c.o\x1b[0m\n'}
+[12.688920] (-) TimerEvent: {}
+[12.790804] (-) TimerEvent: {}
+[12.894848] (-) TimerEvent: {}
+[13.043324] (-) TimerEvent: {}
+[13.147116] (-) TimerEvent: {}
+[13.257516] (-) TimerEvent: {}
+[13.361791] (-) TimerEvent: {}
+[13.421210] (amr_msgs) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/amr_msgs/msg/detail/pose_stamped__type_support_c.cpp.o\x1b[0m\n'}
+[13.462975] (-) TimerEvent: {}
+[13.569804] (-) TimerEvent: {}
+[13.673336] (-) TimerEvent: {}
+[13.775943] (-) TimerEvent: {}
+[13.822071] (amr_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding C object CMakeFiles/amr_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/amr_msgs/msg/detail/range_scan__type_support.c.o\x1b[0m\n'}
+[13.876903] (-) TimerEvent: {}
+[13.989169] (-) TimerEvent: {}
+[14.101728] (-) TimerEvent: {}
+[14.209784] (-) TimerEvent: {}
+[14.318376] (-) TimerEvent: {}
+[14.462965] (-) TimerEvent: {}
+[14.582037] (-) TimerEvent: {}
+[14.727901] (-) TimerEvent: {}
+[14.844942] (-) TimerEvent: {}
+[14.947849] (-) TimerEvent: {}
+[15.049936] (-) TimerEvent: {}
+[15.056302] (amr_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/amr_msgs/msg/detail/range_scan__type_support_c.cpp.o\x1b[0m\n'}
+[15.060852] (amr_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32m\x1b[1mLinking C shared library libamr_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[15.108722] (amr_msgs) StdoutLine: {'line': b'[ 43%] \x1b[32m\x1b[1mLinking CXX shared library libamr_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[15.151003] (-) TimerEvent: {}
+[15.258374] (-) TimerEvent: {}
+[15.364024] (-) TimerEvent: {}
+[15.422889] (amr_msgs) StdoutLine: {'line': b'[ 46%] Built target amr_msgs__rosidl_typesupport_introspection_c\n'}
+[15.464824] (-) TimerEvent: {}
+[15.468177] (amr_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target amr_msgs__rosidl_typesupport_c\x1b[0m\n'}
+[15.477932] (amr_msgs) StdoutLine: {'line': b'[ 48%] Built target amr_msgs__rosidl_typesupport_cpp\n'}
+[15.567006] (-) TimerEvent: {}
+[15.669000] (-) TimerEvent: {}
+[15.790785] (-) TimerEvent: {}
+[15.856523] (amr_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/amr_msgs/msg/range_scan__type_support.cpp.o\x1b[0m\n'}
+[15.896409] (-) TimerEvent: {}
+[15.953324] (amr_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/amr_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/amr_msgs/msg/pose_stamped__type_support.cpp.o\x1b[0m\n'}
+[15.997026] (-) TimerEvent: {}
+[16.112061] (-) TimerEvent: {}
+[16.221405] (-) TimerEvent: {}
+[16.325755] (-) TimerEvent: {}
+[16.428020] (-) TimerEvent: {}
+[16.529861] (-) TimerEvent: {}
+[16.556814] (amr_msgs) StdoutLine: {'line': b'[ 56%] \x1b[32m\x1b[1mLinking CXX shared library libamr_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[16.638544] (-) TimerEvent: {}
+[16.742803] (-) TimerEvent: {}
+[16.823001] (amr_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking CXX shared library libamr_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[16.844190] (-) TimerEvent: {}
+[16.875113] (amr_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library libamr_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[16.944824] (-) TimerEvent: {}
+[16.946936] (amr_msgs) StdoutLine: {'line': b'[ 64%] Built target amr_msgs__rosidl_typesupport_c\n'}
+[17.049864] (-) TimerEvent: {}
+[17.151983] (-) TimerEvent: {}
+[17.253884] (-) TimerEvent: {}
+[17.298379] (amr_msgs) StdoutLine: {'line': b'[ 66%] Built target amr_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[17.354982] (-) TimerEvent: {}
+[17.357584] (amr_msgs) StdoutLine: {'line': b'[ 69%] Built target amr_msgs__rosidl_typesupport_introspection_cpp\n'}
+[17.456522] (-) TimerEvent: {}
+[17.561992] (-) TimerEvent: {}
+[17.667200] (-) TimerEvent: {}
+[17.771128] (-) TimerEvent: {}
+[17.875853] (-) TimerEvent: {}
+[17.902114] (amr_msgs) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX shared library libamr_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[17.981938] (-) TimerEvent: {}
+[18.086774] (-) TimerEvent: {}
+[18.193272] (-) TimerEvent: {}
+[18.198232] (amr_msgs) StdoutLine: {'line': b'[ 74%] Built target amr_msgs__rosidl_typesupport_fastrtps_c\n'}
+[18.262687] (amr_msgs) StdoutLine: {'line': b'[ 74%] Built target amr_msgs\n'}
+[18.294436] (-) TimerEvent: {}
+[18.396130] (-) TimerEvent: {}
+[18.460060] (amr_msgs) StdoutLine: {'line': b'[ 76%] Built target amr_msgs__py\n'}
+[18.498357] (-) TimerEvent: {}
+[18.552888] (amr_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target amr_msgs__rosidl_generator_py\x1b[0m\n'}
+[18.598792] (-) TimerEvent: {}
+[18.701035] (-) TimerEvent: {}
+[18.803757] (-) TimerEvent: {}
+[18.905807] (-) TimerEvent: {}
+[18.926869] (amr_msgs) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding C object CMakeFiles/amr_msgs__rosidl_generator_py.dir/rosidl_generator_py/amr_msgs/msg/_range_scan_s.c.o\x1b[0m\n'}
+[18.933480] (amr_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/amr_msgs__rosidl_generator_py.dir/rosidl_generator_py/amr_msgs/msg/_pose_stamped_s.c.o\x1b[0m\n'}
+[19.006751] (-) TimerEvent: {}
+[19.109443] (-) TimerEvent: {}
+[19.225030] (-) TimerEvent: {}
+[19.329228] (-) TimerEvent: {}
+[19.433078] (-) TimerEvent: {}
+[19.534846] (-) TimerEvent: {}
+[19.587113] (amr_msgs) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/amr_msgs/libamr_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[19.636268] (-) TimerEvent: {}
+[19.737804] (-) TimerEvent: {}
+[19.744064] (amr_msgs) StdoutLine: {'line': b'[ 84%] Built target amr_msgs__rosidl_generator_py\n'}
+[19.783957] (amr_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target amr_msgs__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[19.786532] (amr_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target amr_msgs__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[19.792187] (amr_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target amr_msgs__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[19.839156] (-) TimerEvent: {}
+[19.942809] (-) TimerEvent: {}
+[20.043830] (-) TimerEvent: {}
+[20.062776] (amr_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/amr_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/amr_msgs/_amr_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[20.068906] (amr_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/amr_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/amr_msgs/_amr_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[20.084790] (amr_msgs) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/amr_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/amr_msgs/_amr_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[20.145979] (-) TimerEvent: {}
+[20.246818] (-) TimerEvent: {}
+[20.349360] (-) TimerEvent: {}
+[20.452250] (-) TimerEvent: {}
+[20.559765] (-) TimerEvent: {}
+[20.661894] (-) TimerEvent: {}
+[20.700178] (amr_msgs) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/amr_msgs/amr_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[20.722762] (amr_msgs) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/amr_msgs/amr_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[20.740280] (amr_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/amr_msgs/amr_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[20.763751] (-) TimerEvent: {}
+[20.843588] (amr_msgs) StdoutLine: {'line': b'[100%] Built target amr_msgs__rosidl_typesupport_c__pyext\n'}
+[20.866981] (-) TimerEvent: {}
+[20.887628] (amr_msgs) StdoutLine: {'line': b'[100%] Built target amr_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[20.891563] (amr_msgs) StdoutLine: {'line': b'[100%] Built target amr_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[20.949006] (amr_msgs) CommandEnded: {'returncode': 0}
+[20.959345] (amr_msgs) JobProgress: {'identifier': 'amr_msgs', 'progress': 'install'}
+[20.967842] (-) TimerEvent: {}
+[20.979184] (amr_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/workspaces/amr_ws/src/build/amr_msgs'], 'cwd': '/workspaces/amr_ws/src/build/amr_msgs', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('HOSTNAME', 'humble'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/bin/helpers/browser.sh'), ('HOME', '/home/ros'), ('OLDPWD', '/workspaces/amr_ws'), ('TERM_PROGRAM_VERSION', '1.109.5'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-514cd1ca-71bf-4a01-8f9f-abc4bbb6d6e8.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-a1f67ff7-9e1b-4802-a420-8a933a743fbb.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-a1f67ff7-9e1b-4802-a420-8a933a743fbb.sock"]'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-e3d230fdb7b95ebd.txt'), ('LANG', 'C.UTF-8'), ('PYTHONSTARTUP', '/home/ros/.vscode-server/data/User/workspaceStorage/d9952c271fe3794896cda7c9bd2f5c36/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-732b402040.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-a1f67ff7-9e1b-4802-a420-8a933a743fbb.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/amr_ws/src/build/amr_msgs'), ('LC_ALL', 'C.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[20.996280] (amr_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[20.999243] (amr_msgs) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[21.001525] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/ament_index/resource_index/rosidl_interfaces/amr_msgs\n'}
+[21.006034] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__functions.h\n'}
+[21.007048] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__struct.h\n'}
+[21.008917] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__type_support.h\n'}
+[21.010233] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__functions.h\n'}
+[21.011813] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__struct.h\n'}
+[21.014588] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__type_support.h\n'}
+[21.016115] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/pose_stamped.h\n'}
+[21.017734] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/range_scan.h\n'}
+[21.020467] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[21.022144] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/environment/library_path.sh\n'}
+[21.023627] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/environment/library_path.dsv\n'}
+[21.029050] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__rosidl_typesupport_fastrtps_c.h\n'}
+[21.031999] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__rosidl_typesupport_fastrtps_c.h\n'}
+[21.034160] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[21.037849] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__rosidl_typesupport_introspection_c.h\n'}
+[21.039656] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__rosidl_typesupport_introspection_c.h\n'}
+[21.041021] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[21.046369] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__builder.hpp\n'}
+[21.047808] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__struct.hpp\n'}
+[21.049431] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__traits.hpp\n'}
+[21.050693] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__type_support.hpp\n'}
+[21.052301] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__builder.hpp\n'}
+[21.053692] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__struct.hpp\n'}
+[21.054750] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__traits.hpp\n'}
+[21.056276] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__type_support.hpp\n'}
+[21.057970] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/pose_stamped.hpp\n'}
+[21.059190] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/range_scan.hpp\n'}
+[21.060965] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[21.068688] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[21.070653] (-) TimerEvent: {}
+[21.071242] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[21.072928] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[21.078608] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/pose_stamped__rosidl_typesupport_introspection_cpp.hpp\n'}
+[21.081846] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/include/amr_msgs/amr_msgs/msg/detail/range_scan__rosidl_typesupport_introspection_cpp.hpp\n'}
+[21.084941] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/environment/pythonpath.sh\n'}
+[21.087803] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/environment/pythonpath.dsv\n'}
+[21.093396] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs-1.0.0-py3.10.egg-info/PKG-INFO\n'}
+[21.096728] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs-1.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[21.103742] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs-1.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[21.105534] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs-1.0.0-py3.10.egg-info/top_level.txt\n'}
+[21.116290] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/__init__.py\n'}
+[21.118281] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/_amr_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[21.119800] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/_amr_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[21.121931] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/_amr_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[21.123884] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/amr_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[21.125418] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/amr_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[21.127518] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/amr_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[21.136291] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/libamr_msgs__rosidl_generator_py.so\n'}
+[21.161895] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg/__init__.py\n'}
+[21.176390] (-) TimerEvent: {}
+[21.180658] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg/_pose_stamped.py\n'}
+[21.194001] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg/_pose_stamped_s.c\n'}
+[21.212157] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg/_range_scan.py\n'}
+[21.229588] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg/_range_scan_s.c\n'}
+[21.234245] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/amr_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[21.237873] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/amr_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[21.241062] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/amr_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[21.242686] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/msg/PoseStamped.idl\n'}
+[21.244658] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/msg/RangeScan.idl\n'}
+[21.247201] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/msg/PoseStamped.msg\n'}
+[21.248665] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/msg/RangeScan.msg\n'}
+[21.250458] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/ament_index/resource_index/package_run_dependencies/amr_msgs\n'}
+[21.253010] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/ament_index/resource_index/parent_prefix_path/amr_msgs\n'}
+[21.254692] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/environment/ament_prefix_path.sh\n'}
+[21.256207] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/environment/ament_prefix_path.dsv\n'}
+[21.258394] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/environment/path.sh\n'}
+[21.260369] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/environment/path.dsv\n'}
+[21.262923] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/local_setup.bash\n'}
+[21.265124] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/local_setup.sh\n'}
+[21.267159] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/local_setup.zsh\n'}
+[21.269059] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/local_setup.dsv\n'}
+[21.271354] (amr_msgs) StdoutLine: {'line': b'-- Symlinking: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/package.dsv\n'}
+[21.276834] (-) TimerEvent: {}
+[21.292840] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/ament_index/resource_index/packages/amr_msgs\n'}
+[21.294283] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[21.296370] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[21.297999] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[21.299375] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[21.303333] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[21.305913] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[21.309713] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[21.313439] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgsConfig.cmake\n'}
+[21.315834] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgsConfig-version.cmake\n'}
+[21.317755] (amr_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/package.xml\n'}
+[21.320833] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_generator_c.so\n'}
+[21.342479] (amr_msgs) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_generator_c.so" to ""\n'}
+[21.345893] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[21.358629] (amr_msgs) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[21.361318] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_introspection_c.so\n'}
+[21.377665] (amr_msgs) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[21.379219] (-) TimerEvent: {}
+[21.383447] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_c.so\n'}
+[21.400109] (amr_msgs) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_c.so" to ""\n'}
+[21.404773] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[21.432058] (amr_msgs) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[21.437202] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[21.453039] (amr_msgs) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[21.454972] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_cpp.so\n'}
+[21.467687] (amr_msgs) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[21.479835] (-) TimerEvent: {}
+[21.580776] (-) TimerEvent: {}
+[21.602695] (amr_msgs) StdoutLine: {'line': b"Listing '/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs'...\n"}
+[21.604041] (amr_msgs) StdoutLine: {'line': b"Compiling '/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/__init__.py'...\n"}
+[21.605748] (amr_msgs) StdoutLine: {'line': b"Listing '/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg'...\n"}
+[21.606643] (amr_msgs) StdoutLine: {'line': b"Compiling '/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg/__init__.py'...\n"}
+[21.607523] (amr_msgs) StdoutLine: {'line': b"Compiling '/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg/_pose_stamped.py'...\n"}
+[21.609006] (amr_msgs) StdoutLine: {'line': b"Compiling '/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages/amr_msgs/msg/_range_scan.py'...\n"}
+[21.614155] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_generator_py.so\n'}
+[21.631945] (amr_msgs) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/amr_ws/src/install/amr_msgs/lib/libamr_msgs__rosidl_generator_py.so" to ""\n'}
+[21.634750] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_generator_cExport.cmake\n'}
+[21.642932] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[21.654478] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[21.662536] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[21.672447] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[21.681694] (-) TimerEvent: {}
+[21.683179] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[21.695508] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgs__rosidl_typesupport_cExport.cmake\n'}
+[21.706599] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[21.718724] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_generator_cppExport.cmake\n'}
+[21.730431] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[21.738428] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[21.748643] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[21.759784] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[21.770656] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[21.779094] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/amr_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[21.782747] (-) TimerEvent: {}
+[21.790730] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_generator_pyExport.cmake\n'}
+[21.805798] (amr_msgs) StdoutLine: {'line': b'-- Installing: /workspaces/amr_ws/src/install/amr_msgs/share/amr_msgs/cmake/export_amr_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[21.829503] (amr_msgs) CommandEnded: {'returncode': 0}
+[21.884188] (-) TimerEvent: {}
+[21.986051] (-) TimerEvent: {}
+[22.089920] (-) TimerEvent: {}
+[22.158041] (amr_msgs) JobEnded: {'identifier': 'amr_msgs', 'rc': 0}
+[22.162441] (amr_control) JobStarted: {'identifier': 'amr_control'}
+[22.212001] (amr_localization) JobStarted: {'identifier': 'amr_localization'}
+[22.213550] (-) TimerEvent: {}
+[22.266122] (amr_simulation) JobStarted: {'identifier': 'amr_simulation'}
+[22.317764] (-) TimerEvent: {}
+[22.419826] (-) TimerEvent: {}
+[22.521182] (-) TimerEvent: {}
+[22.622702] (-) TimerEvent: {}
+[22.723775] (-) TimerEvent: {}
+[22.824694] (-) TimerEvent: {}
+[22.927843] (-) TimerEvent: {}
+[23.028705] (-) TimerEvent: {}
+[23.129808] (-) TimerEvent: {}
+[23.232179] (-) TimerEvent: {}
+[23.333824] (-) TimerEvent: {}
+[23.436654] (-) TimerEvent: {}
+[23.537905] (-) TimerEvent: {}
+[23.639871] (-) TimerEvent: {}
+[23.741768] (-) TimerEvent: {}
+[23.842751] (-) TimerEvent: {}
+[23.943723] (-) TimerEvent: {}
+[24.045949] (-) TimerEvent: {}
+[24.146878] (-) TimerEvent: {}
+[24.247814] (-) TimerEvent: {}
+[24.357834] (-) TimerEvent: {}
+[24.458815] (-) TimerEvent: {}
+[24.559741] (-) TimerEvent: {}
+[24.664021] (-) TimerEvent: {}
+[24.764979] (-) TimerEvent: {}
+[24.868982] (-) TimerEvent: {}
+[24.970007] (-) TimerEvent: {}
+[25.070682] (-) TimerEvent: {}
+[25.172000] (-) TimerEvent: {}
+[25.273900] (-) TimerEvent: {}
+[25.374776] (-) TimerEvent: {}
+[25.475813] (-) TimerEvent: {}
+[25.579754] (-) TimerEvent: {}
+[25.682855] (-) TimerEvent: {}
+[25.791494] (amr_localization) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/workspaces/amr_ws/src/build/amr_localization/build', '--no-deps', 'symlink_data'], 'cwd': '/workspaces/amr_ws/src/build/amr_localization', 'env': {'PYTHON_BASIC_REPL': '1', 'HOSTNAME': 'humble', 'GIT_ASKPASS': '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/workspaces/amr_ws/src/install/amr_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/bin/helpers/browser.sh', 'HOME': '/home/ros', 'OLDPWD': '/workspaces/amr_ws', 'TERM_PROGRAM_VERSION': '1.109.5', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-514cd1ca-71bf-4a01-8f9f-abc4bbb6d6e8.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-a1f67ff7-9e1b-4802-a420-8a933a743fbb.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-a1f67ff7-9e1b-4802-a420-8a933a743fbb.sock"]', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-e3d230fdb7b95ebd.txt', 'LANG': 'C.UTF-8', 'PYTHONSTARTUP': '/home/ros/.vscode-server/data/User/workspaceStorage/d9952c271fe3794896cda7c9bd2f5c36/ms-python.python/pythonrc.py', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-732b402040.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-a1f67ff7-9e1b-4802-a420-8a933a743fbb.sock', 'AMENT_PREFIX_PATH': '/workspaces/amr_ws/src/install/amr_msgs:/opt/ros/humble', 'SHELL': '/bin/bash', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/workspaces/amr_ws/src/build/amr_localization', 'LC_ALL': 'C.UTF-8', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/workspaces/amr_ws/src/build/amr_localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/amr_ws/src/install/amr_localization/lib/python3.10/site-packages:/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspaces/amr_ws/src/install/amr_msgs'}, 'shell': False}
+[25.806022] (-) TimerEvent: {}
+[25.823141] (amr_control) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/workspaces/amr_ws/src/build/amr_control/build', '--no-deps', 'symlink_data'], 'cwd': '/workspaces/amr_ws/src/build/amr_control', 'env': {'PYTHON_BASIC_REPL': '1', 'HOSTNAME': 'humble', 'GIT_ASKPASS': '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/workspaces/amr_ws/src/install/amr_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/bin/helpers/browser.sh', 'HOME': '/home/ros', 'OLDPWD': '/workspaces/amr_ws', 'TERM_PROGRAM_VERSION': '1.109.5', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-514cd1ca-71bf-4a01-8f9f-abc4bbb6d6e8.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-a1f67ff7-9e1b-4802-a420-8a933a743fbb.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-a1f67ff7-9e1b-4802-a420-8a933a743fbb.sock"]', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-e3d230fdb7b95ebd.txt', 'LANG': 'C.UTF-8', 'PYTHONSTARTUP': '/home/ros/.vscode-server/data/User/workspaceStorage/d9952c271fe3794896cda7c9bd2f5c36/ms-python.python/pythonrc.py', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-732b402040.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-a1f67ff7-9e1b-4802-a420-8a933a743fbb.sock', 'AMENT_PREFIX_PATH': '/workspaces/amr_ws/src/install/amr_msgs:/opt/ros/humble', 'SHELL': '/bin/bash', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/workspaces/amr_ws/src/build/amr_control', 'LC_ALL': 'C.UTF-8', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/workspaces/amr_ws/src/build/amr_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/amr_ws/src/install/amr_control/lib/python3.10/site-packages:/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspaces/amr_ws/src/install/amr_msgs'}, 'shell': False}
+[25.857244] (amr_simulation) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/workspaces/amr_ws/src/build/amr_simulation/build', '--no-deps', 'symlink_data'], 'cwd': '/workspaces/amr_ws/src/build/amr_simulation', 'env': {'PYTHON_BASIC_REPL': '1', 'HOSTNAME': 'humble', 'GIT_ASKPASS': '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/workspaces/amr_ws/src/install/amr_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/bin/helpers/browser.sh', 'HOME': '/home/ros', 'OLDPWD': '/workspaces/amr_ws', 'TERM_PROGRAM_VERSION': '1.109.5', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-514cd1ca-71bf-4a01-8f9f-abc4bbb6d6e8.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-a1f67ff7-9e1b-4802-a420-8a933a743fbb.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/ros/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-x64/072586267e68ece9a47aa43f8c108e0dcbf44622/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-a1f67ff7-9e1b-4802-a420-8a933a743fbb.sock"]', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/ros/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-e3d230fdb7b95ebd.txt', 'LANG': 'C.UTF-8', 'PYTHONSTARTUP': '/home/ros/.vscode-server/data/User/workspaceStorage/d9952c271fe3794896cda7c9bd2f5c36/ms-python.python/pythonrc.py', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-732b402040.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-a1f67ff7-9e1b-4802-a420-8a933a743fbb.sock', 'AMENT_PREFIX_PATH': '/workspaces/amr_ws/src/install/amr_msgs:/opt/ros/humble', 'SHELL': '/bin/bash', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/workspaces/amr_ws/src/build/amr_simulation', 'LC_ALL': 'C.UTF-8', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/workspaces/amr_ws/src/build/amr_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/amr_ws/src/install/amr_simulation/lib/python3.10/site-packages:/workspaces/amr_ws/src/install/amr_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspaces/amr_ws/src/install/amr_msgs'}, 'shell': False}
+[25.908063] (-) TimerEvent: {}
+[26.009350] (-) TimerEvent: {}
+[26.112715] (-) TimerEvent: {}
+[26.219712] (-) TimerEvent: {}
+[26.320885] (-) TimerEvent: {}
+[26.421829] (-) TimerEvent: {}
+[26.523168] (-) TimerEvent: {}
+[26.695863] (-) TimerEvent: {}
+[26.797972] (-) TimerEvent: {}
+[26.911001] (-) TimerEvent: {}
+[27.014312] (-) TimerEvent: {}
+[27.026827] (amr_control) StdoutLine: {'line': b'running develop\n'}
+[27.063606] (amr_simulation) StdoutLine: {'line': b'running develop\n'}
+[27.076455] (amr_localization) StdoutLine: {'line': b'running develop\n'}
+[27.114858] (-) TimerEvent: {}
+[27.218113] (-) TimerEvent: {}
+[27.320051] (-) TimerEvent: {}
+[27.422939] (-) TimerEvent: {}
+[27.524873] (-) TimerEvent: {}
+[27.604760] (amr_control) StdoutLine: {'line': b'running egg_info\n'}
+[27.607735] (amr_control) StdoutLine: {'line': b'writing amr_control.egg-info/PKG-INFO\n'}
+[27.611433] (amr_control) StdoutLine: {'line': b'writing dependency_links to amr_control.egg-info/dependency_links.txt\n'}
+[27.613989] (amr_control) StdoutLine: {'line': b'writing entry points to amr_control.egg-info/entry_points.txt\n'}
+[27.616712] (amr_control) StdoutLine: {'line': b'writing requirements to amr_control.egg-info/requires.txt\n'}
+[27.622560] (amr_control) StdoutLine: {'line': b'writing top-level names to amr_control.egg-info/top_level.txt\n'}
+[27.629149] (-) TimerEvent: {}
+[27.633342] (amr_simulation) StdoutLine: {'line': b'running egg_info\n'}
+[27.638557] (amr_simulation) StdoutLine: {'line': b'writing amr_simulation.egg-info/PKG-INFO\n'}
+[27.645015] (amr_simulation) StdoutLine: {'line': b'writing dependency_links to amr_simulation.egg-info/dependency_links.txt\n'}
+[27.646986] (amr_simulation) StdoutLine: {'line': b'writing entry points to amr_simulation.egg-info/entry_points.txt\n'}
+[27.649155] (amr_simulation) StdoutLine: {'line': b'writing requirements to amr_simulation.egg-info/requires.txt\n'}
+[27.653763] (amr_simulation) StdoutLine: {'line': b'writing top-level names to amr_simulation.egg-info/top_level.txt\n'}
+[27.656771] (amr_control) StdoutLine: {'line': b"reading manifest file 'amr_control.egg-info/SOURCES.txt'\n"}
+[27.672602] (amr_control) StdoutLine: {'line': b"writing manifest file 'amr_control.egg-info/SOURCES.txt'\n"}
+[27.680995] (amr_control) StdoutLine: {'line': b'running build_ext\n'}
+[27.682570] (amr_control) StdoutLine: {'line': b'Creating /workspaces/amr_ws/src/install/amr_control/lib/python3.10/site-packages/amr-control.egg-link (link to .)\n'}
+[27.685038] (amr_simulation) StdoutLine: {'line': b"reading manifest file 'amr_simulation.egg-info/SOURCES.txt'\n"}
+[27.687609] (amr_control) StdoutLine: {'line': b'Installing pure_pursuit script to /workspaces/amr_ws/src/install/amr_control/lib/amr_control\n'}
+[27.695542] (amr_control) StdoutLine: {'line': b'Installing wall_follower script to /workspaces/amr_ws/src/install/amr_control/lib/amr_control\n'}
+[27.700808] (amr_simulation) StdoutLine: {'line': b"writing manifest file 'amr_simulation.egg-info/SOURCES.txt'\n"}
+[27.702504] (amr_localization) StdoutLine: {'line': b'running egg_info\n'}
+[27.704819] (amr_localization) StdoutLine: {'line': b'writing amr_localization.egg-info/PKG-INFO\n'}
+[27.707016] (amr_localization) StdoutLine: {'line': b'writing dependency_links to amr_localization.egg-info/dependency_links.txt\n'}
+[27.709847] (amr_simulation) StdoutLine: {'line': b'running build_ext\n'}
+[27.711863] (amr_simulation) StdoutLine: {'line': b'Creating /workspaces/amr_ws/src/install/amr_simulation/lib/python3.10/site-packages/amr-simulation.egg-link (link to .)\n'}
+[27.714351] (amr_control) StdoutLine: {'line': b'\n'}
+[27.717620] (amr_control) StdoutLine: {'line': b'Installed /workspaces/amr_ws/src/build/amr_control\n'}
+[27.720465] (amr_localization) StdoutLine: {'line': b'writing entry points to amr_localization.egg-info/entry_points.txt\n'}
+[27.722539] (amr_control) StdoutLine: {'line': b'running symlink_data\n'}
+[27.725894] (amr_localization) StdoutLine: {'line': b'writing requirements to amr_localization.egg-info/requires.txt\n'}
+[27.729105] (amr_localization) StdoutLine: {'line': b'writing top-level names to amr_localization.egg-info/top_level.txt\n'}
+[27.736728] (-) TimerEvent: {}
+[27.739473] (amr_simulation) StdoutLine: {'line': b'Installing coppeliasim script to /workspaces/amr_ws/src/install/amr_simulation/lib/amr_simulation\n'}
+[27.744005] (amr_simulation) StdoutLine: {'line': b'\n'}
+[27.746942] (amr_simulation) StdoutLine: {'line': b'Installed /workspaces/amr_ws/src/build/amr_simulation\n'}
+[27.753438] (amr_simulation) StdoutLine: {'line': b'running symlink_data\n'}
+[27.755621] (amr_localization) StdoutLine: {'line': b"reading manifest file 'amr_localization.egg-info/SOURCES.txt'\n"}
+[27.760300] (amr_localization) StdoutLine: {'line': b"writing manifest file 'amr_localization.egg-info/SOURCES.txt'\n"}
+[27.766037] (amr_localization) StdoutLine: {'line': b'running build_ext\n'}
+[27.768332] (amr_localization) StdoutLine: {'line': b'Creating /workspaces/amr_ws/src/install/amr_localization/lib/python3.10/site-packages/amr-localization.egg-link (link to .)\n'}
+[27.776458] (amr_localization) StdoutLine: {'line': b'Installing particle_filter script to /workspaces/amr_ws/src/install/amr_localization/lib/amr_localization\n'}
+[27.783142] (amr_localization) StdoutLine: {'line': b'\n'}
+[27.785791] (amr_localization) StdoutLine: {'line': b'Installed /workspaces/amr_ws/src/build/amr_localization\n'}
+[27.787921] (amr_localization) StdoutLine: {'line': b'running symlink_data\n'}
+[27.797881] (amr_control) CommandEnded: {'returncode': 0}
+[27.836938] (-) TimerEvent: {}
+[27.938815] (-) TimerEvent: {}
+[27.965445] (amr_control) JobEnded: {'identifier': 'amr_control', 'rc': 0}
+[27.973959] (amr_simulation) CommandEnded: {'returncode': 0}
+[28.046536] (-) TimerEvent: {}
+[28.152532] (-) TimerEvent: {}
+[28.163502] (amr_simulation) JobEnded: {'identifier': 'amr_simulation', 'rc': 0}
+[28.177060] (amr_localization) CommandEnded: {'returncode': 0}
+[28.256320] (-) TimerEvent: {}
+[28.399573] (-) TimerEvent: {}
+[28.526467] (-) TimerEvent: {}
+[28.647766] (-) TimerEvent: {}
+[28.659074] (amr_localization) JobEnded: {'identifier': 'amr_localization', 'rc': 0}
+[28.674969] (-) EventReactorShutdown: {}

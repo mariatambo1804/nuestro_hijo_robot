@@ -1,0 +1,19 @@
+[2.559s] Invoking command in '/workspaces/amr_ws/src/build/amr_bringup': PYTHONPATH=/workspaces/amr_ws/src/build/amr_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/amr_ws/src/install/amr_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspaces/amr_ws/src/build/amr_bringup/build --no-deps symlink_data
+[4.019s] running develop
+[4.918s] running egg_info
+[4.919s] writing amr_bringup.egg-info/PKG-INFO
+[4.926s] writing dependency_links to amr_bringup.egg-info/dependency_links.txt
+[4.928s] writing entry points to amr_bringup.egg-info/entry_points.txt
+[4.934s] writing requirements to amr_bringup.egg-info/requires.txt
+[4.937s] writing top-level names to amr_bringup.egg-info/top_level.txt
+[4.987s] reading manifest file 'amr_bringup.egg-info/SOURCES.txt'
+[5.000s] writing manifest file 'amr_bringup.egg-info/SOURCES.txt'
+[5.005s] running build_ext
+[5.010s] Creating /workspaces/amr_ws/src/install/amr_bringup/lib/python3.10/site-packages/amr-bringup.egg-link (link to .)
+[5.016s] Installing lifecycle_manager script to /workspaces/amr_ws/src/install/amr_bringup/lib/amr_bringup
+[5.025s] 
+[5.031s] Installed /workspaces/amr_ws/src/build/amr_bringup
+[5.037s] running symlink_data
+[5.043s] symbolically linking /workspaces/amr_ws/src/build/amr_bringup/launch/lab03.launch.py -> /workspaces/amr_ws/src/install/amr_bringup/share/amr_bringup/launch
+[5.069s] symbolically linking /workspaces/amr_ws/src/build/amr_bringup/launch/project.launch.py -> /workspaces/amr_ws/src/install/amr_bringup/share/amr_bringup/launch
+[5.311s] Invoked command in '/workspaces/amr_ws/src/build/amr_bringup' returned '0': PYTHONPATH=/workspaces/amr_ws/src/build/amr_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/amr_ws/src/install/amr_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspaces/amr_ws/src/build/amr_bringup/build --no-deps symlink_data

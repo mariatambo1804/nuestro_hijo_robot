@@ -1,0 +1,3 @@
+[console_scripts]
+a_star = amr_planning.a_star_node:main
+

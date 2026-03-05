@@ -68,17 +68,20 @@ class ParticleFilter:
 
         # TODO: 2.10. Complete the missing function body with your code.
         localized: bool = False
-
         pose: tuple[float, float, float] = (float("inf"), float("inf"), float("inf"))
+        
+        # Get coordinates and run DBSCAN to find groups of particles
         xy = self._particles[:, 0:2].astype(float)
         labels = DBSCAN(eps=0.2, min_samples=15).fit_predict(xy)
-
+        
+        # Identify valid clusters (excluding noise label -1)
         cluster_labels = [l for l in set(labels) if l != -1]
         num_clusters = len(cluster_labels)
         print(f"[DEBUG] DBSCAN found {num_clusters} clusters with {self._particle_count} particles")
+        # Exit if no clusters are found
         if len(cluster_labels) == 0:
             return localized, pose
-
+        # Find the largest cluster 
         best_label = cluster_labels[0]
         best_size = np.sum(labels == best_label)
 
@@ -89,36 +92,39 @@ class ParticleFilter:
                 best_label = l
 
         cluster = self._particles[labels == best_label]
-
+        # Calculate mean position (x, y)
         x = float(np.mean(cluster[:, 0].astype(float)))
         y = float(np.mean(cluster[:, 1].astype(float)))
-
+        # Calculate average orientation (theta) 
         thetas = cluster[:, 2].astype(float)
         s = float(np.mean(np.sin(thetas)))
         c = float(np.mean(np.cos(thetas)))
         theta = math.atan2(s, c)
+        # Keep theta in the [0, 2pi] range
         if theta < 0.0:
             theta += 2.0 * math.pi
         pose = (x, y, theta)
 
         # Adaptive particle reduction based on number of clusters
-
         num_clusters = len(cluster_labels)
         N = self._particle_count
         min_tracking = 100  # keep 100 for pose tracking (as stated)
-
+        # If there is only 1 cluster, we are localized; reduce particles to the minimum
         if num_clusters == 1:
             localized = True
             target = min_tracking
+        # If there are 2 clusters, keep 20% of current particles
         elif num_clusters <= 2:
             target = max(min_tracking, int(round(0.20 * N)))  # strong convergence
+        # If there are 3 clusters, keep 35% 
         elif num_clusters <= 3:
             target = max(min_tracking, int(round(0.35 * N)))  # moderate convergence
+        # If there are 5 clusters, keep 50%
         elif num_clusters <= 5:
             target = max(min_tracking, int(round(0.50 * N)))  # weak convergence
         else:
             target = N
-
+        # If the target is smaller than current count, reduce the particle set 
         if self._particle_count > target:
             N = self._particle_count
             step = N / target
@@ -139,17 +145,20 @@ class ParticleFilter:
         """
         self._iteration += 1
         # TODO: 2.5. Complete the function body with your code (i.e., replace the pass statement).
+        # Get the total number of particles
         n = len(self._particles)
+        # Add random Gaussian noise to linear (v) and angular (w) velocities
         v_noisy = v + np.random.normal(0, self._sigma_v, n)
         w_noisy = w + np.random.normal(0, self._sigma_w, n)
-
+        # Extract current state (x, y, theta) for all particles
         x = self._particles[:, 0].astype(float)
         y = self._particles[:, 1].astype(float)
         theta = self._particles[:, 2].astype(float)
-
+        # Predict new pose using the motion model equations
         new_theta = theta + w_noisy * self._dt
         new_x = x + v_noisy * np.cos(theta) * self._dt
         new_y = y + v_noisy * np.sin(theta) * self._dt
+        # Normalize angle to stay within [0, 2pi]
         new_theta = new_theta % (2 * np.pi)
 
         # Check collision for each particle and reposition if necessary
@@ -160,7 +169,7 @@ class ParticleFilter:
                 # Particle crossed a wall, reposition at intersection point
                 new_x[i] = intersection[0]
                 new_y[i] = intersection[1]
-
+        # Update the particle array with the new calculated positions
         self._particles[:, 0] = new_x
         self._particles[:, 1] = new_y
         self._particles[:, 2] = new_theta
@@ -297,13 +306,18 @@ class ParticleFilter:
         particles = np.empty((particle_count, 3), dtype=object)
         # TODO: 2.4. Complete the missing function body with your code.
         valid_orientations = [0, math.pi / 2, math.pi, 3 * math.pi / 2]
+        # Get the bounding box limits of the map
         x_min, y_min, x_max, y_max = self._map.bounds()
         initialized_count = 0
+        # Keep generating particles until we reach the required count
         while initialized_count < particle_count:
             x = np.random.uniform(x_min, x_max)
             y = np.random.uniform(y_min, y_max)
+            # Only accept the particle if it is inside the actual walkable area
             if self._map.contains((x, y)):
+                # Assign a random orientation from the valid list
                 theta = valid_orientations[np.random.randint(0, 4)]
+                # Store the valid particle and move to the next one
                 particles[initialized_count] = (x, y, theta)
                 initialized_count += 1
         return particles
@@ -343,9 +357,11 @@ class ParticleFilter:
         for ray in rays:
             start_point = ray[0]
             end_point = ray[1]
+            # Check if the ray hits a wall in the map and calculate the distance
             intersection, distance = self._map.check_collision(
                 [start_point, end_point], compute_distance=True
             )
+            # If no wall was hit, the distance is infinite 
             if not intersection:
                 z_hat.append(float("inf"))
             else:
@@ -395,11 +411,15 @@ class ParticleFilter:
 
         # predicted measurements from this particle
         z_hat = self._sense(particle)
+        # Compare real measurements with predicted ones
         for z, z_pred in zip(measurements, z_hat):
+            # If a real sensor reading is infinite, set it slightly beyond max range
             if np.isinf(z):
                 z = 1.1 * self._sensor_range
+            # If a predicted reading is infinite, treat it the same way
             if np.isinf(z_pred):
                 z_pred = 1.1 * self._sensor_range
+            # Update the total probability using a Gaussian distribution
             probability *= self._gaussian(z_pred, self._sigma_z, z)
         return probability
 
